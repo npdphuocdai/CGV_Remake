@@ -11,7 +11,6 @@ namespace DAL
 {
     public class dalEmployee : DatabaseServices
     {
-        dtoEmployee employee = new dtoEmployee();
         /// <summary>
         /// Hàm check tài khoản của user có tồn tại hay không
         /// </summary>
@@ -49,7 +48,7 @@ namespace DAL
         /// </summary>
         /// <param name="employeeID"></param>
         /// <returns></returns>
-        public SqlDataReader SearchFromID(int employeeID)
+        public SqlDataReader SearchEmployeeFromID(int employeeID)
         {
             SqlDataReader reader = null;
             try
@@ -70,7 +69,7 @@ namespace DAL
         /// </summary>
         /// <param name="employeeName"></param>
         /// <returns></returns>
-        public SqlDataReader SearchFromName(string employeeName)
+        public SqlDataReader SearchEmployeeFromName(string employeeName)
         {
             SqlDataReader reader = null;
             try
@@ -89,40 +88,32 @@ namespace DAL
         /// <summary>
         /// Hàm thêm mới nhân viên
         /// </summary>
-        /// <param name="name"> Tên nhân viên </param>
-        /// <param name="potrait"> Hình ảnh chân dung </param>
-        /// <param name="birthday"> Sinh nhật </param>
-        /// <param name="address"> Địa chỉ </param>
-        /// <param name="phonenumber"> Số điện thoại </param>
-        /// <param name="email"> Email </param>
-        /// <param name="basicsalary"> Tiền lương cơ bản </param>
-        /// <param name="jobtitleid"> Mã chức vụ </param>
-        /// <param name="startday"> Ngày vào làm </param>
+        /// <param name="employee"> Đối tượng nhân viên được thêm mới </param>
         /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là thêm mới thất bại </returns>
-        public int InsertEmployee(string name, byte[] potrait, DateTime birthday, string address, string phonenumber, string email, decimal basicsalary, int jobtitleid, DateTime startday)
+        public int InsertEmployee(dtoEmployee employee)
         {
             int count = 0;
             try
             {
                 string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay]) VALUES (@Name, @Portrait, @BirthDay, @Address, @PhoneNumber, @Email, @BasicSalary, @JobTitleID, @StartDay)";
                 SqlParameter parameterName = new SqlParameter("@Name",SqlDbType.NVarChar);
-                parameterName.Value = name;
+                parameterName.Value = employee.FullName;
                 SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.Image);
-                parameterPotrait.Value = potrait;
+                parameterPotrait.Value = employee.Potrait;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
-                parameterBirthDay.Value = birthday;
+                parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
-                parameterAddress.Value = address;
+                parameterAddress.Value = employee.Address;
                 SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.NVarChar);
-                parameterPhoneNumber.Value = phonenumber;
+                parameterPhoneNumber.Value = employee.PhoneNumber;
                 SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
-                parameterEmail.Value = email;
+                parameterEmail.Value = employee.Email;
                 SqlParameter parameterBasicSalary = new SqlParameter("@BasicSalary", SqlDbType.Money);
-                parameterBasicSalary.Value = basicsalary;
+                parameterBasicSalary.Value = employee.BasicSalary;
                 SqlParameter parameterJobTitleID = new SqlParameter("@JobTitleID", SqlDbType.Int);
-                parameterJobTitleID.Value = jobtitleid;
+                parameterJobTitleID.Value = employee.JobTitleID;
                 SqlParameter parameterStartDay = new SqlParameter("@Name", SqlDbType.DateTime);
-                parameterStartDay.Value = startday;
+                parameterStartDay.Value = employee.StartDay;
                 count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay });
             }
             finally
@@ -134,43 +125,34 @@ namespace DAL
         /// <summary>
         /// Hàm cập nhập nhân viên theo mã nhân viên
         /// </summary>
-        /// <param name="id"> Mã nhân viên được cập nhập </param>
-        /// <param name="name"> Tên nhân viên </param>
-        /// <param name="potrait"> Hình ảnh chân dung </param>
-        /// <param name="birthday"> Sinh nhật </param>
-        /// <param name="address"> Địa chỉ </param>
-        /// <param name="phonenumber"> Số điện thoại </param>
-        /// <param name="email"> Email </param>
-        /// <param name="basicsalary"> Tiền lương cơ bản </param>
-        /// <param name="jobtitleid"> Mã chức vụ </param>
-        /// <param name="startday"> Ngày vào làm </param>
+        /// <param name="employee"> Đối tượng nhân viên được cập nhập </param>
         /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là cập nhập thất bại </returns>
-        public int UpdateEmployeeFromID(int id,string name, byte[] potrait, DateTime birthday, string address, string phonenumber, string email, decimal basicsalary, int jobtitleid, DateTime startday)
+        public int UpdateEmployeeFromID(dtoEmployee employee)
         {
             int count = 0;
             try
             {
                 string sql = "UPDATE [dbo].[Employee] SET EmployeeFullName = @Name, EmployeePotrait = @Portrait, EmployeeBirthDay = @BirthDay, EmployeeAddress = @Address, EmployeePhoneNumber = @PhoneNumber, EmployeeEmail = @Email, BasicSalary = @BasicSalary, JobTitleID = @JobTitleID, StartDay = @StartDay) WHERE EmployeeID = @EmployeeID";
                 SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
-                parameterID.Value = id;
+                parameterID.Value = employee.EmployeeID;
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
-                parameterName.Value = name;
+                parameterName.Value = employee.FullName;
                 SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.Image);
-                parameterPotrait.Value = potrait;
+                parameterPotrait.Value = employee.Potrait;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
-                parameterBirthDay.Value = birthday;
+                parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
-                parameterAddress.Value = address;
+                parameterAddress.Value = employee.Address;
                 SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.NVarChar);
-                parameterPhoneNumber.Value = phonenumber;
+                parameterPhoneNumber.Value = employee.PhoneNumber;
                 SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
-                parameterEmail.Value = email;
+                parameterEmail.Value = employee.Email;
                 SqlParameter parameterBasicSalary = new SqlParameter("@BasicSalary", SqlDbType.Money);
-                parameterBasicSalary.Value = basicsalary;
+                parameterBasicSalary.Value = employee.BasicSalary;
                 SqlParameter parameterJobTitleID = new SqlParameter("@JobTitleID", SqlDbType.Int);
-                parameterJobTitleID.Value = jobtitleid;
+                parameterJobTitleID.Value = employee.JobTitleID;
                 SqlParameter parameterStartDay = new SqlParameter("@Name", SqlDbType.DateTime);
-                parameterStartDay.Value = startday;
+                parameterStartDay.Value = employee.StartDay;
                 count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay });
             }
             finally
