@@ -92,7 +92,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "UPDATE [dbo].[Customer] SET CustomerFullName = @Name, CustomerBirthDay = @BirthDay, CustomerAddress = @Address, CustomerPhoneNumber = @PhoneNumber, CustomerEmail = @Email) WHERE CustomerID = @CustomerID";
+                string sql = "UPDATE [dbo].[Customer] SET [CustomerFullName] = @Name, [CustomerBirthDay] = @BirthDay, [CustomerAddress] = @Address, [CustomerPhoneNumber] = @PhoneNumber, [CustomerEmail] = @Email) WHERE [CustomerID] = @CustomerID";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = customer.FullName;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);

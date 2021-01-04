@@ -132,7 +132,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "UPDATE [dbo].[Employee] SET EmployeeFullName = @Name, EmployeePotrait = @Portrait, EmployeeBirthDay = @BirthDay, EmployeeAddress = @Address, EmployeePhoneNumber = @PhoneNumber, EmployeeEmail = @Email, BasicSalary = @BasicSalary, JobTitleID = @JobTitleID, StartDay = @StartDay) WHERE EmployeeID = @EmployeeID";
+                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeePotrait] = @Portrait, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [BasicSalary] = @BasicSalary, [JobTitleID] = @JobTitleID, [StartDay] = @StartDay) WHERE [EmployeeID] = @EmployeeID";
                 SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
                 parameterID.Value = employee.EmployeeID;
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
