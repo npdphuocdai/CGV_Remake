@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class dtoGenre
+    public class dtoCustomer : dtoHuman
     {
-        public int GenreID { get; set; }
-        public string GenreName { get; set; }
+        public int CustomerID { get; set; }
     }
 }

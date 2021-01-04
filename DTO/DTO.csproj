@@ -41,12 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dtoCustomer.cs" />
     <Compile Include="dtoGenre.cs" />
     <Compile Include="dtoHuman.cs" />
     <Compile Include="dtoEmployee.cs" />
     <Compile Include="dtoFilm.cs" />
     <Compile Include="dtoJobTitle.cs" />
+    <Compile Include="dtoPrivilegeDetail.cs" />
+    <Compile Include="dtoSetDetail.cs" />
+    <Compile Include="dtoShowingRoom.cs" />
+    <Compile Include="dtoTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="dtoSystemPrivilege.cs" />
+    <Compile Include="dtoShowingSet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
