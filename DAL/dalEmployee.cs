@@ -44,6 +44,11 @@ namespace DAL
             }
             return kq;
         }
+        /// <summary>
+        /// Hàm tìm kiếm nhân viên theo mã nhân viên
+        /// </summary>
+        /// <param name="employeeID"></param>
+        /// <returns></returns>
         public SqlDataReader SearchFromID(int employeeID)
         {
             SqlDataReader reader = null;
@@ -60,6 +65,11 @@ namespace DAL
             }
             return reader;
         }
+        /// <summary>
+        /// Hàm tìm kiếm nhân viên theo tên nhân viên
+        /// </summary>
+        /// <param name="employeeName"></param>
+        /// <returns></returns>
         public SqlDataReader SearchFromName(string employeeName)
         {
             SqlDataReader reader = null;
@@ -76,6 +86,19 @@ namespace DAL
             }
             return reader;
         }
+        /// <summary>
+        /// Hàm thêm mới nhân viên
+        /// </summary>
+        /// <param name="name"> Tên nhân viên </param>
+        /// <param name="potrait"> Hình ảnh chân dung </param>
+        /// <param name="birthday"> Sinh nhật </param>
+        /// <param name="address"> Địa chỉ </param>
+        /// <param name="phonenumber"> Số điện thoại </param>
+        /// <param name="email"> Email </param>
+        /// <param name="basicsalary"> Tiền lương cơ bản </param>
+        /// <param name="jobtitleid"> Mã chức vụ </param>
+        /// <param name="startday"> Ngày vào làm </param>
+        /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là thêm mới thất bại </returns>
         public int InsertEmployee(string name, byte[] potrait, DateTime birthday, string address, string phonenumber, string email, decimal basicsalary, int jobtitleid, DateTime startday)
         {
             int count = 0;
@@ -108,6 +131,20 @@ namespace DAL
             }
             return count;
         }
+        /// <summary>
+        /// Hàm cập nhập nhân viên theo mã nhân viên
+        /// </summary>
+        /// <param name="id"> Mã nhân viên được cập nhập </param>
+        /// <param name="name"> Tên nhân viên </param>
+        /// <param name="potrait"> Hình ảnh chân dung </param>
+        /// <param name="birthday"> Sinh nhật </param>
+        /// <param name="address"> Địa chỉ </param>
+        /// <param name="phonenumber"> Số điện thoại </param>
+        /// <param name="email"> Email </param>
+        /// <param name="basicsalary"> Tiền lương cơ bản </param>
+        /// <param name="jobtitleid"> Mã chức vụ </param>
+        /// <param name="startday"> Ngày vào làm </param>
+        /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là cập nhập thất bại </returns>
         public int UpdateEmployeeFromID(int id,string name, byte[] potrait, DateTime birthday, string address, string phonenumber, string email, decimal basicsalary, int jobtitleid, DateTime startday)
         {
             int count = 0;
