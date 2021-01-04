@@ -68,5 +68,25 @@ namespace DAL
             SqlDataReader reader = command.ExecuteReader();
             return reader;
         }
+        /// <summary>
+        /// Hàm thêm dữ liệu vào một bảng có
+        /// </summary>
+        /// <param name="sql"> là chuỗi truy vấn dạng Insert Into ... values ... </param>
+        /// <param name="parameters"> là các tham số truyền vào ứng với từng cột dữ liệu trong bảng </param>
+        /// <returns></returns>
+        public int InsertUpdateDeleteData(string sql, SqlParameter[] parameters)
+        {
+            //Khởi tạo giá trị đếm bằng 0
+            int count = 0;
+            command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Connection = connection;
+            OpenConnection();
+            command.Parameters.AddRange(parameters);
+            //Hàm ExecuteNonQuery sẽ trả về giá trị là số dòng bị tác động bởi câu truy vấn
+            count = command.ExecuteNonQuery();
+            return count;
+        }
     }
 }
