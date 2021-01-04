@@ -70,7 +70,7 @@ namespace DAL
                 parameterBirthDay.Value = customer.BirthDay;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
                 parameterAddress.Value = customer.Address;
-                SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.NVarChar);
+                SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.Char);
                 parameterPhoneNumber.Value = customer.PhoneNumber;
                 SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
                 parameterEmail.Value = customer.Email;

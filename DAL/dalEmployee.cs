@@ -143,7 +143,7 @@ namespace DAL
                 parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
                 parameterAddress.Value = employee.Address;
-                SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.NVarChar);
+                SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.Char);
                 parameterPhoneNumber.Value = employee.PhoneNumber;
                 SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
                 parameterEmail.Value = employee.Email;
