@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class Film
-    {
-        public int FilmID { get; set; }
+    public class dtoFilm
+    {       
+        public int FilmID;
         public string FilmName { get; set; }
         public DateTime ReleaseDate { get; set; }
         public DateTime StopDate { get; set; }
+        public DateTime Duration { get; set; }
 
     }
 }

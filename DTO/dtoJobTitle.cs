@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class JobTitle
+    public class dtoJobTitle
     {
         public int JobTitleID { get; set; }
-
         public string JobTitleName { get; set; }
-
         public string Major { get; set; }
-
         public decimal? PositionAllowance { get; set; }
-
         public int CoefficientsSalary { get; set; }
-
     }
 }
