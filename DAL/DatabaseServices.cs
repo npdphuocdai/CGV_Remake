@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+
+namespace DAL
+{
+    public class DatabaseServices
+    {
+        /// <summary>
+        /// Tạo Connecting String để kết nối với Database
+        /// </summary>
+        public string connectionString = @"Data Source = NPD-PHUOCDAI; Initial Catalog = CGV; User ID = sa; Password = dai0947170732";
+        public SqlConnection connection;
+        public SqlCommand command;
+        public DatabaseServices() 
+        {
+            connection = new SqlConnection(connectionString);
+        }
+        public void OpenConnection()
+        {
+            if(connection != null && connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
+        }
+        public void CloseConnection()
+        {
+            if(connection != null && connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
+        }
+        /// <summary>
+        /// Hàm đọc data từ table có đối số truyền vào
+        /// </summary>
+        /// <param name="sql"> sql là một câu truy vấn trong SQL
+        /// VD: select * from ABC </param>
+        /// <returns> Trả về một table </returns>
+        public SqlDataReader ReadData(string sql)
+        {
+            command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Connection = connection;
+            OpenConnection();
+            SqlDataReader reader = command.ExecuteReader();
+            return reader;
+        }
+        /// <summary>
+        /// Hàm đọc data từ table có điều kiện
+        /// </summary>
+        /// <param name="sql"> là một câu truy vấn trong SQL </param>
+        /// <param name="parameters"> là các tham số truyền vào cho điều kiện </param>
+        /// VD: select * from ABC Where parameters = XYZ
+        /// <returns> Hàm trả về một bảng </returns>
+        public SqlDataReader ReadDataPars(string sql, SqlParameter[] parameters)
+        {
+            command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Connection = connection;
+            OpenConnection();
+            command.Parameters.AddRange(parameters);
+            SqlDataReader reader = command.ExecuteReader();
+            return reader;
+        }
+    }
+}
