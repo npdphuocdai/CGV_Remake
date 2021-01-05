@@ -74,6 +74,12 @@
     <Compile Include="ucHome.Designer.cs">
       <DependentUpon>ucHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucSelectSeat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSelectSeat.Designer.cs">
+      <DependentUpon>ucSelectSeat.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucTicket.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
     <EmbeddedResource Include="ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSelectSeat.resx">
+      <DependentUpon>ucSelectSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTicket.resx">
       <DependentUpon>ucTicket.cs</DependentUpon>
