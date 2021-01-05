@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Data;
+using System.IO;
 
 namespace DAL
 {
@@ -18,13 +19,13 @@ namespace DAL
         /// <param name="password"> là password </param>
         /// cả 2 đều được nhập từ text box
         /// <returns> giá trị kiểu bool biểu thị cho việc tồn tại hay không </returns>
-        public bool CheckUser(string username, string password)
+        public bool CheckUser(int username, string password)
         {
             bool kq = false;
             try
             {
                 //Tạo câu truy vấn có điều kiện để tìm kiếm user
-                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeID] = @Username AND [Password] = @Password";
+                string sql = "SELECT * AS Pass FROM [dbo].[Employee] WHERE [EmployeeID] = @Username AND CONVERT(NVARCHAR, DECRYPTBYPASSPHRASE(N'Team up fight on', [Password])) = @Password";
                 //Truyền giá trị cho 2 tham số
                 SqlParameter parameterUser = new SqlParameter("@Username", SqlDbType.Int);
                 parameterUser.Value = username;
