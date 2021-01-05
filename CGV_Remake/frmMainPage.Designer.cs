@@ -49,6 +49,7 @@ namespace Viewer
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.acrLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -205,6 +206,11 @@ namespace Viewer
             this.skinPaletteDropDownButtonItem1});
             this.fluentFormDefaultManager1.MaxItemId = 4;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -236,7 +242,6 @@ namespace Viewer
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceButtonHome;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceLogOut;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceAccount;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement aceUsername;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceServices;
         public DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fldContainter;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceStatistics;
@@ -247,6 +252,8 @@ namespace Viewer
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceUsername;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

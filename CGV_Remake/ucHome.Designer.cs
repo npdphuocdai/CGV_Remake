@@ -265,7 +265,8 @@ namespace Viewer
             // 
             this.layBottom.Control = this.picBottom;
             this.layBottom.Location = new System.Drawing.Point(167, 782);
-            this.layBottom.MinSize = new System.Drawing.Size(24, 24);
+            this.layBottom.MaxSize = new System.Drawing.Size(0, 146);
+            this.layBottom.MinSize = new System.Drawing.Size(24, 146);
             this.layBottom.Name = "layBottom";
             this.layBottom.Size = new System.Drawing.Size(1179, 146);
             this.layBottom.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;

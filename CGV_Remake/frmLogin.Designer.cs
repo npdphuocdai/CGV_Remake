@@ -75,10 +75,10 @@ namespace Viewer
             // 
             this.btnLogin.Appearance.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Appearance.Options.UseFont = true;
-            this.btnLogin.Location = new System.Drawing.Point(125, 126);
+            this.btnLogin.Location = new System.Drawing.Point(124, 125);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(274, 49);
+            this.btnLogin.Size = new System.Drawing.Size(276, 49);
             this.btnLogin.StyleController = this.layFormLogin;
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
@@ -86,24 +86,24 @@ namespace Viewer
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(140, 52);
+            this.txtPass.Location = new System.Drawing.Point(138, 50);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Properties.Appearance.Options.UseFont = true;
             this.txtPass.Properties.UseSystemPasswordChar = true;
-            this.txtPass.Size = new System.Drawing.Size(369, 34);
+            this.txtPass.Size = new System.Drawing.Size(373, 34);
             this.txtPass.StyleController = this.layFormLogin;
             this.txtPass.TabIndex = 5;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(140, 14);
+            this.txtUsername.Location = new System.Drawing.Point(138, 12);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
-            this.txtUsername.Size = new System.Drawing.Size(369, 34);
+            this.txtUsername.Size = new System.Drawing.Size(373, 34);
             this.txtUsername.StyleController = this.layFormLogin;
             this.txtUsername.TabIndex = 4;
             // 
@@ -130,7 +130,7 @@ namespace Viewer
             this.layUserName.Control = this.txtUsername;
             this.layUserName.Location = new System.Drawing.Point(0, 0);
             this.layUserName.Name = "layUserName";
-            this.layUserName.Size = new System.Drawing.Size(499, 38);
+            this.layUserName.Size = new System.Drawing.Size(503, 38);
             this.layUserName.Text = "Username:";
             this.layUserName.TextSize = new System.Drawing.Size(123, 27);
             // 
@@ -141,16 +141,16 @@ namespace Viewer
             this.layPassword.Control = this.txtPass;
             this.layPassword.Location = new System.Drawing.Point(0, 38);
             this.layPassword.Name = "layPassword";
-            this.layPassword.Size = new System.Drawing.Size(499, 38);
+            this.layPassword.Size = new System.Drawing.Size(503, 38);
             this.layPassword.Text = "Password: ";
             this.layPassword.TextSize = new System.Drawing.Size(123, 27);
             // 
             // layButtonLogin
             // 
             this.layButtonLogin.Control = this.btnLogin;
-            this.layButtonLogin.Location = new System.Drawing.Point(111, 112);
+            this.layButtonLogin.Location = new System.Drawing.Point(112, 113);
             this.layButtonLogin.Name = "layButtonLogin";
-            this.layButtonLogin.Size = new System.Drawing.Size(278, 53);
+            this.layButtonLogin.Size = new System.Drawing.Size(280, 53);
             this.layButtonLogin.TextSize = new System.Drawing.Size(0, 0);
             this.layButtonLogin.TextVisible = false;
             // 
@@ -159,33 +159,33 @@ namespace Viewer
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 76);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(111, 107);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(112, 111);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(389, 76);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(392, 76);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(110, 107);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(111, 111);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(111, 76);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(112, 76);
             this.emptySpaceItem3.MinSize = new System.Drawing.Size(104, 23);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(278, 36);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(280, 37);
             this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(111, 165);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(112, 166);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(278, 18);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(280, 21);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // frmLogin
@@ -196,10 +196,12 @@ namespace Viewer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 207);
             this.Controls.Add(this.layFormLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("frmLogin.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.layFormLogin)).EndInit();
             this.layFormLogin.ResumeLayout(false);

@@ -121,27 +121,17 @@ namespace DAL
             }
             return count;
         }
-        public List<dtoEmployee> GetEmployees()
+        public DataTable GetEmployees()
         {
-            List<dtoEmployee> employees = new List<dtoEmployee>();
+            //List<dtoEmployee> employees = new List<dtoEmployee>();
+            DataTable employees = new DataTable();
             try
             {
-                dtoEmployee employee = new dtoEmployee();
-                string sql = "SELECT * FROM [dbo].[Employee]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                string sql = "SELECT* FROM[dbo].[Employee]";
+                SqlDataAdapter adapter = Adapter(sql);
+                if ( adapter != null)
                 {
-                    employee.EmployeeID = Convert.ToInt32((dtoEmployee)reader[0]);
-                    employee.FullName = ((dtoEmployee)reader[1]).ToString();
-                    employee.Potrait = SettingImage.ImageToByteArray((Image)reader[2]);
-                    employee.BirthDay = Convert.ToDateTime((dtoEmployee)reader[3]);
-                    employee.Address = ((dtoEmployee)reader[4]).ToString();
-                    employee.PhoneNumber = ((dtoEmployee)reader[5]).ToString();
-                    employee.Email = ((dtoEmployee)reader[6]).ToString();
-                    employee.BasicSalary = Convert.ToDecimal((dtoEmployee)reader[7]);
-                    employee.JobTitleID = Convert.ToInt32((dtoEmployee)reader[8]);
-                    employee.StartDay = Convert.ToDateTime((dtoEmployee)reader[9]);
-                    employees.Add(employee);
+                    adapter.Fill(employees);
                 }
             }
             finally

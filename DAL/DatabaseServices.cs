@@ -76,8 +76,6 @@ namespace DAL
         /// <returns></returns>
         public int InsertUpdateDeleteData(string sql, SqlParameter[] parameters)
         {
-            //Khởi tạo giá trị đếm bằng 0
-            int count = 0;
             command = new SqlCommand();
             command.CommandType = CommandType.Text;
             command.CommandText = sql;
@@ -85,8 +83,28 @@ namespace DAL
             OpenConnection();
             command.Parameters.AddRange(parameters);
             //Hàm ExecuteNonQuery sẽ trả về giá trị là số dòng bị tác động bởi câu truy vấn
-            count = command.ExecuteNonQuery();
-            return count;
+            return command.ExecuteNonQuery();
+        }
+        public SqlDataAdapter Adapter(string sql)
+        {
+            command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Connection = connection;
+            OpenConnection();
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            return adapter;
+        }
+        public SqlDataAdapter AdapterPars(string sql, SqlParameter[] parameters)
+        {
+            command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Connection = connection;
+            OpenConnection();
+            command.Parameters.AddRange(parameters);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            return adapter;
         }
     }
 }

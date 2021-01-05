@@ -21,7 +21,6 @@ namespace Viewer
             SkinHelper.InitSkinPopupMenu(SkinsLink);
             AddPage(ucHome.Instance);
         }
-        public dtoEmployee UserLogin = new dtoEmployee();
         frmLogin frmLogin = new frmLogin();
         public void AddPage(UserControl userControl)
         {
@@ -33,22 +32,6 @@ namespace Viewer
             userControl.Dock = DockStyle.Fill;
             userControl.BringToFront();
         }
-        public void CallChildForm(object Child)
-        {
-            while (this.fldContainter.Controls.Count > 0)
-            {
-                this.fldContainter.Controls.RemoveAt(0);
-
-            }
-            Form fr = Child as Form;
-
-            fr.TopLevel = false;
-            fr.Dock = DockStyle.Fill;
-
-            this.fldContainter.Controls.Add(fr);
-            this.fldContainter.Tag = fr;
-            fr.Show();
-        }
         private void aceTicket_Click(object sender, EventArgs e)
         {
             AddPage(ucTicket.Instance);
@@ -56,8 +39,24 @@ namespace Viewer
 
         private void aceUsername_Click(object sender, EventArgs e)
         {
-            CallChildForm(frmLogin);
-            aceUsername.Text = UserLogin.FullName;
+            if (frmLogin.flag == false)
+            {
+                this.Hide();
+                frmLogin.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                AddPage(ucEmployeeInformation.Instance);
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(frmLogin.flag == true)
+            {
+                aceUsername.Text = frmLogin.UserLogin.FullName;
+            }
         }
     }
 }

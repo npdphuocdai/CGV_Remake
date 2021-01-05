@@ -20,7 +20,7 @@ namespace Viewer
         {
             InitializeComponent();
         }
-        public dtoEmployee UserLogin = new dtoEmployee();
+        public dtoEmployee UserLogin;
         public bool flag = false;
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Viewer
                 else
                 {
                     flag = true;
-                    foreach(var i in listEmployee)
+                    foreach(dtoEmployee i in listEmployee)
                     {
                         if(Convert.ToInt32(txtUsername.Text) == i.EmployeeID)
                         {
