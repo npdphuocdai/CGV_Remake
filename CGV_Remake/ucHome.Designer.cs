@@ -1,5 +1,5 @@
 ﻿
-namespace CGV_Remake
+namespace Viewer
 {
     partial class ucHome
     {

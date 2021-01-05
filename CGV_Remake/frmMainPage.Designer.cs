@@ -1,5 +1,5 @@
 ﻿
-namespace CGV_Remake
+namespace Viewer
 {
     partial class frmMainPage
     {
@@ -57,10 +57,10 @@ namespace CGV_Remake
             // fldContainter
             // 
             this.fldContainter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fldContainter.Location = new System.Drawing.Point(60, 39);
+            this.fldContainter.Location = new System.Drawing.Point(312, 39);
             this.fldContainter.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.fldContainter.Name = "fldContainter";
-            this.fldContainter.Size = new System.Drawing.Size(1189, 577);
+            this.fldContainter.Size = new System.Drawing.Size(937, 577);
             this.fldContainter.TabIndex = 0;
             // 
             // acrLeft
@@ -75,9 +75,8 @@ namespace CGV_Remake
             this.acrLeft.Location = new System.Drawing.Point(0, 39);
             this.acrLeft.Margin = new System.Windows.Forms.Padding(2, 6, 2, 6);
             this.acrLeft.Name = "acrLeft";
-            this.acrLeft.OptionsMinimizing.State = DevExpress.XtraBars.Navigation.AccordionControlState.Minimized;
             this.acrLeft.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
-            this.acrLeft.Size = new System.Drawing.Size(60, 577);
+            this.acrLeft.Size = new System.Drawing.Size(312, 577);
             this.acrLeft.TabIndex = 1;
             this.acrLeft.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -106,6 +105,7 @@ namespace CGV_Remake
             // 
             this.aceAccount.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceUsername});
+            this.aceAccount.Expanded = true;
             this.aceAccount.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceAccount.ImageOptions.SvgImage")));
             this.aceAccount.Name = "aceAccount";
             this.aceAccount.Text = "Account";
@@ -114,7 +114,8 @@ namespace CGV_Remake
             // 
             this.aceUsername.Name = "aceUsername";
             this.aceUsername.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.aceUsername.Text = "Username";
+            this.aceUsername.Text = "Log In";
+            this.aceUsername.Click += new System.EventHandler(this.aceUsername_Click);
             // 
             // aceServices
             // 

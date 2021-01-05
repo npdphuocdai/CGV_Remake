@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DTO;
 using System.Data;
 using System.IO;
+using System.Drawing;
 
 namespace DAL
 {
@@ -25,7 +26,7 @@ namespace DAL
             try
             {
                 //Tạo câu truy vấn có điều kiện để tìm kiếm user
-                string sql = "SELECT * AS Pass FROM [dbo].[Employee] WHERE [EmployeeID] = @Username AND CONVERT(NVARCHAR, DECRYPTBYPASSPHRASE(N'Team up fight on', [Password])) = @Password";
+                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeID] = @Username AND CONVERT(NVARCHAR, DECRYPTBYPASSPHRASE(N'Team up fight on', [Password])) = @Password";
                 //Truyền giá trị cho 2 tham số
                 SqlParameter parameterUser = new SqlParameter("@Username", SqlDbType.Int);
                 parameterUser.Value = username;
@@ -45,48 +46,6 @@ namespace DAL
             return kq;
         }
         /// <summary>
-        /// Hàm tìm kiếm nhân viên theo mã nhân viên
-        /// </summary>
-        /// <param name="employeeID"></param>
-        /// <returns></returns>
-        public SqlDataReader SearchEmployeeFromID(int employeeID)
-        {
-            SqlDataReader reader = null;
-            try
-            {
-                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeID] = @EmployeeID";
-                SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.NVarChar);
-                parameterID.Value = employeeID;
-                reader = ReadDataPars(sql, new[] { parameterID });
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return reader;
-        }
-        /// <summary>
-        /// Hàm tìm kiếm nhân viên theo tên nhân viên
-        /// </summary>
-        /// <param name="employeeName"></param>
-        /// <returns></returns>
-        public SqlDataReader SearchEmployeeFromName(string employeeName)
-        {
-            SqlDataReader reader = null;
-            try
-            {
-                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeFullName] = @EmployeeName";
-                SqlParameter parameterName = new SqlParameter("@EmployeeName", SqlDbType.NVarChar);
-                parameterName.Value = employeeName;
-                reader = ReadDataPars(sql, new[] { parameterName });
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return reader;
-        }
-        /// <summary>
         /// Hàm thêm mới nhân viên
         /// </summary>
         /// <param name="employee"> Đối tượng nhân viên được thêm mới </param>
@@ -97,7 +56,7 @@ namespace DAL
             try
             {
                 string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay]) VALUES (@Name, @Portrait, @BirthDay, @Address, @PhoneNumber, @Email, @BasicSalary, @JobTitleID, @StartDay)";
-                SqlParameter parameterName = new SqlParameter("@Name",SqlDbType.NVarChar);
+                SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;
                 SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.Image);
                 parameterPotrait.Value = employee.Potrait;
@@ -161,6 +120,35 @@ namespace DAL
                 CloseConnection();
             }
             return count;
+        }
+        public List<dtoEmployee> GetEmployees()
+        {
+            List<dtoEmployee> employees = new List<dtoEmployee>();
+            try
+            {
+                dtoEmployee employee = new dtoEmployee();
+                string sql = "SELECT * FROM [dbo].[Employee]";
+                SqlDataReader reader = ReadData(sql);
+                while (reader.Read())
+                {
+                    employee.EmployeeID = Convert.ToInt32((dtoEmployee)reader[0]);
+                    employee.FullName = ((dtoEmployee)reader[1]).ToString();
+                    employee.Potrait = SettingImage.ImageToByteArray((Image)reader[2]);
+                    employee.BirthDay = Convert.ToDateTime((dtoEmployee)reader[3]);
+                    employee.Address = ((dtoEmployee)reader[4]).ToString();
+                    employee.PhoneNumber = ((dtoEmployee)reader[5]).ToString();
+                    employee.Email = ((dtoEmployee)reader[6]).ToString();
+                    employee.BasicSalary = Convert.ToDecimal((dtoEmployee)reader[7]);
+                    employee.JobTitleID = Convert.ToInt32((dtoEmployee)reader[8]);
+                    employee.StartDay = Convert.ToDateTime((dtoEmployee)reader[9]);
+                    employees.Add(employee);
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return employees;
         }
     }
 }

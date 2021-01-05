@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CGV_Remake
+namespace DAL
 {
     public static class SettingImage
     {

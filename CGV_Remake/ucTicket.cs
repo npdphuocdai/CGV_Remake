@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CGV_Remake
+namespace Viewer
 {
     public partial class ucTicket : DevExpress.XtraEditors.XtraUserControl
     {

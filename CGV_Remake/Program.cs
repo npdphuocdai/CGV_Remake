@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace CGV_Remake
+namespace Viewer
 {
     static class Program
     {
@@ -13,6 +13,7 @@ namespace CGV_Remake
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+        
         static void Main()
         {
             DevExpress.UserSkins.BonusSkins.Register();

@@ -1,0 +1,11 @@
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\bin\Debug\BAL.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\bin\Debug\BAL.pdb
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\bin\Debug\DAL.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\bin\Debug\DTO.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\bin\Debug\DAL.pdb
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\bin\Debug\DTO.pdb
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\obj\Debug\BAL.csprojAssemblyReference.cache
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\obj\Debug\BAL.csproj.CoreCompileInputs.cache
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\obj\Debug\BAL.csproj.CopyComplete
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\obj\Debug\BAL.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\BAL\obj\Debug\BAL.pdb

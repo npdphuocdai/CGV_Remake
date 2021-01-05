@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace BAL
 {
-    class balEmployee
+    public class balEmployee
     {
         public bool Login(int username, string password)
         {
@@ -17,11 +17,11 @@ namespace BAL
             bool kq = dalEmployee.CheckUser(username, password);
             return kq;
         }
-        public SqlDataReader GetUserLogin(int username)
+        public List<dtoEmployee> GetEmployees()
         {
             dalEmployee dalEmployee = new dalEmployee();
-            return dalEmployee.SearchEmployeeFromID(username);
+            List<dtoEmployee> employees = dalEmployee.GetEmployees();
+            return employees;
         }
-
     }
 }

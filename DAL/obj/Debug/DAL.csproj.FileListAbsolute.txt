@@ -1,0 +1,9 @@
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\bin\Debug\DAL.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\bin\Debug\DAL.pdb
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\bin\Debug\DTO.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\bin\Debug\DTO.pdb
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.pdb
