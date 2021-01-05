@@ -12,6 +12,6 @@ namespace DTO
         public string JobTitleName { get; set; }
         public string Major { get; set; }
         public decimal? PositionAllowance { get; set; }
-        public int CoefficientsSalary { get; set; }
+        public double CoefficientsSalary { get; set; }
     }
 }

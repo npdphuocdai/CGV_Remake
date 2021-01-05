@@ -10,5 +10,6 @@ namespace DTO
     {
         public int JobTitleID { get; set; }
         public int PrivilegeID { get; set; }
+        public string Description { get; set; }
     }
 }

@@ -24,7 +24,6 @@ namespace DAL
                     room.RoomID = Convert.ToInt32((dtoShowingSet)reader[0]);
                     room.RoomType = ((dtoShowingSet)reader[1]).ToString();
                     room.NumberOfSeats = Convert.ToInt32((dtoShowingSet)reader[2]);
-
                     rooms.Add(room);
                 }
                 reader.Close();

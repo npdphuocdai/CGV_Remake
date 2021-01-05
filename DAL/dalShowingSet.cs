@@ -28,7 +28,6 @@ namespace DAL
                     set.SetID = Convert.ToInt32((dtoShowingSet)reader[0]);
                     set.StartTime = Convert.ToDateTime((dtoShowingSet)reader[1]);
                     set.EndTime = Convert.ToDateTime((dtoShowingSet)reader[2]);
-
                     sets.Add(set);
                 }
                 reader.Close();
