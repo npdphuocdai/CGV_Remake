@@ -24,7 +24,7 @@ namespace DAL
             try
             {
                 //Tạo câu truy vấn có điều kiện để tìm kiếm user
-                string sql = "SELECT * FROM [Employee] WHERE [EmployeeID] = @Username AND [Password] = @Password";
+                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeID] = @Username AND [Password] = @Password";
                 //Truyền giá trị cho 2 tham số
                 SqlParameter parameterUser = new SqlParameter("@Username", SqlDbType.Int);
                 parameterUser.Value = username;
@@ -53,7 +53,7 @@ namespace DAL
             SqlDataReader reader = null;
             try
             {
-                string sql = "SELECT * FROM [Employee] WHERE [EmployeeID] = @EmployeeID";
+                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeID] = @EmployeeID";
                 SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.NVarChar);
                 parameterID.Value = employeeID;
                 reader = ReadDataPars(sql, new[] { parameterID });
@@ -74,7 +74,7 @@ namespace DAL
             SqlDataReader reader = null;
             try
             {
-                string sql = "SELECT * FROM [Employee] WHERE [EmployeeFullName] = @EmployeeName";
+                string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeFullName] = @EmployeeName";
                 SqlParameter parameterName = new SqlParameter("@EmployeeName", SqlDbType.NVarChar);
                 parameterName.Value = employeeName;
                 reader = ReadDataPars(sql, new[] { parameterName });

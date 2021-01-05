@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class dtoSetDetail
+    public class dtoSetDetail
     {
         public int FilmID { get; set; }
         public int SetID { get; set; }

@@ -43,9 +43,11 @@
   <ItemGroup>
     <Compile Include="dalCustomer.cs" />
     <Compile Include="dalEmployee.cs" />
+    <Compile Include="dalFilm.cs" />
     <Compile Include="dalGenre.cs" />
     <Compile Include="dalJobTitle.cs" />
     <Compile Include="dalPrivilegeDetail.cs" />
+    <Compile Include="dalSetDetail.cs" />
     <Compile Include="dalShowingRoom.cs" />
     <Compile Include="dalShowingSet.cs" />
     <Compile Include="dalSystemPrivilege.cs" />

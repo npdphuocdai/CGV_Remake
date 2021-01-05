@@ -16,7 +16,7 @@ namespace DAL
             bool kq = false;
             try
             {
-                string sql = "SELECT * FROM [PrivilegeDetail] WHERE [JobTitleID] = @JobTitleID AND [PrivilegeID] = @PrivilegeID";
+                string sql = "SELECT * FROM [dbo].[PrivilegeDetail] WHERE [JobTitleID] = @JobTitleID AND [PrivilegeID] = @PrivilegeID";
                 SqlParameter parameterJobTilteID = new SqlParameter("@JobTitleID", SqlDbType.Int);
                 parameterJobTilteID.Value = jobtitleid;
                 SqlParameter parameterPrivilegeID = new SqlParameter("@PrivilegeID", SqlDbType.Int);
