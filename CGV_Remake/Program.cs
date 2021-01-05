@@ -15,6 +15,9 @@ namespace CGV_Remake
         [STAThread]
         static void Main()
         {
+            DevExpress.UserSkins.BonusSkins.Register();
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "The Bezier";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMainPage());
