@@ -51,6 +51,7 @@
     <Compile Include="dalShowingRoom.cs" />
     <Compile Include="dalShowingSet.cs" />
     <Compile Include="dalSystemPrivilege.cs" />
+    <Compile Include="dalTicket.cs" />
     <Compile Include="DatabaseServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
