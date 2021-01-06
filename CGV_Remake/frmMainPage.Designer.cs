@@ -95,12 +95,14 @@ namespace Viewer
             this.aceButtonHome.Name = "aceButtonHome";
             this.aceButtonHome.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceButtonHome.Text = "Home";
+            this.aceButtonHome.Click += new System.EventHandler(this.aceButtonHome_Click);
             // 
             // aceLogOut
             // 
             this.aceLogOut.Name = "aceLogOut";
             this.aceLogOut.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceLogOut.Text = "Log Out";
+            this.aceLogOut.Click += new System.EventHandler(this.aceLogOut_Click);
             // 
             // aceAccount
             // 

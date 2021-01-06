@@ -42,5 +42,19 @@ namespace Viewer
                 return _instance;
             }
         }
+        private void ucEmployeeInformation_Load(object sender, EventArgs e)
+        {
+            txtEmployeeID.Text = frmLogin.UserLogin.EmployeeID.ToString();
+            txtGender.Text = frmLogin.UserLogin.Gender;
+            txtFullName.Text = frmLogin.UserLogin.FullName;
+            txtBirthDay.Text = frmLogin.UserLogin.BirthDay.ToString();
+            txtAddress.Text = frmLogin.UserLogin.Address;
+            txtPhoneNumber.Text = frmLogin.UserLogin.PhoneNumber;
+            txtEmail.Text = frmLogin.UserLogin.Email;
+            txtStartDay.Text = frmLogin.UserLogin.StartDay.ToString();
+            txtJobTitle.Text = frmLogin.UserLogin.JobTitleID.ToString();
+            txtBasicSalary.Text = frmLogin.UserLogin.BasicSalary.ToString();
+
+        }
     }
 }

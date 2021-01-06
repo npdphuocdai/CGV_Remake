@@ -37,13 +37,13 @@ namespace Viewer
             this.txtMajor = new DevExpress.XtraEditors.TextEdit();
             this.txtNote = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layNote = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layMajor = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layPositionAllow = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layCoeSalary = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layJobTitle = new DevExpress.XtraLayout.LayoutControlItem();
             this.layStartDay = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layJobTitle = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layCoeSalary = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layPositionAllow = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layMajor = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layNote = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutTong = new DevExpress.XtraLayout.LayoutControl();
             this.grpOthers = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
@@ -98,13 +98,13 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.txtMajor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layNote)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layMajor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layPositionAllow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layCoeSalary)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layJobTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layStartDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layJobTitle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layCoeSalary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layPositionAllow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layMajor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layNote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutTong)).BeginInit();
             this.layoutTong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpOthers)).BeginInit();
@@ -237,55 +237,15 @@ namespace Viewer
             this.layoutControlGroup1.Size = new System.Drawing.Size(742, 326);
             this.layoutControlGroup1.TextVisible = false;
             // 
-            // layNote
+            // layStartDay
             // 
-            this.layNote.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layNote.AppearanceItemCaption.Options.UseFont = true;
-            this.layNote.Location = new System.Drawing.Point(0, 0);
-            this.layNote.Name = "layNote";
-            this.layNote.Size = new System.Drawing.Size(722, 306);
-            this.layNote.Text = "Note";
-            this.layNote.TextSize = new System.Drawing.Size(252, 32);
-            // 
-            // layMajor
-            // 
-            this.layMajor.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layMajor.AppearanceItemCaption.Options.UseFont = true;
-            this.layMajor.Location = new System.Drawing.Point(0, 0);
-            this.layMajor.Name = "layMajor";
-            this.layMajor.Size = new System.Drawing.Size(722, 252);
-            this.layMajor.Text = "Major";
-            this.layMajor.TextSize = new System.Drawing.Size(252, 32);
-            // 
-            // layPositionAllow
-            // 
-            this.layPositionAllow.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layPositionAllow.AppearanceItemCaption.Options.UseFont = true;
-            this.layPositionAllow.Location = new System.Drawing.Point(0, 0);
-            this.layPositionAllow.Name = "layPositionAllow";
-            this.layPositionAllow.Size = new System.Drawing.Size(722, 210);
-            this.layPositionAllow.Text = "Position Allowance";
-            this.layPositionAllow.TextSize = new System.Drawing.Size(252, 32);
-            // 
-            // layCoeSalary
-            // 
-            this.layCoeSalary.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layCoeSalary.AppearanceItemCaption.Options.UseFont = true;
-            this.layCoeSalary.Location = new System.Drawing.Point(0, 0);
-            this.layCoeSalary.Name = "layCoeSalary";
-            this.layCoeSalary.Size = new System.Drawing.Size(722, 168);
-            this.layCoeSalary.Text = "Coefficients Salary";
-            this.layCoeSalary.TextSize = new System.Drawing.Size(252, 32);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(722, 126);
-            this.layoutControlItem4.Text = "Basic Salary";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(252, 32);
+            this.layStartDay.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layStartDay.AppearanceItemCaption.Options.UseFont = true;
+            this.layStartDay.Location = new System.Drawing.Point(0, 0);
+            this.layStartDay.Name = "layStartDay";
+            this.layStartDay.Size = new System.Drawing.Size(722, 42);
+            this.layStartDay.Text = "Start Day";
+            this.layStartDay.TextSize = new System.Drawing.Size(252, 32);
             // 
             // layJobTitle
             // 
@@ -297,15 +257,55 @@ namespace Viewer
             this.layJobTitle.Text = "Job Title";
             this.layJobTitle.TextSize = new System.Drawing.Size(252, 32);
             // 
-            // layStartDay
+            // layoutControlItem4
             // 
-            this.layStartDay.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layStartDay.AppearanceItemCaption.Options.UseFont = true;
-            this.layStartDay.Location = new System.Drawing.Point(0, 0);
-            this.layStartDay.Name = "layStartDay";
-            this.layStartDay.Size = new System.Drawing.Size(722, 42);
-            this.layStartDay.Text = "Start Day";
-            this.layStartDay.TextSize = new System.Drawing.Size(252, 32);
+            this.layoutControlItem4.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layoutControlItem4.AppearanceItemCaption.Options.UseFont = true;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(722, 126);
+            this.layoutControlItem4.Text = "Basic Salary";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(252, 32);
+            // 
+            // layCoeSalary
+            // 
+            this.layCoeSalary.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layCoeSalary.AppearanceItemCaption.Options.UseFont = true;
+            this.layCoeSalary.Location = new System.Drawing.Point(0, 0);
+            this.layCoeSalary.Name = "layCoeSalary";
+            this.layCoeSalary.Size = new System.Drawing.Size(722, 168);
+            this.layCoeSalary.Text = "Coefficients Salary";
+            this.layCoeSalary.TextSize = new System.Drawing.Size(252, 32);
+            // 
+            // layPositionAllow
+            // 
+            this.layPositionAllow.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layPositionAllow.AppearanceItemCaption.Options.UseFont = true;
+            this.layPositionAllow.Location = new System.Drawing.Point(0, 0);
+            this.layPositionAllow.Name = "layPositionAllow";
+            this.layPositionAllow.Size = new System.Drawing.Size(722, 210);
+            this.layPositionAllow.Text = "Position Allowance";
+            this.layPositionAllow.TextSize = new System.Drawing.Size(252, 32);
+            // 
+            // layMajor
+            // 
+            this.layMajor.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layMajor.AppearanceItemCaption.Options.UseFont = true;
+            this.layMajor.Location = new System.Drawing.Point(0, 0);
+            this.layMajor.Name = "layMajor";
+            this.layMajor.Size = new System.Drawing.Size(722, 252);
+            this.layMajor.Text = "Major";
+            this.layMajor.TextSize = new System.Drawing.Size(252, 32);
+            // 
+            // layNote
+            // 
+            this.layNote.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layNote.AppearanceItemCaption.Options.UseFont = true;
+            this.layNote.Location = new System.Drawing.Point(0, 0);
+            this.layNote.Name = "layNote";
+            this.layNote.Size = new System.Drawing.Size(722, 306);
+            this.layNote.Text = "Note";
+            this.layNote.TextSize = new System.Drawing.Size(252, 32);
             // 
             // layoutTong
             // 
@@ -377,6 +377,7 @@ namespace Viewer
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit4.Properties.Appearance.Options.UseFont = true;
+            this.textEdit4.Properties.ReadOnly = true;
             this.textEdit4.Size = new System.Drawing.Size(453, 38);
             this.textEdit4.StyleController = this.layoutControl2;
             this.textEdit4.TabIndex = 8;
@@ -387,6 +388,7 @@ namespace Viewer
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit5.Properties.Appearance.Options.UseFont = true;
+            this.textEdit5.Properties.ReadOnly = true;
             this.textEdit5.Size = new System.Drawing.Size(453, 38);
             this.textEdit5.StyleController = this.layoutControl2;
             this.textEdit5.TabIndex = 7;
@@ -397,6 +399,7 @@ namespace Viewer
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit6.Properties.Appearance.Options.UseFont = true;
+            this.textEdit6.Properties.ReadOnly = true;
             this.textEdit6.Size = new System.Drawing.Size(453, 38);
             this.textEdit6.StyleController = this.layoutControl2;
             this.textEdit6.TabIndex = 6;
@@ -407,6 +410,7 @@ namespace Viewer
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit7.Properties.Appearance.Options.UseFont = true;
+            this.textEdit7.Properties.ReadOnly = true;
             this.textEdit7.Size = new System.Drawing.Size(453, 38);
             this.textEdit7.StyleController = this.layoutControl2;
             this.textEdit7.TabIndex = 5;
@@ -417,6 +421,7 @@ namespace Viewer
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit8.Properties.Appearance.Options.UseFont = true;
+            this.textEdit8.Properties.ReadOnly = true;
             this.textEdit8.Size = new System.Drawing.Size(453, 38);
             this.textEdit8.StyleController = this.layoutControl2;
             this.textEdit8.TabIndex = 4;
@@ -576,17 +581,18 @@ namespace Viewer
             // 
             // txtGender
             // 
-            this.txtGender.Location = new System.Drawing.Point(214, 138);
+            this.txtGender.Location = new System.Drawing.Point(214, 54);
             this.txtGender.Name = "txtGender";
             this.txtGender.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Properties.Appearance.Options.UseFont = true;
+            this.txtGender.Properties.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(506, 38);
             this.txtGender.StyleController = this.layoutControl1;
             this.txtGender.TabIndex = 14;
             // 
             // txtBirthDay
             // 
-            this.txtBirthDay.Location = new System.Drawing.Point(214, 96);
+            this.txtBirthDay.Location = new System.Drawing.Point(214, 138);
             this.txtBirthDay.Name = "txtBirthDay";
             this.txtBirthDay.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirthDay.Properties.Appearance.Options.UseFont = true;
@@ -596,17 +602,18 @@ namespace Viewer
             // 
             // txtEmployeeID
             // 
-            this.txtEmployeeID.Location = new System.Drawing.Point(214, 54);
+            this.txtEmployeeID.Location = new System.Drawing.Point(214, 12);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmployeeID.Properties.Appearance.Options.UseFont = true;
+            this.txtEmployeeID.Properties.ReadOnly = true;
             this.txtEmployeeID.Size = new System.Drawing.Size(506, 38);
             this.txtEmployeeID.StyleController = this.layoutControl1;
             this.txtEmployeeID.TabIndex = 12;
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(214, 12);
+            this.txtFullName.Location = new System.Drawing.Point(214, 96);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.Properties.Appearance.Options.UseFont = true;
@@ -620,12 +627,12 @@ namespace Viewer
             this.Root.GroupBordersVisible = false;
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layFullName,
-            this.layEmployeeID,
             this.layBirthDay,
-            this.layGender,
             this.layAddress,
             this.layPhoneNumber,
-            this.layEmail});
+            this.layEmail,
+            this.layEmployeeID,
+            this.layGender});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(732, 315);
             this.Root.TextVisible = false;
@@ -635,7 +642,7 @@ namespace Viewer
             this.layFullName.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layFullName.AppearanceItemCaption.Options.UseFont = true;
             this.layFullName.Control = this.txtFullName;
-            this.layFullName.Location = new System.Drawing.Point(0, 0);
+            this.layFullName.Location = new System.Drawing.Point(0, 84);
             this.layFullName.Name = "layFullName";
             this.layFullName.Size = new System.Drawing.Size(712, 42);
             this.layFullName.Text = "FullName";
@@ -646,7 +653,7 @@ namespace Viewer
             this.layEmployeeID.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layEmployeeID.AppearanceItemCaption.Options.UseFont = true;
             this.layEmployeeID.Control = this.txtEmployeeID;
-            this.layEmployeeID.Location = new System.Drawing.Point(0, 42);
+            this.layEmployeeID.Location = new System.Drawing.Point(0, 0);
             this.layEmployeeID.Name = "layEmployeeID";
             this.layEmployeeID.Size = new System.Drawing.Size(712, 42);
             this.layEmployeeID.Text = "Employee ID";
@@ -657,7 +664,7 @@ namespace Viewer
             this.layBirthDay.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layBirthDay.AppearanceItemCaption.Options.UseFont = true;
             this.layBirthDay.Control = this.txtBirthDay;
-            this.layBirthDay.Location = new System.Drawing.Point(0, 84);
+            this.layBirthDay.Location = new System.Drawing.Point(0, 126);
             this.layBirthDay.Name = "layBirthDay";
             this.layBirthDay.Size = new System.Drawing.Size(712, 42);
             this.layBirthDay.Text = "Birth Day";
@@ -668,7 +675,7 @@ namespace Viewer
             this.layGender.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layGender.AppearanceItemCaption.Options.UseFont = true;
             this.layGender.Control = this.txtGender;
-            this.layGender.Location = new System.Drawing.Point(0, 126);
+            this.layGender.Location = new System.Drawing.Point(0, 42);
             this.layGender.Name = "layGender";
             this.layGender.Size = new System.Drawing.Size(712, 42);
             this.layGender.Text = "Gender";
@@ -828,6 +835,7 @@ namespace Viewer
             this.Controls.Add(this.layoutTong);
             this.Name = "ucEmployeeInformation";
             this.Size = new System.Drawing.Size(1500, 670);
+            this.Load += new System.EventHandler(this.ucEmployeeInformation_Load);
             this.Resize += new System.EventHandler(this.ucEmployeeInformation_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDay.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtJobTitle.Properties)).EndInit();
@@ -837,13 +845,13 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.txtMajor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNote.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layNote)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layMajor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layPositionAllow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layCoeSalary)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layJobTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layStartDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layJobTitle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layCoeSalary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layPositionAllow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layMajor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layNote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutTong)).EndInit();
             this.layoutTong.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpOthers)).EndInit();

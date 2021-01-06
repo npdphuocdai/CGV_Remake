@@ -94,6 +94,7 @@ namespace Viewer
             // 
             // islCenter
             // 
+            this.islCenter.AutoSlide = DevExpress.XtraEditors.Controls.AutoSlide.Forward;
             this.islCenter.CurrentImageIndex = 0;
             this.islCenter.Images.Add(((System.Drawing.Image)(resources.GetObject("islCenter.Images"))));
             this.islCenter.Images.Add(((System.Drawing.Image)(resources.GetObject("islCenter.Images1"))));
