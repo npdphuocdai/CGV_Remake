@@ -9,7 +9,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class dalCustomer : DatabaseServices
+    class dalCustomer : DatabaseServices
     {
         /// <summary>
         /// Hàm tìm kiếm khách hàng theo mã khách hàng

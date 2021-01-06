@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class dalShowingRoom : DatabaseServices
+    class dalShowingRoom : DatabaseServices
     {
         public List<dtoShowingRoom> GetListRooms()
         {

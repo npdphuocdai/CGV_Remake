@@ -9,7 +9,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class dalSetDetail : DatabaseServices
+    class dalSetDetail : DatabaseServices
     {
         public List<dtoSetDetail> GetSetDetails()
         {

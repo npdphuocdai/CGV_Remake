@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class dalFilm : DatabaseServices
+    class dalFilm : DatabaseServices
     {
         public List<dtoFilm> GetFilms()
         {

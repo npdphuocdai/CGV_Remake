@@ -9,7 +9,7 @@ using System.Data;
 
 namespace DAL
 {
-    public class dalGenre : DatabaseServices
+    class dalGenre : DatabaseServices
     {
         /// <summary>
         /// Hàm lấy list thể loại từ database

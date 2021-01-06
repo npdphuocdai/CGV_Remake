@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class dalJobTitle : DatabaseServices
+    class dalJobTitle : DatabaseServices
     {
         /// <summary>
         /// Hàm lấy danh sách chức vụ

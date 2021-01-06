@@ -9,7 +9,7 @@ using DTO;
 
 namespace DAL
 {
-    public class dalSystemPrivilege : DatabaseServices
+    class dalSystemPrivilege : DatabaseServices
     {
         public List<dtoSystemPrivilege> GetPrivileges()
         {

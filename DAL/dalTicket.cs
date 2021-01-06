@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    public class dalTicket : DatabaseServices
+    class dalTicket : DatabaseServices
     {
         public List<dtoTicket> GetTickets()
         {
