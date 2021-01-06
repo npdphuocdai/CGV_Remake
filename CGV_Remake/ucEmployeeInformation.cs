@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Viewer
         public ucEmployeeInformation()
         {
             InitializeComponent();
+            imgInfor.Images.Add(SettingImage.ByteArrayToImage(frmLogin.UserLogin.Potrait));
             layPotrait.Height = Convert.ToInt32(layoutTong.Height * 0.54);
             grpInfor.Height = Convert.ToInt32(layoutTong.Height * 0.35);
             grpOthers.Height = Convert.ToInt32(layoutTong.Height * 0.35);
@@ -51,10 +53,10 @@ namespace Viewer
             txtAddress.Text = frmLogin.UserLogin.Address;
             txtPhoneNumber.Text = frmLogin.UserLogin.PhoneNumber;
             txtEmail.Text = frmLogin.UserLogin.Email;
-            txtStartDay.Text = frmLogin.UserLogin.StartDay.ToString();
-            txtJobTitle.Text = frmLogin.UserLogin.JobTitleID.ToString();
-            txtBasicSalary.Text = frmLogin.UserLogin.BasicSalary.ToString();
-
+            txtStartDay1.Text = frmLogin.UserLogin.StartDay.ToString();
+            txtJobTitle1.Text = frmLogin.UserLogin.JobTitleID.ToString();
+            txtBasicSalary1.Text = frmLogin.UserLogin.BasicSalary.ToString();
+            imgInfor.Images.Add(SettingImage.ByteArrayToImage(frmLogin.UserLogin.Potrait));
         }
     }
 }

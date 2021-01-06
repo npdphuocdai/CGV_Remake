@@ -47,13 +47,13 @@ namespace Viewer
             this.layoutTong = new DevExpress.XtraLayout.LayoutControl();
             this.grpOthers = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNote1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtMajor1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPosi = new DevExpress.XtraEditors.TextEdit();
+            this.txtCoe = new DevExpress.XtraEditors.TextEdit();
+            this.txtBasicSalary1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtJobTitle1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtStartDay1 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -111,13 +111,13 @@ namespace Viewer
             this.grpOthers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMajor1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPosi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCoe.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasicSalary1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJobTitle1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartDay1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -336,13 +336,13 @@ namespace Viewer
             // 
             // layoutControl2
             // 
-            this.layoutControl2.Controls.Add(this.textEdit2);
-            this.layoutControl2.Controls.Add(this.textEdit3);
-            this.layoutControl2.Controls.Add(this.textEdit4);
-            this.layoutControl2.Controls.Add(this.textEdit5);
-            this.layoutControl2.Controls.Add(this.textEdit6);
-            this.layoutControl2.Controls.Add(this.textEdit7);
-            this.layoutControl2.Controls.Add(this.textEdit8);
+            this.layoutControl2.Controls.Add(this.txtNote1);
+            this.layoutControl2.Controls.Add(this.txtMajor1);
+            this.layoutControl2.Controls.Add(this.txtPosi);
+            this.layoutControl2.Controls.Add(this.txtCoe);
+            this.layoutControl2.Controls.Add(this.txtBasicSalary1);
+            this.layoutControl2.Controls.Add(this.txtJobTitle1);
+            this.layoutControl2.Controls.Add(this.txtStartDay1);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl2.Location = new System.Drawing.Point(2, 45);
             this.layoutControl2.Name = "layoutControl2";
@@ -351,80 +351,80 @@ namespace Viewer
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // textEdit2
+            // txtNote1
             // 
-            this.textEdit2.Location = new System.Drawing.Point(267, 264);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(453, 38);
-            this.textEdit2.StyleController = this.layoutControl2;
-            this.textEdit2.TabIndex = 10;
+            this.txtNote1.Location = new System.Drawing.Point(267, 264);
+            this.txtNote1.Name = "txtNote1";
+            this.txtNote1.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote1.Properties.Appearance.Options.UseFont = true;
+            this.txtNote1.Size = new System.Drawing.Size(453, 38);
+            this.txtNote1.StyleController = this.layoutControl2;
+            this.txtNote1.TabIndex = 10;
             // 
-            // textEdit3
+            // txtMajor1
             // 
-            this.textEdit3.Location = new System.Drawing.Point(267, 222);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(453, 38);
-            this.textEdit3.StyleController = this.layoutControl2;
-            this.textEdit3.TabIndex = 9;
+            this.txtMajor1.Location = new System.Drawing.Point(267, 222);
+            this.txtMajor1.Name = "txtMajor1";
+            this.txtMajor1.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMajor1.Properties.Appearance.Options.UseFont = true;
+            this.txtMajor1.Size = new System.Drawing.Size(453, 38);
+            this.txtMajor1.StyleController = this.layoutControl2;
+            this.txtMajor1.TabIndex = 9;
             // 
-            // textEdit4
+            // txtPosi
             // 
-            this.textEdit4.Location = new System.Drawing.Point(267, 180);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Properties.ReadOnly = true;
-            this.textEdit4.Size = new System.Drawing.Size(453, 38);
-            this.textEdit4.StyleController = this.layoutControl2;
-            this.textEdit4.TabIndex = 8;
+            this.txtPosi.Location = new System.Drawing.Point(267, 180);
+            this.txtPosi.Name = "txtPosi";
+            this.txtPosi.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPosi.Properties.Appearance.Options.UseFont = true;
+            this.txtPosi.Properties.ReadOnly = true;
+            this.txtPosi.Size = new System.Drawing.Size(453, 38);
+            this.txtPosi.StyleController = this.layoutControl2;
+            this.txtPosi.TabIndex = 8;
             // 
-            // textEdit5
+            // txtCoe
             // 
-            this.textEdit5.Location = new System.Drawing.Point(267, 138);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Properties.ReadOnly = true;
-            this.textEdit5.Size = new System.Drawing.Size(453, 38);
-            this.textEdit5.StyleController = this.layoutControl2;
-            this.textEdit5.TabIndex = 7;
+            this.txtCoe.Location = new System.Drawing.Point(267, 138);
+            this.txtCoe.Name = "txtCoe";
+            this.txtCoe.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCoe.Properties.Appearance.Options.UseFont = true;
+            this.txtCoe.Properties.ReadOnly = true;
+            this.txtCoe.Size = new System.Drawing.Size(453, 38);
+            this.txtCoe.StyleController = this.layoutControl2;
+            this.txtCoe.TabIndex = 7;
             // 
-            // textEdit6
+            // txtBasicSalary1
             // 
-            this.textEdit6.Location = new System.Drawing.Point(267, 96);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Properties.ReadOnly = true;
-            this.textEdit6.Size = new System.Drawing.Size(453, 38);
-            this.textEdit6.StyleController = this.layoutControl2;
-            this.textEdit6.TabIndex = 6;
+            this.txtBasicSalary1.Location = new System.Drawing.Point(267, 96);
+            this.txtBasicSalary1.Name = "txtBasicSalary1";
+            this.txtBasicSalary1.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBasicSalary1.Properties.Appearance.Options.UseFont = true;
+            this.txtBasicSalary1.Properties.ReadOnly = true;
+            this.txtBasicSalary1.Size = new System.Drawing.Size(453, 38);
+            this.txtBasicSalary1.StyleController = this.layoutControl2;
+            this.txtBasicSalary1.TabIndex = 6;
             // 
-            // textEdit7
+            // txtJobTitle1
             // 
-            this.textEdit7.Location = new System.Drawing.Point(267, 54);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Properties.ReadOnly = true;
-            this.textEdit7.Size = new System.Drawing.Size(453, 38);
-            this.textEdit7.StyleController = this.layoutControl2;
-            this.textEdit7.TabIndex = 5;
+            this.txtJobTitle1.Location = new System.Drawing.Point(267, 54);
+            this.txtJobTitle1.Name = "txtJobTitle1";
+            this.txtJobTitle1.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJobTitle1.Properties.Appearance.Options.UseFont = true;
+            this.txtJobTitle1.Properties.ReadOnly = true;
+            this.txtJobTitle1.Size = new System.Drawing.Size(453, 38);
+            this.txtJobTitle1.StyleController = this.layoutControl2;
+            this.txtJobTitle1.TabIndex = 5;
             // 
-            // textEdit8
+            // txtStartDay1
             // 
-            this.textEdit8.Location = new System.Drawing.Point(267, 12);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.textEdit8.Properties.ReadOnly = true;
-            this.textEdit8.Size = new System.Drawing.Size(453, 38);
-            this.textEdit8.StyleController = this.layoutControl2;
-            this.textEdit8.TabIndex = 4;
+            this.txtStartDay1.Location = new System.Drawing.Point(267, 12);
+            this.txtStartDay1.Name = "txtStartDay1";
+            this.txtStartDay1.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStartDay1.Properties.Appearance.Options.UseFont = true;
+            this.txtStartDay1.Properties.ReadOnly = true;
+            this.txtStartDay1.Size = new System.Drawing.Size(453, 38);
+            this.txtStartDay1.StyleController = this.layoutControl2;
+            this.txtStartDay1.TabIndex = 4;
             // 
             // layoutControlGroup2
             // 
@@ -446,7 +446,7 @@ namespace Viewer
             // 
             this.layoutControlItem1.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem1.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem1.Control = this.textEdit8;
+            this.layoutControlItem1.Control = this.txtStartDay1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layStartDay";
             this.layoutControlItem1.Size = new System.Drawing.Size(712, 42);
@@ -457,7 +457,7 @@ namespace Viewer
             // 
             this.layoutControlItem2.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem2.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem2.Control = this.textEdit7;
+            this.layoutControlItem2.Control = this.txtJobTitle1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 42);
             this.layoutControlItem2.Name = "layJobTitle";
             this.layoutControlItem2.Size = new System.Drawing.Size(712, 42);
@@ -468,7 +468,7 @@ namespace Viewer
             // 
             this.layoutControlItem3.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem3.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem3.Control = this.textEdit6;
+            this.layoutControlItem3.Control = this.txtBasicSalary1;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 84);
             this.layoutControlItem3.Name = "layoutControlItem4";
             this.layoutControlItem3.Size = new System.Drawing.Size(712, 42);
@@ -479,7 +479,7 @@ namespace Viewer
             // 
             this.layoutControlItem5.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem5.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem5.Control = this.textEdit5;
+            this.layoutControlItem5.Control = this.txtCoe;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 126);
             this.layoutControlItem5.Name = "layCoeSalary";
             this.layoutControlItem5.Size = new System.Drawing.Size(712, 42);
@@ -490,7 +490,7 @@ namespace Viewer
             // 
             this.layoutControlItem6.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem6.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem6.Control = this.textEdit4;
+            this.layoutControlItem6.Control = this.txtPosi;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem6.Name = "layPositionAllow";
             this.layoutControlItem6.Size = new System.Drawing.Size(712, 42);
@@ -501,7 +501,7 @@ namespace Viewer
             // 
             this.layoutControlItem7.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem7.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem7.Control = this.textEdit3;
+            this.layoutControlItem7.Control = this.txtMajor1;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 210);
             this.layoutControlItem7.Name = "layMajor";
             this.layoutControlItem7.Size = new System.Drawing.Size(712, 42);
@@ -512,7 +512,7 @@ namespace Viewer
             // 
             this.layoutControlItem8.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.layoutControlItem8.AppearanceItemCaption.Options.UseFont = true;
-            this.layoutControlItem8.Control = this.textEdit2;
+            this.layoutControlItem8.Control = this.txtNote1;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 252);
             this.layoutControlItem8.Name = "layNote";
             this.layoutControlItem8.Size = new System.Drawing.Size(712, 43);
@@ -858,13 +858,13 @@ namespace Viewer
             this.grpOthers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNote1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMajor1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPosi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCoe.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBasicSalary1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtJobTitle1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStartDay1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -926,13 +926,13 @@ namespace Viewer
         private DevExpress.XtraLayout.LayoutControl layoutTong;
         private DevExpress.XtraEditors.GroupControl grpOthers;
         private DevExpress.XtraLayout.LayoutControl layoutControl2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit txtNote1;
+        private DevExpress.XtraEditors.TextEdit txtMajor1;
+        private DevExpress.XtraEditors.TextEdit txtPosi;
+        private DevExpress.XtraEditors.TextEdit txtCoe;
+        private DevExpress.XtraEditors.TextEdit txtBasicSalary1;
+        private DevExpress.XtraEditors.TextEdit txtJobTitle1;
+        private DevExpress.XtraEditors.TextEdit txtStartDay1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
