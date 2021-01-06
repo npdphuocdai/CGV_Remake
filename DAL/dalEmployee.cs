@@ -55,13 +55,15 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Gender]) VALUES (@Name, @Portrait, @BirthDay, @Address, @PhoneNumber, @Email, @BasicSalary, @JobTitleID, @StartDay, @Gender)";
+                string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Password], [Gender]) SELECT @Employee, BulkColumn, @Birthday, @Address, @PhoneNumber, @Email, @BasicSalary, @JobtitleID, @StartDay, ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password),@Gender From Openrowset(Bulk @Potrait, Single_Blob) as Picture";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;
-                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.Image);
+                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.VarBinary);
                 parameterPotrait.Value = employee.Potrait;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
                 parameterBirthDay.Value = employee.BirthDay;
+                SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
+                parameterGender.Value = employee.Gender;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
                 parameterAddress.Value = employee.Address;
                 SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.NVarChar);
@@ -74,9 +76,9 @@ namespace DAL
                 parameterJobTitleID.Value = employee.JobTitleID;
                 SqlParameter parameterStartDay = new SqlParameter("@StartDay", SqlDbType.DateTime);
                 parameterStartDay.Value = employee.StartDay;
-                SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
-                parameterGender.Value = employee.Gender;
-                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay, parameterGender });
+                SqlParameter parameterPassword = new SqlParameter("@Password", SqlDbType.NVarChar);
+                parameterPassword.Value = employee.Password;
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterGender, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay, parameterPassword});
             }
             finally
             {
