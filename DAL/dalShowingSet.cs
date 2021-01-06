@@ -9,7 +9,7 @@ using System.Data;
 
 namespace DAL
 {
-    class dalShowingSet : DatabaseServices
+    public class dalShowingSet : DatabaseServices
     {
         /// <summary>
         /// Hàm lấy list dữ liệu dạng ShowingSet từ Database

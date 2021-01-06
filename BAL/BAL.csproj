@@ -43,7 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="balCustomer.cs" />
     <Compile Include="balEmployee.cs" />
+    <Compile Include="balFilm.cs" />
+    <Compile Include="balGenre.cs" />
+    <Compile Include="balJobTitle.cs" />
+    <Compile Include="balPrivilegeDetail.cs" />
+    <Compile Include="balSetDetail.cs" />
+    <Compile Include="balShowingRoom.cs" />
+    <Compile Include="balShowingSet.cs" />
+    <Compile Include="balSystemPrivilege.cs" />
+    <Compile Include="balTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
