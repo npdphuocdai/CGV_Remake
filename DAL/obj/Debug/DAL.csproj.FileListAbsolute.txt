@@ -7,3 +7,12 @@ C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csproj.CoreCompileI
 C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.dll
 C:\Users\npdph\Documents\GitHub\CGV_Remake\DAL\obj\Debug\DAL.pdb
+D:\CNPM\CGV_Remake\DAL\bin\Debug\DAL.dll
+D:\CNPM\CGV_Remake\DAL\bin\Debug\DAL.pdb
+D:\CNPM\CGV_Remake\DAL\bin\Debug\DTO.dll
+D:\CNPM\CGV_Remake\DAL\bin\Debug\DTO.pdb
+D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.dll
+D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.pdb
