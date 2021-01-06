@@ -20,7 +20,7 @@ namespace Viewer
         {
             InitializeComponent();
         }
-        public dtoEmployee UserLogin;
+        public static dtoEmployee UserLogin;
         public bool flag = false;
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -46,11 +46,87 @@ namespace Viewer
                             UserLogin = i;
                         }
                     }
+                    txtPass.Text = "";
                     XtraMessageBox.Show("Đăng nhập thành công!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                 }
             }
             catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            balEmployee balEmployee = new balEmployee();
+            List<dtoEmployee> listEmployee = balEmployee.GetEmployees();
+            try
+            {
+                if (e.KeyChar == (char)13)
+                {
+                    if (txtUsername.Text == "" || txtPass.Text == "")
+                    {
+                        throw new Exception("Vui lòng nhập đầy đủ thông tin đăng nhập!");
+                    }
+                    else if (!balEmployee.Login(Convert.ToInt32(txtUsername.Text), txtPass.Text))
+                    {
+                        throw new Exception("Sai thông tin đăng nhập, vui lòng nhập lại!");
+                    }
+                    else
+                    {
+                        flag = true;
+                        foreach (dtoEmployee i in listEmployee)
+                        {
+                            if (Convert.ToInt32(txtUsername.Text) == i.EmployeeID)
+                            {
+                                UserLogin = i;
+                            }
+                        }
+                        txtPass.Text = "";
+                        XtraMessageBox.Show("Đăng nhập thành công!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            balEmployee balEmployee = new balEmployee();
+            List<dtoEmployee> listEmployee = balEmployee.GetEmployees();
+            try
+            {
+                if (e.KeyChar == (char)13)
+                {
+                    if (txtUsername.Text == "" || txtPass.Text == "")
+                    {
+                        throw new Exception("Vui lòng nhập đầy đủ thông tin đăng nhập!");
+                    }
+                    else if (!balEmployee.Login(Convert.ToInt32(txtUsername.Text), txtPass.Text))
+                    {
+                        throw new Exception("Sai thông tin đăng nhập, vui lòng nhập lại!");
+                    }
+                    else
+                    {
+                        flag = true;
+                        foreach (dtoEmployee i in listEmployee)
+                        {
+                            if (Convert.ToInt32(txtUsername.Text) == i.EmployeeID)
+                            {
+                                UserLogin = i;
+                            }
+                        }
+                        txtPass.Text = "";
+                        XtraMessageBox.Show("Đăng nhập thành công!", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                    }
+                }
+            }
+            catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

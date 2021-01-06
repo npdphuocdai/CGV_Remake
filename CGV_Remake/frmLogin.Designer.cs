@@ -95,6 +95,7 @@ namespace Viewer
             this.txtPass.Size = new System.Drawing.Size(373, 34);
             this.txtPass.StyleController = this.layFormLogin;
             this.txtPass.TabIndex = 5;
+            this.txtPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPass_KeyPress);
             // 
             // txtUsername
             // 
@@ -106,6 +107,7 @@ namespace Viewer
             this.txtUsername.Size = new System.Drawing.Size(373, 34);
             this.txtUsername.StyleController = this.layFormLogin;
             this.txtUsername.TabIndex = 4;
+            this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
             // 
             // Root
             // 

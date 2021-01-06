@@ -10,6 +10,9 @@ using System.Text;
 using System.Windows.Forms;
 using DTO;
 using BAL;
+using DevExpress.XtraEditors;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace Viewer
 {
@@ -55,7 +58,30 @@ namespace Viewer
         {
             if(frmLogin.flag == true)
             {
+                aceLogOut.Enabled = true;
                 aceUsername.Text = frmLogin.UserLogin.FullName;
+            }
+            else
+            {
+                aceLogOut.Enabled = false;
+            }
+        }
+
+        private void aceButtonHome_Click(object sender, EventArgs e)
+        {
+                AddPage(ucHome.Instance);
+        }
+
+        private void aceLogOut_Click(object sender, EventArgs e)
+        {
+            if(frmLogin.flag == true)
+            {
+                frmLogin.flag = false;
+                aceUsername.Text = "Log In";
+                frmLogin.UserLogin = null;
+                this.Hide();
+                frmLogin.ShowDialog();
+                this.Show();
             }
         }
     }
