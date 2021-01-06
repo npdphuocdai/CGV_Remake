@@ -24,6 +24,7 @@ namespace Viewer
             SkinHelper.InitSkinPopupMenu(SkinsLink);
             AddPage(ucHome.Instance);
         }
+        public static dtoViewEmployee EmployeeTemp = new dtoViewEmployee();
         frmLogin frmLogin = new frmLogin();
         public void AddPage(UserControl userControl)
         {
@@ -59,7 +60,7 @@ namespace Viewer
             if(frmLogin.flag == true)
             {
                 aceLogOut.Enabled = true;
-                aceUsername.Text = frmLogin.UserLogin.FullName;
+                aceUsername.Text = frmLogin.UserLogin.EmployeeFullName;
             }
             else
             {

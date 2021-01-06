@@ -25,6 +25,8 @@ namespace DAL
                     film.FilmName = ((dtoFilm)reader[1]).ToString();
                     film.ReleaseDate = Convert.ToDateTime((dtoFilm)reader[2]);
                     film.StopDate = Convert.ToDateTime((dtoFilm)reader[3]);
+                    film.Duration = Convert.ToDateTime((dtoFilm)reader[4]);
+                    film.GenreID = Convert.ToInt32((dtoFilm)reader[5]);
                     films.Add(film);
                 }
                 reader.Close();

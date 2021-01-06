@@ -32,15 +32,22 @@ namespace BAL
                 employee.FullName = row[1].ToString();
                 employee.Potrait = (byte[])row[2];
                 employee.BirthDay = Convert.ToDateTime(row[3]);
-                employee.Address = row[4].ToString();
-                employee.PhoneNumber = row[5].ToString();
-                employee.Email = row[6].ToString();
-                employee.BasicSalary = Convert.ToDecimal(row[7]);
-                employee.JobTitleID = Convert.ToInt32(row[8]);
-                employee.StartDay = Convert.ToDateTime(row[9]);
+                employee.Gender = row[4].ToString();
+                employee.Address = row[5].ToString();
+                employee.PhoneNumber = row[6].ToString();
+                employee.Email = row[7].ToString();
+                employee.BasicSalary = Convert.ToDecimal(row[8]);
+                employee.JobTitleID = Convert.ToInt32(row[9]);
+                employee.StartDay = Convert.ToDateTime(row[10]);
                 listEmp.Add(employee);
             }
             return listEmp;
+        }
+        public int UpdateFromView(dtoViewEmployee viewEmployee)
+        {
+            dalEmployee employee = new dalEmployee();
+            int count = employee.SelfUpdateEmployeeFromView(viewEmployee);
+            return count;
         }
     }
 }
