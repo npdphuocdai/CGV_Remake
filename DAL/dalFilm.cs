@@ -11,7 +11,7 @@ namespace DAL
 {
     class dalFilm : DatabaseServices
     {
-        public List<dtoFilm> GetFilms()
+        /*public List<dtoFilm> GetFilms()
         {
             List<dtoFilm> films = new List<dtoFilm>();
             try
@@ -28,6 +28,75 @@ namespace DAL
                     films.Add(film);
                 }
                 reader.Close();
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return films;
+        }*/
+        public int InsertFilm (dtoFilm film)
+        {
+            int count = 0;
+            try
+            {
+                string sql = "INSERT [dbo].[Film] ([FilmName], [ReleaseDate], [StopDate], [Duration], [GenreID]) SELECT @Name, @ReleaseDate, @StopDate, @Duration, @GenreID";
+                SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
+                parameterName.Value = film.FilmName;
+                SqlParameter parameterReleaseDate = new SqlParameter("@ReleaseDate", SqlDbType.DateTime);
+                parameterReleaseDate.Value = film.ReleaseDate;
+                SqlParameter parameterStopDate = new SqlParameter("@StopDate", SqlDbType.DateTime);
+                parameterStopDate.Value = film.StopDate;
+                SqlParameter parameterDuration = new SqlParameter("@Duration", SqlDbType.DateTime);
+                parameterDuration.Value = film.Duration;
+                SqlParameter parameterGenreID = new SqlParameter("@GenreID", SqlDbType.Int);
+                parameterGenreID.Value = film.GenreID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterReleaseDate, parameterStopDate, parameterDuration, parameterGenreID });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
+
+        public int UpdateFilmFromID(dtoFilm film)
+        {
+            int count = 0;
+            try
+            {
+                string sql = "UPDATE [dbo].[Film] SET [FilmName] = @Name, [ReleaseDate] = @ReleaseDate, [StopDate] = @StopDate, [Duration] = @Duration, [GenreID] = @GenreID WHERE [FilmID] = @FilmID";
+                SqlParameter parameterID = new SqlParameter("@FilmID", SqlDbType.Int);
+                parameterID.Value = film.FilmID;
+                SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
+                parameterName.Value = film.FilmName;
+                SqlParameter parameterReleaseDate = new SqlParameter("@ReleaseDate", SqlDbType.DateTime);
+                parameterReleaseDate.Value = film.ReleaseDate;
+                SqlParameter parameterStopDate = new SqlParameter("@StopDate", SqlDbType.DateTime);
+                parameterStopDate.Value = film.StopDate;
+                SqlParameter parameterDuration = new SqlParameter("@Duration", SqlDbType.DateTime);
+                parameterDuration.Value = film.Duration;
+                SqlParameter parameterGenreID = new SqlParameter("@GenreID", SqlDbType.Int);
+                parameterGenreID.Value = film.GenreID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterReleaseDate, parameterStopDate, parameterDuration, parameterGenreID });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
+        public DataTable GetFilms()
+        {
+            DataTable films = new DataTable();
+            try
+            {
+                string sql = "SELECT* FROM[dbo].[Film]";
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
+                {
+                    adapter.Fill(films);
+                }
             }
             finally
             {
