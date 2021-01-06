@@ -51,6 +51,7 @@
     <Compile Include="dtoSetDetail.cs" />
     <Compile Include="dtoShowingRoom.cs" />
     <Compile Include="dtoTicket.cs" />
+    <Compile Include="dtoViewEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="dtoSystemPrivilege.cs" />
     <Compile Include="dtoShowingSet.cs" />
