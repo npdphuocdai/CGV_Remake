@@ -248,3 +248,4 @@ C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\de\DevExpress.Of
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\es\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\ja\DevExpress.Office.v20.1.Core.resources.dll
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\ru\DevExpress.Office.v20.1.Core.resources.dll
+C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.frmTicket.resources

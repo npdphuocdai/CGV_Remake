@@ -34,6 +34,7 @@ namespace Viewer
             grpInfor.Width = Convert.ToInt32(layoutTong.Width * 0.48);
             grpOthers.Width = Convert.ToInt32(layoutTong.Width * 0.48);
         }
+        string FileName;
         private static ucEmployeeInformation _instance;
         public static ucEmployeeInformation Instance
         {
@@ -63,7 +64,6 @@ namespace Viewer
             txtPosi.Text = frmLogin.UserLogin.PositionAllowance.ToString();
             txtMajor1.Text = frmLogin.UserLogin.Major.ToString();
         }
-
         private void btnEditInfor_Click(object sender, EventArgs e)
         {
             frmMainPage.EmployeeTemp.EmployeeID = Convert.ToInt32(txtEmployeeID.Text);
@@ -81,13 +81,13 @@ namespace Viewer
             frmMainPage.EmployeeTemp.Major = txtMajor1.Text;
             balEmployee employee = new balEmployee();
             int count = employee.UpdateFromView(frmMainPage.EmployeeTemp);
-            string mess = count.ToString() + "hàng đã được UPDATE!";
+            string mess = "Số hàng đã được update: " + count.ToString();
             XtraMessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void imgInfor_Properties_ImageLoading(object sender, DevExpress.XtraEditors.Repository.SaveLoadImageEventArgs e)
         {
-            frmMainPage.EmployeeTemp.EmployeePotrait = SettingImage.ImageToByteArray(e.Image);
+            FileName = e.FileName;
         }
     }
 }
