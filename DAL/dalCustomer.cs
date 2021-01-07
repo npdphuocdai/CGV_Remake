@@ -45,7 +45,7 @@ namespace DAL
         /// </summary>
         /// <param name="customer"> đối tượng khách hàng được cập nhập </param>
         /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là cập nhập thất bại </returns>
-        public int UpdateEmployeeFromID(dtoCustomer customer)
+        public int UpdateCustomerFromID(dtoCustomer customer)
         {
             int count = 0;
             try
@@ -68,6 +68,24 @@ namespace DAL
                 CloseConnection();
             }
             return count;
+        }
+        public DataTable GetCustomer()
+        {
+            DataTable customer = new DataTable();
+            try
+            {
+                string sql = "SELECT * FROM [dbo].[Customer]";
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
+                {
+                    adapter.Fill(customer);
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return customer;
         }
     }
 }
