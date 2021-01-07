@@ -24,21 +24,35 @@ namespace Viewer
             SkinHelper.InitSkinPopupMenu(SkinsLink);
             AddPage(ucHome.Instance);
         }
+        frmTicket frmTicket = new frmTicket();
         public static dtoViewEmployee EmployeeTemp = new dtoViewEmployee();
         frmLogin frmLogin = new frmLogin();
         public void AddPage(UserControl userControl)
         {
-            while(this.fldContainter.Controls.Count > 0)
+            while(fldContainter.Controls.Count > 0)
             {
-                this.fldContainter.Controls.RemoveAt(0);
+                fldContainter.Controls.RemoveAt(0);
             }
-            this.fldContainter.Controls.Add(userControl);
+            fldContainter.Controls.Add(userControl);
             userControl.Dock = DockStyle.Fill;
             userControl.BringToFront();
         }
+        public void CallChildForm(object Child)
+        {
+            while (fldContainter.Controls.Count > 0)
+            {
+                fldContainter.Controls.RemoveAt(0);
+            }
+            Form fr = Child as Form;
+            fr.TopLevel = false;
+            fr.Dock = DockStyle.Fill;
+            fldContainter.Controls.Add(fr);
+            fldContainter.Tag = fr;
+            fr.Show();
+        }
         private void aceTicket_Click(object sender, EventArgs e)
         {
-            AddPage(ucTicket.Instance);
+            CallChildForm(frmTicket);
         }
 
         private void aceUsername_Click(object sender, EventArgs e)

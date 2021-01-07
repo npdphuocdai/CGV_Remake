@@ -42,7 +42,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "INSERT [dbo].[Film] ([FilmName], [ReleaseDate], [StopDate], [Duration], [GenreID]) SELECT @Name, @ReleaseDate, @StopDate, @Duration, @GenreID";
+                string sql = "INSERT [dbo].[Film] ([FilmName], [ReleaseDate], [StopDate], [Duration], [GenreID]) VALUES (@Name, @ReleaseDate, @StopDate, @Duration, @GenreID)";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = film.FilmName;
                 SqlParameter parameterReleaseDate = new SqlParameter("@ReleaseDate", SqlDbType.DateTime);
