@@ -46,5 +46,9 @@ namespace BAL
                 return 75000 * sl;
             }
         }
+        public long GetTotalMoney(int sl)
+        {
+            return 75000 * sl;
+        }
     }
 }

@@ -93,8 +93,9 @@ namespace DAL
             try
             {
                 //Tạo câu truy vấn có điều kiện để tìm kiếm user
-                string sql = "SELECT * FROM [dbo].[Customer] WHERE  (YEAR(GETDATE()) - YEAR([CustomerBirthDay])) <= 22 && AND [CustomerID] = @ID";
+                string sql = "SELECT * FROM [dbo].[Customer] WHERE  (YEAR(GETDATE()) - YEAR([CustomerBirthDay])) <= 22 AND [CustomerID] = @ID";
                 SqlParameter paraID = new SqlParameter("@ID", SqlDbType.Int);
+                paraID.Value = ID;
                 SqlDataReader reader = ReadDataPars(sql, new[] { paraID});
                 if (reader.Read())
                 {

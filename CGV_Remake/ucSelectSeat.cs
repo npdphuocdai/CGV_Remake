@@ -32,26 +32,67 @@ namespace Viewer
                 return _instance;
             }
         }
+        balTicket ticket = new balTicket();
         List<SimpleButton> DanhSachChon = new List<SimpleButton>();
         private void btnSeat1_Click(object sender, EventArgs e)
         {
-            balTicket ticket = new balTicket();
-            SimpleButton btn = sender as SimpleButton;
-            if (btn.Appearance.BackColor == DXSkinColors.FillColors.Success)
+            if (txtCusID.Text == "")
             {
-                btn.Appearance.BackColor = DXSkinColors.FillColors.Question;
-                DanhSachChon.Add(btn);
-                txtTotalMoney.Text = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtU22.Text)).ToString();
+                SimpleButton btn = sender as SimpleButton;
+                if (btn.Appearance.BackColor == DXSkinColors.FillColors.Success)
+                {
+                    btn.Appearance.BackColor = DXSkinColors.FillColors.Question;
+                    DanhSachChon.Add(btn);
+                    long lg = ticket.GetTotalMoney(DanhSachChon.Count);
+                    txtTotalMoney.Text = lg.ToString();
+                }
+                else if (btn.Appearance.BackColor == DXSkinColors.FillColors.Question)
+                {
+                    btn.Appearance.BackColor = DXSkinColors.FillColors.Success;
+                    DanhSachChon.Remove(btn);
+                    long lg = ticket.GetTotalMoney(DanhSachChon.Count);
+                    txtTotalMoney.Text = lg.ToString();
+                }
+                else if (btn.Appearance.BackColor == DXSkinColors.FillColors.Warning)
+                {
+                    MessageBox.Show("Ghế đã được chọn!");
+                }
             }
-            else if (btn.Appearance.BackColor == DXSkinColors.FillColors.Question)
+            else
             {
-                btn.Appearance.BackColor = DXSkinColors.FillColors.Success;
-                DanhSachChon.Remove(btn);
-                txtTotalMoney.Text = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtU22.Text)).ToString();
+                SimpleButton btn = sender as SimpleButton;
+                if (btn.Appearance.BackColor == DXSkinColors.FillColors.Success)
+                {
+                    btn.Appearance.BackColor = DXSkinColors.FillColors.Question;
+                    DanhSachChon.Add(btn);
+                    long lg = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtCusID.Text));
+                    txtTotalMoney.Text = lg.ToString();
+                }
+                else if (btn.Appearance.BackColor == DXSkinColors.FillColors.Question)
+                {
+                    btn.Appearance.BackColor = DXSkinColors.FillColors.Success;
+                    DanhSachChon.Remove(btn);
+                    long lg = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtCusID.Text));
+                    txtTotalMoney.Text = lg.ToString();
+                }
+                else if (btn.Appearance.BackColor == DXSkinColors.FillColors.Warning)
+                {
+                    MessageBox.Show("Ghế đã được chọn!");
+                }
             }
-            else if (btn.Appearance.BackColor == DXSkinColors.FillColors.Warning)
+        }
+
+        private void txtCusID_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
+            if (txtCusID.Text == "")
             {
-                MessageBox.Show("Ghế đã được chọn!");
+                long lg = ticket.GetTotalMoney(DanhSachChon.Count);
+                txtTotalMoney.Text = lg.ToString();
+            }
+            else
+            {
+                long lg = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtCusID.Text));
+                txtTotalMoney.Text = lg.ToString();
             }
         }
     }
