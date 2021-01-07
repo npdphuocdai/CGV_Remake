@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class dtoViewCustomer
+    public class dtoViewCustomer
     {
         public int CustomerID { get; set; }
         public string Gender { get; set; }

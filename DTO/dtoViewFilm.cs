@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class dtoViewFilm
+    public class dtoViewFilm
     {
         public int FilmID { get; set; }
         public string FilmName { get; set; }

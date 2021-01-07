@@ -9,7 +9,7 @@ using System.Data;
 
 namespace DAL
 {
-    class dalPrivilegeDetail :DatabaseServices
+    public class dalPrivilegeDetail :DatabaseServices
     {
         public bool CheckPrivilege(int jobtitleid, int privilegeid)
         {

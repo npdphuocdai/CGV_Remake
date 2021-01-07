@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DAL
 {
-    class dalTicket : DatabaseServices
+    public class dalTicket : DatabaseServices
     {
         public int InsertTicket(dtoTicket ticket)
         {
