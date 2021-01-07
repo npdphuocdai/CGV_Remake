@@ -9,6 +9,6 @@ namespace DTO
     public class dtoViewSetDetail
     {
         public string FilmName { get; set; }
-        public DateTime StartTime { get; set; }
+        public string StartTime { get; set; }
     }
 }

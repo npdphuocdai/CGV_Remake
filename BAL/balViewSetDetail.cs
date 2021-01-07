@@ -20,8 +20,8 @@ namespace BAL
             {
                 dtoViewSetDetail setdetail = new dtoViewSetDetail();
                 DataRow row = setDetails.Rows[i];
-                setdetail.FilmName = row[0].ToString();
-                setdetail.StartTime = Convert.ToDateTime(row[1]);
+                setdetail.FilmName = row[0].ToString();;
+                setdetail.StartTime = row[1].ToString();
                 listSet.Add(setdetail);
             }
             return listSet;

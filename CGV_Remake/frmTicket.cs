@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BAL;
+using DTO;
 
 namespace Viewer
 {
@@ -16,7 +18,11 @@ namespace Viewer
         public frmTicket()
         {
             InitializeComponent();
+            List<dtoViewSetDetail> listFilm = balView.GetViewSetDetails();
+            lueMovie.Properties.DataSource = listFilm;
+            lueMovie.Properties.DisplayMember = "FilmName";
         }
+        balViewSetDetail balView = new balViewSetDetail();
         public void AddPage(UserControl userControl)
         {
             while (this.Controls.Count > 0)
@@ -37,5 +43,9 @@ namespace Viewer
 
         }
 
+        private void lueMovie_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
