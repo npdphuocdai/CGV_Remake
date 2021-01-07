@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="balEmployee.cs" />
     <Compile Include="balViewEmployee.cs" />
+    <Compile Include="balViewSetDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -55,6 +55,7 @@
     <Compile Include="dalSystemPrivilege.cs" />
     <Compile Include="dalTicket.cs" />
     <Compile Include="dalViewEmployee.cs" />
+    <Compile Include="dalViewSetDetail.cs" />
     <Compile Include="DatabaseServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingImage.cs" />
