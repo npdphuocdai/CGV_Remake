@@ -11,28 +11,23 @@ namespace DAL
 {
     class dalShowingRoom : DatabaseServices
     {
-        public List<dtoShowingRoom> GetListRooms()
+        public DataTable GetShowingRooms()
         {
-            List<dtoShowingRoom> rooms = new List<dtoShowingRoom>();
+            DataTable showingRooms = new DataTable();
             try
             {
                 string sql = "SELECT * FROM [dbo].[ShowingRoom]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
                 {
-                    dtoShowingRoom room = new dtoShowingRoom();
-                    room.RoomID = Convert.ToInt32((dtoShowingSet)reader[0]);
-                    room.RoomType = ((dtoShowingSet)reader[1]).ToString();
-                    room.NumberOfSeats = Convert.ToInt32((dtoShowingSet)reader[2]);
-                    rooms.Add(room);
+                    adapter.Fill(showingRooms);
                 }
-                reader.Close();
             }
             finally
             {
                 CloseConnection();
             }
-            return rooms;
+            return showingRooms;
         }
         /// <summary>
         /// Hàm thêm phòng chiếu

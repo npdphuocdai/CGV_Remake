@@ -11,26 +11,23 @@ namespace DAL
 {
     class dalSystemPrivilege : DatabaseServices
     {
-        public List<dtoSystemPrivilege> GetPrivileges()
+        public DataTable GetSystemPrivileges()
         {
-            List<dtoSystemPrivilege> privileges = new List<dtoSystemPrivilege>();
+            DataTable systemprivileges = new DataTable();
             try
             {
-                string sql = "SELECT * FROM [dbo].[SystemPrivilege]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                string sql = "SELECT * FROM [dbo].[SetDetail]";
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
                 {
-                    dtoSystemPrivilege privilege = new dtoSystemPrivilege();
-                    privilege.PrivilegeID = Convert.ToInt32((dtoSystemPrivilege)reader[0]);
-                    privilege.PrivilegeName = ((dtoSystemPrivilege)reader[1]).ToString();
-                    privileges.Add(privilege);
+                    adapter.Fill(systemprivileges);
                 }
             }
             finally
             {
                 CloseConnection();
             }
-            return privileges;
+            return systemprivileges;
         }
         public int InsertPrivilege(dtoSystemPrivilege privilege)
         {

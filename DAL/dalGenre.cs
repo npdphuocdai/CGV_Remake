@@ -15,7 +15,7 @@ namespace DAL
         /// Hàm lấy list thể loại từ database
         /// </summary>
         /// <returns> Trả về một biến kiểu list thể loại </returns>
-        public DataTable GetGenre()
+        public DataTable GetGenres()
         {
             DataTable genres = new DataTable();
             try

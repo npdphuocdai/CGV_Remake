@@ -69,23 +69,23 @@ namespace DAL
             }
             return count;
         }
-        public DataTable GetCustomer()
+        public DataTable GetCustomers()
         {
-            DataTable customer = new DataTable();
+            DataTable customers = new DataTable();
             try
             {
                 string sql = "SELECT * FROM [dbo].[Customer]";
                 SqlDataAdapter adapter = Adapter(sql);
                 if (adapter != null)
                 {
-                    adapter.Fill(customer);
+                    adapter.Fill(customers);
                 }
             }
             finally
             {
                 CloseConnection();
             }
-            return customer;
+            return customers;
         }
     }
 }
