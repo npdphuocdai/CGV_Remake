@@ -40,7 +40,7 @@ namespace Viewer
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
-
+            AddPage(ucSelectSeat.Instance);
         }
 
         private void lueMovie_EditValueChanged(object sender, EventArgs e)

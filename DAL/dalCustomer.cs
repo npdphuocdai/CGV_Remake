@@ -87,5 +87,25 @@ namespace DAL
             }
             return customers;
         }
+        public bool GetU22Customer(int ID)
+        {
+            bool kq = false;
+            try
+            {
+                //Tạo câu truy vấn có điều kiện để tìm kiếm user
+                string sql = "SELECT * FROM [dbo].[Customer] WHERE  (YEAR(GETDATE()) - YEAR([CustomerBirthDay])) <= 22 && AND [CustomerID] = @ID";
+                SqlParameter paraID = new SqlParameter("@ID", SqlDbType.Int);
+                SqlDataReader reader = ReadDataPars(sql, new[] { paraID});
+                if (reader.Read())
+                {
+                    kq = true;
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return kq;
+        }
     }
 }

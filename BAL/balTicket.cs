@@ -34,5 +34,17 @@ namespace BAL
             }
             return listEmp;
         }
+        public long GetTotalMoney(int sl,int id)
+        {
+            dalCustomer customer = new dalCustomer();
+            if (customer.GetU22Customer(id))
+            {
+                return 45000 * sl;
+            }
+            else
+            {
+                return 75000 * sl;
+            }
+        }
     }
 }

@@ -34,11 +34,11 @@ namespace BAL
             }
             return listEmp;
         }
-        public int UpdateFromView(dtoViewCustomer viewCustomer)
+        /*public int UpdateFromView(dtoViewCustomer viewCustomer)
         {
             dalCustomer Customer = new dalCustomer();
             int count = Customer.SelfUpdateCustomerFromView(viewCustomer);
             return count;
-        }
+        }*/
     }
 }

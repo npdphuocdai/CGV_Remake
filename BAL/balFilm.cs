@@ -32,11 +32,11 @@ namespace BAL
             }
             return listEmp;
         }
-        public int UpdateFromView(dtoViewFilm viewFilm)
+        /*public int UpdateFromView(dtoViewFilm viewFilm)
         {
             dalFilm Film = new dalFilm();
             int count = Film.SelfUpdateFilmFromView(viewFilm);
             return count;
-        }
+        }*/
     }
 }

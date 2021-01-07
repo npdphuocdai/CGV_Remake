@@ -138,7 +138,6 @@ namespace Viewer
             this.btnSeat20 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSeat24 = new DevExpress.XtraEditors.SimpleButton();
             this.lblucScreen = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit21 = new DevExpress.XtraEditors.TextEdit();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.lblScreen = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -249,7 +248,6 @@ namespace Viewer
             this.layucTotalMoney = new DevExpress.XtraLayout.LayoutControlItem();
             this.layucU22Ticket = new DevExpress.XtraLayout.LayoutControlItem();
             this.layucButtonConfirm = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layucCustomer = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layucSelectSeat)).BeginInit();
@@ -257,7 +255,6 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.txtCusID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU22.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalMoney.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblScreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
@@ -368,7 +365,6 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.layucTotalMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layucU22Ticket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layucButtonConfirm)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layucCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
@@ -482,36 +478,35 @@ namespace Viewer
             this.layucSelectSeat.Controls.Add(this.btnSeat20);
             this.layucSelectSeat.Controls.Add(this.btnSeat24);
             this.layucSelectSeat.Controls.Add(this.lblucScreen);
-            this.layucSelectSeat.Controls.Add(this.textEdit21);
             this.layucSelectSeat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layucSelectSeat.Location = new System.Drawing.Point(0, 0);
             this.layucSelectSeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.layucSelectSeat.Name = "layucSelectSeat";
             this.layucSelectSeat.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(842, 293, 812, 500);
             this.layucSelectSeat.Root = this.Root;
-            this.layucSelectSeat.Size = new System.Drawing.Size(1286, 730);
+            this.layucSelectSeat.Size = new System.Drawing.Size(1500, 898);
             this.layucSelectSeat.TabIndex = 1;
             this.layucSelectSeat.Text = "layoutControl1";
             // 
             // txtCusID
             // 
-            this.txtCusID.Location = new System.Drawing.Point(211, 516);
+            this.txtCusID.Location = new System.Drawing.Point(260, 655);
             this.txtCusID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Properties.Appearance.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCusID.Properties.Appearance.Options.UseFont = true;
-            this.txtCusID.Size = new System.Drawing.Size(1063, 42);
+            this.txtCusID.Size = new System.Drawing.Size(1226, 50);
             this.txtCusID.StyleController = this.layucSelectSeat;
             this.txtCusID.TabIndex = 118;
             // 
             // txtU22
             // 
-            this.txtU22.Location = new System.Drawing.Point(223, 618);
+            this.txtU22.Location = new System.Drawing.Point(273, 766);
             this.txtU22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtU22.Name = "txtU22";
             this.txtU22.Properties.Appearance.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtU22.Properties.Appearance.Options.UseFont = true;
-            this.txtU22.Size = new System.Drawing.Size(683, 42);
+            this.txtU22.Size = new System.Drawing.Size(784, 50);
             this.txtU22.StyleController = this.layucSelectSeat;
             this.txtU22.TabIndex = 117;
             // 
@@ -520,23 +515,23 @@ namespace Viewer
             this.btnConfirm.Appearance.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.Appearance.Options.UseFont = true;
             this.btnConfirm.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnConfirm.ImageOptions.Image")));
-            this.btnConfirm.Location = new System.Drawing.Point(910, 618);
+            this.btnConfirm.Location = new System.Drawing.Point(1061, 766);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(352, 88);
+            this.btnConfirm.Size = new System.Drawing.Size(412, 104);
             this.btnConfirm.StyleController = this.layucSelectSeat;
             this.btnConfirm.TabIndex = 115;
             this.btnConfirm.Text = "Confirm";
             // 
             // txtTotalMoney
             // 
-            this.txtTotalMoney.Location = new System.Drawing.Point(223, 664);
+            this.txtTotalMoney.Location = new System.Drawing.Point(273, 820);
             this.txtTotalMoney.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotalMoney.Name = "txtTotalMoney";
             this.txtTotalMoney.Properties.Appearance.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalMoney.Properties.Appearance.Options.UseFont = true;
             this.txtTotalMoney.Properties.ReadOnly = true;
-            this.txtTotalMoney.Size = new System.Drawing.Size(683, 42);
+            this.txtTotalMoney.Size = new System.Drawing.Size(784, 50);
             this.txtTotalMoney.StyleController = this.layucSelectSeat;
             this.txtTotalMoney.TabIndex = 114;
             // 
@@ -546,13 +541,14 @@ namespace Viewer
             this.btnSeat11.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat11.Appearance.Options.UseBackColor = true;
             this.btnSeat11.Appearance.Options.UseFont = true;
-            this.btnSeat11.Location = new System.Drawing.Point(334, 130);
+            this.btnSeat11.Location = new System.Drawing.Point(389, 158);
             this.btnSeat11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat11.Name = "btnSeat11";
-            this.btnSeat11.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat11.Size = new System.Drawing.Size(177, 29);
             this.btnSeat11.StyleController = this.layucSelectSeat;
             this.btnSeat11.TabIndex = 113;
             this.btnSeat11.Text = "Seat 11";
+            this.btnSeat11.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat1
             // 
@@ -560,13 +556,14 @@ namespace Viewer
             this.btnSeat1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat1.Appearance.Options.UseBackColor = true;
             this.btnSeat1.Appearance.Options.UseFont = true;
-            this.btnSeat1.Location = new System.Drawing.Point(24, 102);
+            this.btnSeat1.Location = new System.Drawing.Point(27, 125);
             this.btnSeat1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat1.Name = "btnSeat1";
-            this.btnSeat1.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat1.Size = new System.Drawing.Size(176, 29);
             this.btnSeat1.StyleController = this.layucSelectSeat;
             this.btnSeat1.TabIndex = 112;
             this.btnSeat1.Text = "Seat 01";
+            this.btnSeat1.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat2
             // 
@@ -574,13 +571,14 @@ namespace Viewer
             this.btnSeat2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat2.Appearance.Options.UseBackColor = true;
             this.btnSeat2.Appearance.Options.UseFont = true;
-            this.btnSeat2.Location = new System.Drawing.Point(178, 102);
+            this.btnSeat2.Location = new System.Drawing.Point(207, 125);
             this.btnSeat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat2.Name = "btnSeat2";
-            this.btnSeat2.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat2.Size = new System.Drawing.Size(178, 29);
             this.btnSeat2.StyleController = this.layucSelectSeat;
             this.btnSeat2.TabIndex = 111;
             this.btnSeat2.Text = "Seat 02";
+            this.btnSeat2.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat3
             // 
@@ -588,13 +586,14 @@ namespace Viewer
             this.btnSeat3.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat3.Appearance.Options.UseBackColor = true;
             this.btnSeat3.Appearance.Options.UseFont = true;
-            this.btnSeat3.Location = new System.Drawing.Point(334, 102);
+            this.btnSeat3.Location = new System.Drawing.Point(389, 125);
             this.btnSeat3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat3.Name = "btnSeat3";
-            this.btnSeat3.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat3.Size = new System.Drawing.Size(177, 29);
             this.btnSeat3.StyleController = this.layucSelectSeat;
             this.btnSeat3.TabIndex = 110;
             this.btnSeat3.Text = "Seat 03";
+            this.btnSeat3.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnFS1
             // 
@@ -602,10 +601,10 @@ namespace Viewer
             this.btnFS1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnFS1.Appearance.Options.UseBackColor = true;
             this.btnFS1.Appearance.Options.UseFont = true;
-            this.btnFS1.Location = new System.Drawing.Point(24, 466);
+            this.btnFS1.Location = new System.Drawing.Point(27, 554);
             this.btnFS1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFS1.Name = "btnFS1";
-            this.btnFS1.Size = new System.Drawing.Size(617, 24);
+            this.btnFS1.Size = new System.Drawing.Size(721, 29);
             this.btnFS1.StyleController = this.layucSelectSeat;
             this.btnFS1.TabIndex = 107;
             this.btnFS1.Text = "Family Seats 01";
@@ -616,10 +615,10 @@ namespace Viewer
             this.btnFS2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnFS2.Appearance.Options.UseBackColor = true;
             this.btnFS2.Appearance.Options.UseFont = true;
-            this.btnFS2.Location = new System.Drawing.Point(645, 466);
+            this.btnFS2.Location = new System.Drawing.Point(752, 554);
             this.btnFS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFS2.Name = "btnFS2";
-            this.btnFS2.Size = new System.Drawing.Size(617, 24);
+            this.btnFS2.Size = new System.Drawing.Size(721, 29);
             this.btnFS2.StyleController = this.layucSelectSeat;
             this.btnFS2.TabIndex = 106;
             this.btnFS2.Text = "Family Seats 02";
@@ -630,10 +629,10 @@ namespace Viewer
             this.btnCPS3.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnCPS3.Appearance.Options.UseBackColor = true;
             this.btnCPS3.Appearance.Options.UseFont = true;
-            this.btnCPS3.Location = new System.Drawing.Point(645, 438);
+            this.btnCPS3.Location = new System.Drawing.Point(752, 521);
             this.btnCPS3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCPS3.Name = "btnCPS3";
-            this.btnCPS3.Size = new System.Drawing.Size(306, 24);
+            this.btnCPS3.Size = new System.Drawing.Size(358, 29);
             this.btnCPS3.StyleController = this.layucSelectSeat;
             this.btnCPS3.TabIndex = 105;
             this.btnCPS3.Text = "Couple Seats 03";
@@ -644,10 +643,10 @@ namespace Viewer
             this.btnCPS1.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnCPS1.Appearance.Options.UseBackColor = true;
             this.btnCPS1.Appearance.Options.UseFont = true;
-            this.btnCPS1.Location = new System.Drawing.Point(24, 438);
+            this.btnCPS1.Location = new System.Drawing.Point(27, 521);
             this.btnCPS1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCPS1.Name = "btnCPS1";
-            this.btnCPS1.Size = new System.Drawing.Size(306, 24);
+            this.btnCPS1.Size = new System.Drawing.Size(358, 29);
             this.btnCPS1.StyleController = this.layucSelectSeat;
             this.btnCPS1.TabIndex = 104;
             this.btnCPS1.Text = "Couple Seats 01";
@@ -658,10 +657,10 @@ namespace Viewer
             this.btnCPS2.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnCPS2.Appearance.Options.UseBackColor = true;
             this.btnCPS2.Appearance.Options.UseFont = true;
-            this.btnCPS2.Location = new System.Drawing.Point(334, 438);
+            this.btnCPS2.Location = new System.Drawing.Point(389, 521);
             this.btnCPS2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCPS2.Name = "btnCPS2";
-            this.btnCPS2.Size = new System.Drawing.Size(307, 24);
+            this.btnCPS2.Size = new System.Drawing.Size(359, 29);
             this.btnCPS2.StyleController = this.layucSelectSeat;
             this.btnCPS2.TabIndex = 103;
             this.btnCPS2.Text = "Couple Seats 02";
@@ -672,10 +671,10 @@ namespace Viewer
             this.btnCPS4.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnCPS4.Appearance.Options.UseBackColor = true;
             this.btnCPS4.Appearance.Options.UseFont = true;
-            this.btnCPS4.Location = new System.Drawing.Point(955, 438);
+            this.btnCPS4.Location = new System.Drawing.Point(1114, 521);
             this.btnCPS4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCPS4.Name = "btnCPS4";
-            this.btnCPS4.Size = new System.Drawing.Size(307, 24);
+            this.btnCPS4.Size = new System.Drawing.Size(359, 29);
             this.btnCPS4.StyleController = this.layucSelectSeat;
             this.btnCPS4.TabIndex = 102;
             this.btnCPS4.Text = "Couple Seats 04";
@@ -686,10 +685,10 @@ namespace Viewer
             this.btnSeat95.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat95.Appearance.Options.UseBackColor = true;
             this.btnSeat95.Appearance.Options.UseFont = true;
-            this.btnSeat95.Location = new System.Drawing.Point(955, 410);
+            this.btnSeat95.Location = new System.Drawing.Point(1114, 488);
             this.btnSeat95.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat95.Name = "btnSeat95";
-            this.btnSeat95.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat95.Size = new System.Drawing.Size(177, 29);
             this.btnSeat95.StyleController = this.layucSelectSeat;
             this.btnSeat95.TabIndex = 101;
             this.btnSeat95.Text = "Seat 95";
@@ -700,10 +699,10 @@ namespace Viewer
             this.btnSeat93.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat93.Appearance.Options.UseBackColor = true;
             this.btnSeat93.Appearance.Options.UseFont = true;
-            this.btnSeat93.Location = new System.Drawing.Point(645, 410);
+            this.btnSeat93.Location = new System.Drawing.Point(752, 488);
             this.btnSeat93.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat93.Name = "btnSeat93";
-            this.btnSeat93.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat93.Size = new System.Drawing.Size(176, 29);
             this.btnSeat93.StyleController = this.layucSelectSeat;
             this.btnSeat93.TabIndex = 100;
             this.btnSeat93.Text = "Seat 93";
@@ -714,10 +713,10 @@ namespace Viewer
             this.btnSeat94.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat94.Appearance.Options.UseBackColor = true;
             this.btnSeat94.Appearance.Options.UseFont = true;
-            this.btnSeat94.Location = new System.Drawing.Point(799, 410);
+            this.btnSeat94.Location = new System.Drawing.Point(932, 488);
             this.btnSeat94.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat94.Name = "btnSeat94";
-            this.btnSeat94.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat94.Size = new System.Drawing.Size(178, 29);
             this.btnSeat94.StyleController = this.layucSelectSeat;
             this.btnSeat94.TabIndex = 99;
             this.btnSeat94.Text = "Seat 94";
@@ -728,10 +727,10 @@ namespace Viewer
             this.btnSeat91.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat91.Appearance.Options.UseBackColor = true;
             this.btnSeat91.Appearance.Options.UseFont = true;
-            this.btnSeat91.Location = new System.Drawing.Point(334, 410);
+            this.btnSeat91.Location = new System.Drawing.Point(389, 488);
             this.btnSeat91.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat91.Name = "btnSeat91";
-            this.btnSeat91.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat91.Size = new System.Drawing.Size(177, 29);
             this.btnSeat91.StyleController = this.layucSelectSeat;
             this.btnSeat91.TabIndex = 98;
             this.btnSeat91.Text = "Seat 91";
@@ -742,10 +741,10 @@ namespace Viewer
             this.btnSeat89.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat89.Appearance.Options.UseBackColor = true;
             this.btnSeat89.Appearance.Options.UseFont = true;
-            this.btnSeat89.Location = new System.Drawing.Point(24, 410);
+            this.btnSeat89.Location = new System.Drawing.Point(27, 488);
             this.btnSeat89.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat89.Name = "btnSeat89";
-            this.btnSeat89.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat89.Size = new System.Drawing.Size(176, 29);
             this.btnSeat89.StyleController = this.layucSelectSeat;
             this.btnSeat89.TabIndex = 97;
             this.btnSeat89.Text = "Seat 89";
@@ -756,10 +755,10 @@ namespace Viewer
             this.btnSeat90.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat90.Appearance.Options.UseBackColor = true;
             this.btnSeat90.Appearance.Options.UseFont = true;
-            this.btnSeat90.Location = new System.Drawing.Point(178, 410);
+            this.btnSeat90.Location = new System.Drawing.Point(207, 488);
             this.btnSeat90.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat90.Name = "btnSeat90";
-            this.btnSeat90.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat90.Size = new System.Drawing.Size(178, 29);
             this.btnSeat90.StyleController = this.layucSelectSeat;
             this.btnSeat90.TabIndex = 96;
             this.btnSeat90.Text = "Seat 90";
@@ -770,10 +769,10 @@ namespace Viewer
             this.btnSeat92.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat92.Appearance.Options.UseBackColor = true;
             this.btnSeat92.Appearance.Options.UseFont = true;
-            this.btnSeat92.Location = new System.Drawing.Point(489, 410);
+            this.btnSeat92.Location = new System.Drawing.Point(570, 488);
             this.btnSeat92.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat92.Name = "btnSeat92";
-            this.btnSeat92.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat92.Size = new System.Drawing.Size(178, 29);
             this.btnSeat92.StyleController = this.layucSelectSeat;
             this.btnSeat92.TabIndex = 95;
             this.btnSeat92.Text = "Seat 92";
@@ -784,10 +783,10 @@ namespace Viewer
             this.btnSeat96.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat96.Appearance.Options.UseBackColor = true;
             this.btnSeat96.Appearance.Options.UseFont = true;
-            this.btnSeat96.Location = new System.Drawing.Point(1110, 410);
+            this.btnSeat96.Location = new System.Drawing.Point(1295, 488);
             this.btnSeat96.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat96.Name = "btnSeat96";
-            this.btnSeat96.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat96.Size = new System.Drawing.Size(178, 29);
             this.btnSeat96.StyleController = this.layucSelectSeat;
             this.btnSeat96.TabIndex = 94;
             this.btnSeat96.Text = "Seat 96";
@@ -798,10 +797,10 @@ namespace Viewer
             this.btnSeat87.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat87.Appearance.Options.UseBackColor = true;
             this.btnSeat87.Appearance.Options.UseFont = true;
-            this.btnSeat87.Location = new System.Drawing.Point(955, 382);
+            this.btnSeat87.Location = new System.Drawing.Point(1114, 455);
             this.btnSeat87.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat87.Name = "btnSeat87";
-            this.btnSeat87.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat87.Size = new System.Drawing.Size(177, 29);
             this.btnSeat87.StyleController = this.layucSelectSeat;
             this.btnSeat87.TabIndex = 93;
             this.btnSeat87.Text = "Seat 87";
@@ -812,10 +811,10 @@ namespace Viewer
             this.btnSeat85.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat85.Appearance.Options.UseBackColor = true;
             this.btnSeat85.Appearance.Options.UseFont = true;
-            this.btnSeat85.Location = new System.Drawing.Point(645, 382);
+            this.btnSeat85.Location = new System.Drawing.Point(752, 455);
             this.btnSeat85.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat85.Name = "btnSeat85";
-            this.btnSeat85.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat85.Size = new System.Drawing.Size(176, 29);
             this.btnSeat85.StyleController = this.layucSelectSeat;
             this.btnSeat85.TabIndex = 92;
             this.btnSeat85.Text = "Seat 85";
@@ -826,10 +825,10 @@ namespace Viewer
             this.btnSeat83.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat83.Appearance.Options.UseBackColor = true;
             this.btnSeat83.Appearance.Options.UseFont = true;
-            this.btnSeat83.Location = new System.Drawing.Point(334, 382);
+            this.btnSeat83.Location = new System.Drawing.Point(389, 455);
             this.btnSeat83.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat83.Name = "btnSeat83";
-            this.btnSeat83.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat83.Size = new System.Drawing.Size(177, 29);
             this.btnSeat83.StyleController = this.layucSelectSeat;
             this.btnSeat83.TabIndex = 91;
             this.btnSeat83.Text = "Seat 83";
@@ -840,10 +839,10 @@ namespace Viewer
             this.btnSeat81.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat81.Appearance.Options.UseBackColor = true;
             this.btnSeat81.Appearance.Options.UseFont = true;
-            this.btnSeat81.Location = new System.Drawing.Point(24, 382);
+            this.btnSeat81.Location = new System.Drawing.Point(27, 455);
             this.btnSeat81.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat81.Name = "btnSeat81";
-            this.btnSeat81.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat81.Size = new System.Drawing.Size(176, 29);
             this.btnSeat81.StyleController = this.layucSelectSeat;
             this.btnSeat81.TabIndex = 90;
             this.btnSeat81.Text = "Seat 81";
@@ -854,10 +853,10 @@ namespace Viewer
             this.btnSeat86.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat86.Appearance.Options.UseBackColor = true;
             this.btnSeat86.Appearance.Options.UseFont = true;
-            this.btnSeat86.Location = new System.Drawing.Point(799, 382);
+            this.btnSeat86.Location = new System.Drawing.Point(932, 455);
             this.btnSeat86.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat86.Name = "btnSeat86";
-            this.btnSeat86.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat86.Size = new System.Drawing.Size(178, 29);
             this.btnSeat86.StyleController = this.layucSelectSeat;
             this.btnSeat86.TabIndex = 89;
             this.btnSeat86.Text = "Seat 86";
@@ -868,10 +867,10 @@ namespace Viewer
             this.btnSeat82.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat82.Appearance.Options.UseBackColor = true;
             this.btnSeat82.Appearance.Options.UseFont = true;
-            this.btnSeat82.Location = new System.Drawing.Point(178, 382);
+            this.btnSeat82.Location = new System.Drawing.Point(207, 455);
             this.btnSeat82.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat82.Name = "btnSeat82";
-            this.btnSeat82.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat82.Size = new System.Drawing.Size(178, 29);
             this.btnSeat82.StyleController = this.layucSelectSeat;
             this.btnSeat82.TabIndex = 88;
             this.btnSeat82.Text = "Seat 82";
@@ -882,10 +881,10 @@ namespace Viewer
             this.btnSeat84.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat84.Appearance.Options.UseBackColor = true;
             this.btnSeat84.Appearance.Options.UseFont = true;
-            this.btnSeat84.Location = new System.Drawing.Point(489, 382);
+            this.btnSeat84.Location = new System.Drawing.Point(570, 455);
             this.btnSeat84.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat84.Name = "btnSeat84";
-            this.btnSeat84.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat84.Size = new System.Drawing.Size(178, 29);
             this.btnSeat84.StyleController = this.layucSelectSeat;
             this.btnSeat84.TabIndex = 87;
             this.btnSeat84.Text = "Seat 84";
@@ -896,10 +895,10 @@ namespace Viewer
             this.btnSeat88.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat88.Appearance.Options.UseBackColor = true;
             this.btnSeat88.Appearance.Options.UseFont = true;
-            this.btnSeat88.Location = new System.Drawing.Point(1110, 382);
+            this.btnSeat88.Location = new System.Drawing.Point(1295, 455);
             this.btnSeat88.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat88.Name = "btnSeat88";
-            this.btnSeat88.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat88.Size = new System.Drawing.Size(178, 29);
             this.btnSeat88.StyleController = this.layucSelectSeat;
             this.btnSeat88.TabIndex = 86;
             this.btnSeat88.Text = "Seat 88";
@@ -910,13 +909,14 @@ namespace Viewer
             this.btnSeat15.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat15.Appearance.Options.UseBackColor = true;
             this.btnSeat15.Appearance.Options.UseFont = true;
-            this.btnSeat15.Location = new System.Drawing.Point(955, 130);
+            this.btnSeat15.Location = new System.Drawing.Point(1114, 158);
             this.btnSeat15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat15.Name = "btnSeat15";
-            this.btnSeat15.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat15.Size = new System.Drawing.Size(177, 29);
             this.btnSeat15.StyleController = this.layucSelectSeat;
             this.btnSeat15.TabIndex = 85;
             this.btnSeat15.Text = "Seat 15";
+            this.btnSeat15.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat13
             // 
@@ -924,13 +924,14 @@ namespace Viewer
             this.btnSeat13.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat13.Appearance.Options.UseBackColor = true;
             this.btnSeat13.Appearance.Options.UseFont = true;
-            this.btnSeat13.Location = new System.Drawing.Point(645, 130);
+            this.btnSeat13.Location = new System.Drawing.Point(752, 158);
             this.btnSeat13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat13.Name = "btnSeat13";
-            this.btnSeat13.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat13.Size = new System.Drawing.Size(176, 29);
             this.btnSeat13.StyleController = this.layucSelectSeat;
             this.btnSeat13.TabIndex = 84;
             this.btnSeat13.Text = "Seat 13";
+            this.btnSeat13.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat14
             // 
@@ -938,13 +939,14 @@ namespace Viewer
             this.btnSeat14.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat14.Appearance.Options.UseBackColor = true;
             this.btnSeat14.Appearance.Options.UseFont = true;
-            this.btnSeat14.Location = new System.Drawing.Point(799, 130);
+            this.btnSeat14.Location = new System.Drawing.Point(932, 158);
             this.btnSeat14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat14.Name = "btnSeat14";
-            this.btnSeat14.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat14.Size = new System.Drawing.Size(178, 29);
             this.btnSeat14.StyleController = this.layucSelectSeat;
             this.btnSeat14.TabIndex = 83;
             this.btnSeat14.Text = "Seat 14";
+            this.btnSeat14.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat10
             // 
@@ -952,13 +954,14 @@ namespace Viewer
             this.btnSeat10.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat10.Appearance.Options.UseBackColor = true;
             this.btnSeat10.Appearance.Options.UseFont = true;
-            this.btnSeat10.Location = new System.Drawing.Point(178, 130);
+            this.btnSeat10.Location = new System.Drawing.Point(207, 158);
             this.btnSeat10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat10.Name = "btnSeat10";
-            this.btnSeat10.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat10.Size = new System.Drawing.Size(178, 29);
             this.btnSeat10.StyleController = this.layucSelectSeat;
             this.btnSeat10.TabIndex = 81;
             this.btnSeat10.Text = "Seat 10";
+            this.btnSeat10.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat12
             // 
@@ -966,13 +969,14 @@ namespace Viewer
             this.btnSeat12.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat12.Appearance.Options.UseBackColor = true;
             this.btnSeat12.Appearance.Options.UseFont = true;
-            this.btnSeat12.Location = new System.Drawing.Point(489, 130);
+            this.btnSeat12.Location = new System.Drawing.Point(570, 158);
             this.btnSeat12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat12.Name = "btnSeat12";
-            this.btnSeat12.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat12.Size = new System.Drawing.Size(178, 29);
             this.btnSeat12.StyleController = this.layucSelectSeat;
             this.btnSeat12.TabIndex = 80;
             this.btnSeat12.Text = "Seat 12";
+            this.btnSeat12.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat9
             // 
@@ -980,13 +984,14 @@ namespace Viewer
             this.btnSeat9.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat9.Appearance.Options.UseBackColor = true;
             this.btnSeat9.Appearance.Options.UseFont = true;
-            this.btnSeat9.Location = new System.Drawing.Point(24, 130);
+            this.btnSeat9.Location = new System.Drawing.Point(27, 158);
             this.btnSeat9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat9.Name = "btnSeat9";
-            this.btnSeat9.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat9.Size = new System.Drawing.Size(176, 29);
             this.btnSeat9.StyleController = this.layucSelectSeat;
             this.btnSeat9.TabIndex = 79;
             this.btnSeat9.Text = "Seat 09";
+            this.btnSeat9.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat7
             // 
@@ -994,13 +999,14 @@ namespace Viewer
             this.btnSeat7.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat7.Appearance.Options.UseBackColor = true;
             this.btnSeat7.Appearance.Options.UseFont = true;
-            this.btnSeat7.Location = new System.Drawing.Point(955, 102);
+            this.btnSeat7.Location = new System.Drawing.Point(1114, 125);
             this.btnSeat7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat7.Name = "btnSeat7";
-            this.btnSeat7.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat7.Size = new System.Drawing.Size(177, 29);
             this.btnSeat7.StyleController = this.layucSelectSeat;
             this.btnSeat7.TabIndex = 78;
             this.btnSeat7.Text = "Seat 07";
+            this.btnSeat7.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat5
             // 
@@ -1008,13 +1014,14 @@ namespace Viewer
             this.btnSeat5.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat5.Appearance.Options.UseBackColor = true;
             this.btnSeat5.Appearance.Options.UseFont = true;
-            this.btnSeat5.Location = new System.Drawing.Point(645, 102);
+            this.btnSeat5.Location = new System.Drawing.Point(752, 125);
             this.btnSeat5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat5.Name = "btnSeat5";
-            this.btnSeat5.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat5.Size = new System.Drawing.Size(176, 29);
             this.btnSeat5.StyleController = this.layucSelectSeat;
             this.btnSeat5.TabIndex = 77;
             this.btnSeat5.Text = "Seat 05";
+            this.btnSeat5.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat6
             // 
@@ -1022,13 +1029,14 @@ namespace Viewer
             this.btnSeat6.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat6.Appearance.Options.UseBackColor = true;
             this.btnSeat6.Appearance.Options.UseFont = true;
-            this.btnSeat6.Location = new System.Drawing.Point(799, 102);
+            this.btnSeat6.Location = new System.Drawing.Point(932, 125);
             this.btnSeat6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat6.Name = "btnSeat6";
-            this.btnSeat6.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat6.Size = new System.Drawing.Size(178, 29);
             this.btnSeat6.StyleController = this.layucSelectSeat;
             this.btnSeat6.TabIndex = 76;
             this.btnSeat6.Text = "Seat 06";
+            this.btnSeat6.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat4
             // 
@@ -1036,13 +1044,14 @@ namespace Viewer
             this.btnSeat4.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat4.Appearance.Options.UseBackColor = true;
             this.btnSeat4.Appearance.Options.UseFont = true;
-            this.btnSeat4.Location = new System.Drawing.Point(489, 102);
+            this.btnSeat4.Location = new System.Drawing.Point(570, 125);
             this.btnSeat4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat4.Name = "btnSeat4";
-            this.btnSeat4.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat4.Size = new System.Drawing.Size(178, 29);
             this.btnSeat4.StyleController = this.layucSelectSeat;
             this.btnSeat4.TabIndex = 72;
             this.btnSeat4.Text = "Seat 04";
+            this.btnSeat4.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat16
             // 
@@ -1050,13 +1059,14 @@ namespace Viewer
             this.btnSeat16.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat16.Appearance.Options.UseBackColor = true;
             this.btnSeat16.Appearance.Options.UseFont = true;
-            this.btnSeat16.Location = new System.Drawing.Point(1110, 130);
+            this.btnSeat16.Location = new System.Drawing.Point(1295, 158);
             this.btnSeat16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat16.Name = "btnSeat16";
-            this.btnSeat16.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat16.Size = new System.Drawing.Size(178, 29);
             this.btnSeat16.StyleController = this.layucSelectSeat;
             this.btnSeat16.TabIndex = 71;
             this.btnSeat16.Text = "Seat 16";
+            this.btnSeat16.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat8
             // 
@@ -1064,13 +1074,14 @@ namespace Viewer
             this.btnSeat8.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat8.Appearance.Options.UseBackColor = true;
             this.btnSeat8.Appearance.Options.UseFont = true;
-            this.btnSeat8.Location = new System.Drawing.Point(1110, 102);
+            this.btnSeat8.Location = new System.Drawing.Point(1295, 125);
             this.btnSeat8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat8.Name = "btnSeat8";
-            this.btnSeat8.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat8.Size = new System.Drawing.Size(178, 29);
             this.btnSeat8.StyleController = this.layucSelectSeat;
             this.btnSeat8.TabIndex = 70;
             this.btnSeat8.Text = "Seat 08";
+            this.btnSeat8.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat79
             // 
@@ -1078,13 +1089,14 @@ namespace Viewer
             this.btnSeat79.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat79.Appearance.Options.UseBackColor = true;
             this.btnSeat79.Appearance.Options.UseFont = true;
-            this.btnSeat79.Location = new System.Drawing.Point(955, 354);
+            this.btnSeat79.Location = new System.Drawing.Point(1114, 422);
             this.btnSeat79.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat79.Name = "btnSeat79";
-            this.btnSeat79.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat79.Size = new System.Drawing.Size(177, 29);
             this.btnSeat79.StyleController = this.layucSelectSeat;
             this.btnSeat79.TabIndex = 69;
             this.btnSeat79.Text = "Seat 79";
+            this.btnSeat79.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat77
             // 
@@ -1092,13 +1104,14 @@ namespace Viewer
             this.btnSeat77.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat77.Appearance.Options.UseBackColor = true;
             this.btnSeat77.Appearance.Options.UseFont = true;
-            this.btnSeat77.Location = new System.Drawing.Point(645, 354);
+            this.btnSeat77.Location = new System.Drawing.Point(752, 422);
             this.btnSeat77.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat77.Name = "btnSeat77";
-            this.btnSeat77.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat77.Size = new System.Drawing.Size(176, 29);
             this.btnSeat77.StyleController = this.layucSelectSeat;
             this.btnSeat77.TabIndex = 68;
             this.btnSeat77.Text = "Seat 77";
+            this.btnSeat77.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat78
             // 
@@ -1106,13 +1119,14 @@ namespace Viewer
             this.btnSeat78.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat78.Appearance.Options.UseBackColor = true;
             this.btnSeat78.Appearance.Options.UseFont = true;
-            this.btnSeat78.Location = new System.Drawing.Point(799, 354);
+            this.btnSeat78.Location = new System.Drawing.Point(932, 422);
             this.btnSeat78.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat78.Name = "btnSeat78";
-            this.btnSeat78.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat78.Size = new System.Drawing.Size(178, 29);
             this.btnSeat78.StyleController = this.layucSelectSeat;
             this.btnSeat78.TabIndex = 67;
             this.btnSeat78.Text = "Seat 78";
+            this.btnSeat78.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat75
             // 
@@ -1120,13 +1134,14 @@ namespace Viewer
             this.btnSeat75.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat75.Appearance.Options.UseBackColor = true;
             this.btnSeat75.Appearance.Options.UseFont = true;
-            this.btnSeat75.Location = new System.Drawing.Point(334, 354);
+            this.btnSeat75.Location = new System.Drawing.Point(389, 422);
             this.btnSeat75.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat75.Name = "btnSeat75";
-            this.btnSeat75.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat75.Size = new System.Drawing.Size(177, 29);
             this.btnSeat75.StyleController = this.layucSelectSeat;
             this.btnSeat75.TabIndex = 66;
             this.btnSeat75.Text = "Seat 75";
+            this.btnSeat75.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat73
             // 
@@ -1134,13 +1149,14 @@ namespace Viewer
             this.btnSeat73.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat73.Appearance.Options.UseBackColor = true;
             this.btnSeat73.Appearance.Options.UseFont = true;
-            this.btnSeat73.Location = new System.Drawing.Point(24, 354);
+            this.btnSeat73.Location = new System.Drawing.Point(27, 422);
             this.btnSeat73.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat73.Name = "btnSeat73";
-            this.btnSeat73.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat73.Size = new System.Drawing.Size(176, 29);
             this.btnSeat73.StyleController = this.layucSelectSeat;
             this.btnSeat73.TabIndex = 65;
             this.btnSeat73.Text = "Seat 73";
+            this.btnSeat73.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat74
             // 
@@ -1148,13 +1164,14 @@ namespace Viewer
             this.btnSeat74.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat74.Appearance.Options.UseBackColor = true;
             this.btnSeat74.Appearance.Options.UseFont = true;
-            this.btnSeat74.Location = new System.Drawing.Point(178, 354);
+            this.btnSeat74.Location = new System.Drawing.Point(207, 422);
             this.btnSeat74.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat74.Name = "btnSeat74";
-            this.btnSeat74.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat74.Size = new System.Drawing.Size(178, 29);
             this.btnSeat74.StyleController = this.layucSelectSeat;
             this.btnSeat74.TabIndex = 64;
             this.btnSeat74.Text = "Seat 74";
+            this.btnSeat74.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat76
             // 
@@ -1162,13 +1179,14 @@ namespace Viewer
             this.btnSeat76.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat76.Appearance.Options.UseBackColor = true;
             this.btnSeat76.Appearance.Options.UseFont = true;
-            this.btnSeat76.Location = new System.Drawing.Point(489, 354);
+            this.btnSeat76.Location = new System.Drawing.Point(570, 422);
             this.btnSeat76.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat76.Name = "btnSeat76";
-            this.btnSeat76.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat76.Size = new System.Drawing.Size(178, 29);
             this.btnSeat76.StyleController = this.layucSelectSeat;
             this.btnSeat76.TabIndex = 63;
             this.btnSeat76.Text = "Seat 76";
+            this.btnSeat76.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat71
             // 
@@ -1176,13 +1194,14 @@ namespace Viewer
             this.btnSeat71.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat71.Appearance.Options.UseBackColor = true;
             this.btnSeat71.Appearance.Options.UseFont = true;
-            this.btnSeat71.Location = new System.Drawing.Point(955, 326);
+            this.btnSeat71.Location = new System.Drawing.Point(1114, 389);
             this.btnSeat71.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat71.Name = "btnSeat71";
-            this.btnSeat71.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat71.Size = new System.Drawing.Size(177, 29);
             this.btnSeat71.StyleController = this.layucSelectSeat;
             this.btnSeat71.TabIndex = 62;
             this.btnSeat71.Text = "Seat 71";
+            this.btnSeat71.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat69
             // 
@@ -1190,13 +1209,14 @@ namespace Viewer
             this.btnSeat69.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat69.Appearance.Options.UseBackColor = true;
             this.btnSeat69.Appearance.Options.UseFont = true;
-            this.btnSeat69.Location = new System.Drawing.Point(645, 326);
+            this.btnSeat69.Location = new System.Drawing.Point(752, 389);
             this.btnSeat69.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat69.Name = "btnSeat69";
-            this.btnSeat69.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat69.Size = new System.Drawing.Size(176, 29);
             this.btnSeat69.StyleController = this.layucSelectSeat;
             this.btnSeat69.TabIndex = 61;
             this.btnSeat69.Text = "Seat 69";
+            this.btnSeat69.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat70
             // 
@@ -1204,13 +1224,14 @@ namespace Viewer
             this.btnSeat70.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat70.Appearance.Options.UseBackColor = true;
             this.btnSeat70.Appearance.Options.UseFont = true;
-            this.btnSeat70.Location = new System.Drawing.Point(799, 326);
+            this.btnSeat70.Location = new System.Drawing.Point(932, 389);
             this.btnSeat70.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat70.Name = "btnSeat70";
-            this.btnSeat70.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat70.Size = new System.Drawing.Size(178, 29);
             this.btnSeat70.StyleController = this.layucSelectSeat;
             this.btnSeat70.TabIndex = 60;
             this.btnSeat70.Text = "Seat 70";
+            this.btnSeat70.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat67
             // 
@@ -1218,13 +1239,14 @@ namespace Viewer
             this.btnSeat67.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat67.Appearance.Options.UseBackColor = true;
             this.btnSeat67.Appearance.Options.UseFont = true;
-            this.btnSeat67.Location = new System.Drawing.Point(334, 326);
+            this.btnSeat67.Location = new System.Drawing.Point(389, 389);
             this.btnSeat67.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat67.Name = "btnSeat67";
-            this.btnSeat67.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat67.Size = new System.Drawing.Size(177, 29);
             this.btnSeat67.StyleController = this.layucSelectSeat;
             this.btnSeat67.TabIndex = 59;
             this.btnSeat67.Text = "Seat 67";
+            this.btnSeat67.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat65
             // 
@@ -1232,13 +1254,14 @@ namespace Viewer
             this.btnSeat65.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat65.Appearance.Options.UseBackColor = true;
             this.btnSeat65.Appearance.Options.UseFont = true;
-            this.btnSeat65.Location = new System.Drawing.Point(24, 326);
+            this.btnSeat65.Location = new System.Drawing.Point(27, 389);
             this.btnSeat65.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat65.Name = "btnSeat65";
-            this.btnSeat65.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat65.Size = new System.Drawing.Size(176, 29);
             this.btnSeat65.StyleController = this.layucSelectSeat;
             this.btnSeat65.TabIndex = 58;
             this.btnSeat65.Text = "Seat 65";
+            this.btnSeat65.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat66
             // 
@@ -1246,13 +1269,14 @@ namespace Viewer
             this.btnSeat66.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat66.Appearance.Options.UseBackColor = true;
             this.btnSeat66.Appearance.Options.UseFont = true;
-            this.btnSeat66.Location = new System.Drawing.Point(178, 326);
+            this.btnSeat66.Location = new System.Drawing.Point(207, 389);
             this.btnSeat66.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat66.Name = "btnSeat66";
-            this.btnSeat66.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat66.Size = new System.Drawing.Size(178, 29);
             this.btnSeat66.StyleController = this.layucSelectSeat;
             this.btnSeat66.TabIndex = 57;
             this.btnSeat66.Text = "Seat 66";
+            this.btnSeat66.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat68
             // 
@@ -1260,13 +1284,14 @@ namespace Viewer
             this.btnSeat68.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat68.Appearance.Options.UseBackColor = true;
             this.btnSeat68.Appearance.Options.UseFont = true;
-            this.btnSeat68.Location = new System.Drawing.Point(489, 326);
+            this.btnSeat68.Location = new System.Drawing.Point(570, 389);
             this.btnSeat68.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat68.Name = "btnSeat68";
-            this.btnSeat68.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat68.Size = new System.Drawing.Size(178, 29);
             this.btnSeat68.StyleController = this.layucSelectSeat;
             this.btnSeat68.TabIndex = 56;
             this.btnSeat68.Text = "Seat 68";
+            this.btnSeat68.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat80
             // 
@@ -1274,13 +1299,14 @@ namespace Viewer
             this.btnSeat80.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeat80.Appearance.Options.UseBackColor = true;
             this.btnSeat80.Appearance.Options.UseFont = true;
-            this.btnSeat80.Location = new System.Drawing.Point(1110, 354);
+            this.btnSeat80.Location = new System.Drawing.Point(1295, 422);
             this.btnSeat80.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat80.Name = "btnSeat80";
-            this.btnSeat80.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat80.Size = new System.Drawing.Size(178, 29);
             this.btnSeat80.StyleController = this.layucSelectSeat;
             this.btnSeat80.TabIndex = 55;
             this.btnSeat80.Text = "Seat 80";
+            this.btnSeat80.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat72
             // 
@@ -1288,13 +1314,14 @@ namespace Viewer
             this.btnSeat72.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat72.Appearance.Options.UseBackColor = true;
             this.btnSeat72.Appearance.Options.UseFont = true;
-            this.btnSeat72.Location = new System.Drawing.Point(1110, 326);
+            this.btnSeat72.Location = new System.Drawing.Point(1295, 389);
             this.btnSeat72.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat72.Name = "btnSeat72";
-            this.btnSeat72.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat72.Size = new System.Drawing.Size(178, 29);
             this.btnSeat72.StyleController = this.layucSelectSeat;
             this.btnSeat72.TabIndex = 54;
             this.btnSeat72.Text = "Seat 72";
+            this.btnSeat72.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat63
             // 
@@ -1302,10 +1329,10 @@ namespace Viewer
             this.btnSeat63.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat63.Appearance.Options.UseBackColor = true;
             this.btnSeat63.Appearance.Options.UseFont = true;
-            this.btnSeat63.Location = new System.Drawing.Point(955, 298);
+            this.btnSeat63.Location = new System.Drawing.Point(1114, 356);
             this.btnSeat63.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat63.Name = "btnSeat63";
-            this.btnSeat63.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat63.Size = new System.Drawing.Size(177, 29);
             this.btnSeat63.StyleController = this.layucSelectSeat;
             this.btnSeat63.TabIndex = 53;
             this.btnSeat63.Text = "Seat 63";
@@ -1316,10 +1343,10 @@ namespace Viewer
             this.btnSeat61.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat61.Appearance.Options.UseBackColor = true;
             this.btnSeat61.Appearance.Options.UseFont = true;
-            this.btnSeat61.Location = new System.Drawing.Point(645, 298);
+            this.btnSeat61.Location = new System.Drawing.Point(752, 356);
             this.btnSeat61.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat61.Name = "btnSeat61";
-            this.btnSeat61.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat61.Size = new System.Drawing.Size(176, 29);
             this.btnSeat61.StyleController = this.layucSelectSeat;
             this.btnSeat61.TabIndex = 52;
             this.btnSeat61.Text = "Seat 61";
@@ -1330,10 +1357,10 @@ namespace Viewer
             this.btnSeat62.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat62.Appearance.Options.UseBackColor = true;
             this.btnSeat62.Appearance.Options.UseFont = true;
-            this.btnSeat62.Location = new System.Drawing.Point(799, 298);
+            this.btnSeat62.Location = new System.Drawing.Point(932, 356);
             this.btnSeat62.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat62.Name = "btnSeat62";
-            this.btnSeat62.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat62.Size = new System.Drawing.Size(178, 29);
             this.btnSeat62.StyleController = this.layucSelectSeat;
             this.btnSeat62.TabIndex = 51;
             this.btnSeat62.Text = "Seat 62";
@@ -1344,10 +1371,10 @@ namespace Viewer
             this.btnSeat59.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat59.Appearance.Options.UseBackColor = true;
             this.btnSeat59.Appearance.Options.UseFont = true;
-            this.btnSeat59.Location = new System.Drawing.Point(334, 298);
+            this.btnSeat59.Location = new System.Drawing.Point(389, 356);
             this.btnSeat59.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat59.Name = "btnSeat59";
-            this.btnSeat59.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat59.Size = new System.Drawing.Size(177, 29);
             this.btnSeat59.StyleController = this.layucSelectSeat;
             this.btnSeat59.TabIndex = 50;
             this.btnSeat59.Text = "Seat 59";
@@ -1358,10 +1385,10 @@ namespace Viewer
             this.btnSeat57.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat57.Appearance.Options.UseBackColor = true;
             this.btnSeat57.Appearance.Options.UseFont = true;
-            this.btnSeat57.Location = new System.Drawing.Point(24, 298);
+            this.btnSeat57.Location = new System.Drawing.Point(27, 356);
             this.btnSeat57.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat57.Name = "btnSeat57";
-            this.btnSeat57.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat57.Size = new System.Drawing.Size(176, 29);
             this.btnSeat57.StyleController = this.layucSelectSeat;
             this.btnSeat57.TabIndex = 49;
             this.btnSeat57.Text = "Seat 57";
@@ -1372,10 +1399,10 @@ namespace Viewer
             this.btnSeat58.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat58.Appearance.Options.UseBackColor = true;
             this.btnSeat58.Appearance.Options.UseFont = true;
-            this.btnSeat58.Location = new System.Drawing.Point(178, 298);
+            this.btnSeat58.Location = new System.Drawing.Point(207, 356);
             this.btnSeat58.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat58.Name = "btnSeat58";
-            this.btnSeat58.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat58.Size = new System.Drawing.Size(178, 29);
             this.btnSeat58.StyleController = this.layucSelectSeat;
             this.btnSeat58.TabIndex = 48;
             this.btnSeat58.Text = "Seat 58";
@@ -1386,10 +1413,10 @@ namespace Viewer
             this.btnSeat60.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat60.Appearance.Options.UseBackColor = true;
             this.btnSeat60.Appearance.Options.UseFont = true;
-            this.btnSeat60.Location = new System.Drawing.Point(489, 298);
+            this.btnSeat60.Location = new System.Drawing.Point(570, 356);
             this.btnSeat60.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat60.Name = "btnSeat60";
-            this.btnSeat60.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat60.Size = new System.Drawing.Size(178, 29);
             this.btnSeat60.StyleController = this.layucSelectSeat;
             this.btnSeat60.TabIndex = 47;
             this.btnSeat60.Text = "Seat 60";
@@ -1400,10 +1427,10 @@ namespace Viewer
             this.btnSeat64.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat64.Appearance.Options.UseBackColor = true;
             this.btnSeat64.Appearance.Options.UseFont = true;
-            this.btnSeat64.Location = new System.Drawing.Point(1110, 298);
+            this.btnSeat64.Location = new System.Drawing.Point(1295, 356);
             this.btnSeat64.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat64.Name = "btnSeat64";
-            this.btnSeat64.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat64.Size = new System.Drawing.Size(178, 29);
             this.btnSeat64.StyleController = this.layucSelectSeat;
             this.btnSeat64.TabIndex = 46;
             this.btnSeat64.Text = "Seat 64";
@@ -1414,13 +1441,14 @@ namespace Viewer
             this.btnSeat55.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat55.Appearance.Options.UseBackColor = true;
             this.btnSeat55.Appearance.Options.UseFont = true;
-            this.btnSeat55.Location = new System.Drawing.Point(955, 270);
+            this.btnSeat55.Location = new System.Drawing.Point(1114, 323);
             this.btnSeat55.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat55.Name = "btnSeat55";
-            this.btnSeat55.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat55.Size = new System.Drawing.Size(177, 29);
             this.btnSeat55.StyleController = this.layucSelectSeat;
             this.btnSeat55.TabIndex = 45;
             this.btnSeat55.Text = "Seat 55";
+            this.btnSeat55.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat53
             // 
@@ -1428,13 +1456,14 @@ namespace Viewer
             this.btnSeat53.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat53.Appearance.Options.UseBackColor = true;
             this.btnSeat53.Appearance.Options.UseFont = true;
-            this.btnSeat53.Location = new System.Drawing.Point(645, 270);
+            this.btnSeat53.Location = new System.Drawing.Point(752, 323);
             this.btnSeat53.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat53.Name = "btnSeat53";
-            this.btnSeat53.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat53.Size = new System.Drawing.Size(176, 29);
             this.btnSeat53.StyleController = this.layucSelectSeat;
             this.btnSeat53.TabIndex = 44;
             this.btnSeat53.Text = "Seat 53";
+            this.btnSeat53.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat54
             // 
@@ -1442,13 +1471,14 @@ namespace Viewer
             this.btnSeat54.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat54.Appearance.Options.UseBackColor = true;
             this.btnSeat54.Appearance.Options.UseFont = true;
-            this.btnSeat54.Location = new System.Drawing.Point(799, 270);
+            this.btnSeat54.Location = new System.Drawing.Point(932, 323);
             this.btnSeat54.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat54.Name = "btnSeat54";
-            this.btnSeat54.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat54.Size = new System.Drawing.Size(178, 29);
             this.btnSeat54.StyleController = this.layucSelectSeat;
             this.btnSeat54.TabIndex = 43;
             this.btnSeat54.Text = "Seat 54";
+            this.btnSeat54.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat51
             // 
@@ -1456,13 +1486,14 @@ namespace Viewer
             this.btnSeat51.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat51.Appearance.Options.UseBackColor = true;
             this.btnSeat51.Appearance.Options.UseFont = true;
-            this.btnSeat51.Location = new System.Drawing.Point(334, 270);
+            this.btnSeat51.Location = new System.Drawing.Point(389, 323);
             this.btnSeat51.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat51.Name = "btnSeat51";
-            this.btnSeat51.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat51.Size = new System.Drawing.Size(177, 29);
             this.btnSeat51.StyleController = this.layucSelectSeat;
             this.btnSeat51.TabIndex = 42;
             this.btnSeat51.Text = "Seat 51";
+            this.btnSeat51.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat49
             // 
@@ -1470,13 +1501,14 @@ namespace Viewer
             this.btnSeat49.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat49.Appearance.Options.UseBackColor = true;
             this.btnSeat49.Appearance.Options.UseFont = true;
-            this.btnSeat49.Location = new System.Drawing.Point(24, 270);
+            this.btnSeat49.Location = new System.Drawing.Point(27, 323);
             this.btnSeat49.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat49.Name = "btnSeat49";
-            this.btnSeat49.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat49.Size = new System.Drawing.Size(176, 29);
             this.btnSeat49.StyleController = this.layucSelectSeat;
             this.btnSeat49.TabIndex = 41;
             this.btnSeat49.Text = "Seat 49";
+            this.btnSeat49.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat50
             // 
@@ -1484,13 +1516,14 @@ namespace Viewer
             this.btnSeat50.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat50.Appearance.Options.UseBackColor = true;
             this.btnSeat50.Appearance.Options.UseFont = true;
-            this.btnSeat50.Location = new System.Drawing.Point(178, 270);
+            this.btnSeat50.Location = new System.Drawing.Point(207, 323);
             this.btnSeat50.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat50.Name = "btnSeat50";
-            this.btnSeat50.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat50.Size = new System.Drawing.Size(178, 29);
             this.btnSeat50.StyleController = this.layucSelectSeat;
             this.btnSeat50.TabIndex = 40;
             this.btnSeat50.Text = "Seat 50";
+            this.btnSeat50.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat52
             // 
@@ -1498,13 +1531,14 @@ namespace Viewer
             this.btnSeat52.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat52.Appearance.Options.UseBackColor = true;
             this.btnSeat52.Appearance.Options.UseFont = true;
-            this.btnSeat52.Location = new System.Drawing.Point(489, 270);
+            this.btnSeat52.Location = new System.Drawing.Point(570, 323);
             this.btnSeat52.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat52.Name = "btnSeat52";
-            this.btnSeat52.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat52.Size = new System.Drawing.Size(178, 29);
             this.btnSeat52.StyleController = this.layucSelectSeat;
             this.btnSeat52.TabIndex = 39;
             this.btnSeat52.Text = "Seat 52";
+            this.btnSeat52.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat56
             // 
@@ -1512,13 +1546,14 @@ namespace Viewer
             this.btnSeat56.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat56.Appearance.Options.UseBackColor = true;
             this.btnSeat56.Appearance.Options.UseFont = true;
-            this.btnSeat56.Location = new System.Drawing.Point(1110, 270);
+            this.btnSeat56.Location = new System.Drawing.Point(1295, 323);
             this.btnSeat56.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat56.Name = "btnSeat56";
-            this.btnSeat56.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat56.Size = new System.Drawing.Size(178, 29);
             this.btnSeat56.StyleController = this.layucSelectSeat;
             this.btnSeat56.TabIndex = 38;
             this.btnSeat56.Text = "Seat 56";
+            this.btnSeat56.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat47
             // 
@@ -1526,13 +1561,14 @@ namespace Viewer
             this.btnSeat47.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat47.Appearance.Options.UseBackColor = true;
             this.btnSeat47.Appearance.Options.UseFont = true;
-            this.btnSeat47.Location = new System.Drawing.Point(955, 242);
+            this.btnSeat47.Location = new System.Drawing.Point(1114, 290);
             this.btnSeat47.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat47.Name = "btnSeat47";
-            this.btnSeat47.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat47.Size = new System.Drawing.Size(177, 29);
             this.btnSeat47.StyleController = this.layucSelectSeat;
             this.btnSeat47.TabIndex = 37;
             this.btnSeat47.Text = "Seat 47";
+            this.btnSeat47.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat45
             // 
@@ -1540,13 +1576,14 @@ namespace Viewer
             this.btnSeat45.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat45.Appearance.Options.UseBackColor = true;
             this.btnSeat45.Appearance.Options.UseFont = true;
-            this.btnSeat45.Location = new System.Drawing.Point(645, 242);
+            this.btnSeat45.Location = new System.Drawing.Point(752, 290);
             this.btnSeat45.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat45.Name = "btnSeat45";
-            this.btnSeat45.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat45.Size = new System.Drawing.Size(176, 29);
             this.btnSeat45.StyleController = this.layucSelectSeat;
             this.btnSeat45.TabIndex = 36;
             this.btnSeat45.Text = "Seat 45";
+            this.btnSeat45.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat43
             // 
@@ -1554,13 +1591,14 @@ namespace Viewer
             this.btnSeat43.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat43.Appearance.Options.UseBackColor = true;
             this.btnSeat43.Appearance.Options.UseFont = true;
-            this.btnSeat43.Location = new System.Drawing.Point(334, 242);
+            this.btnSeat43.Location = new System.Drawing.Point(389, 290);
             this.btnSeat43.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat43.Name = "btnSeat43";
-            this.btnSeat43.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat43.Size = new System.Drawing.Size(177, 29);
             this.btnSeat43.StyleController = this.layucSelectSeat;
             this.btnSeat43.TabIndex = 35;
             this.btnSeat43.Text = "Seat 43";
+            this.btnSeat43.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat41
             // 
@@ -1568,13 +1606,14 @@ namespace Viewer
             this.btnSeat41.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat41.Appearance.Options.UseBackColor = true;
             this.btnSeat41.Appearance.Options.UseFont = true;
-            this.btnSeat41.Location = new System.Drawing.Point(24, 242);
+            this.btnSeat41.Location = new System.Drawing.Point(27, 290);
             this.btnSeat41.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat41.Name = "btnSeat41";
-            this.btnSeat41.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat41.Size = new System.Drawing.Size(176, 29);
             this.btnSeat41.StyleController = this.layucSelectSeat;
             this.btnSeat41.TabIndex = 34;
             this.btnSeat41.Text = "Seat 41";
+            this.btnSeat41.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat46
             // 
@@ -1582,13 +1621,14 @@ namespace Viewer
             this.btnSeat46.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat46.Appearance.Options.UseBackColor = true;
             this.btnSeat46.Appearance.Options.UseFont = true;
-            this.btnSeat46.Location = new System.Drawing.Point(799, 242);
+            this.btnSeat46.Location = new System.Drawing.Point(932, 290);
             this.btnSeat46.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat46.Name = "btnSeat46";
-            this.btnSeat46.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat46.Size = new System.Drawing.Size(178, 29);
             this.btnSeat46.StyleController = this.layucSelectSeat;
             this.btnSeat46.TabIndex = 33;
             this.btnSeat46.Text = "Seat 46";
+            this.btnSeat46.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat42
             // 
@@ -1596,13 +1636,14 @@ namespace Viewer
             this.btnSeat42.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat42.Appearance.Options.UseBackColor = true;
             this.btnSeat42.Appearance.Options.UseFont = true;
-            this.btnSeat42.Location = new System.Drawing.Point(178, 242);
+            this.btnSeat42.Location = new System.Drawing.Point(207, 290);
             this.btnSeat42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat42.Name = "btnSeat42";
-            this.btnSeat42.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat42.Size = new System.Drawing.Size(178, 29);
             this.btnSeat42.StyleController = this.layucSelectSeat;
             this.btnSeat42.TabIndex = 32;
             this.btnSeat42.Text = "Seat 42";
+            this.btnSeat42.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat44
             // 
@@ -1610,13 +1651,14 @@ namespace Viewer
             this.btnSeat44.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat44.Appearance.Options.UseBackColor = true;
             this.btnSeat44.Appearance.Options.UseFont = true;
-            this.btnSeat44.Location = new System.Drawing.Point(489, 242);
+            this.btnSeat44.Location = new System.Drawing.Point(570, 290);
             this.btnSeat44.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat44.Name = "btnSeat44";
-            this.btnSeat44.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat44.Size = new System.Drawing.Size(178, 29);
             this.btnSeat44.StyleController = this.layucSelectSeat;
             this.btnSeat44.TabIndex = 31;
             this.btnSeat44.Text = "Seat 44";
+            this.btnSeat44.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat48
             // 
@@ -1624,13 +1666,14 @@ namespace Viewer
             this.btnSeat48.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat48.Appearance.Options.UseBackColor = true;
             this.btnSeat48.Appearance.Options.UseFont = true;
-            this.btnSeat48.Location = new System.Drawing.Point(1110, 242);
+            this.btnSeat48.Location = new System.Drawing.Point(1295, 290);
             this.btnSeat48.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat48.Name = "btnSeat48";
-            this.btnSeat48.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat48.Size = new System.Drawing.Size(178, 29);
             this.btnSeat48.StyleController = this.layucSelectSeat;
             this.btnSeat48.TabIndex = 30;
             this.btnSeat48.Text = "Seat 48";
+            this.btnSeat48.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat39
             // 
@@ -1638,13 +1681,14 @@ namespace Viewer
             this.btnSeat39.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat39.Appearance.Options.UseBackColor = true;
             this.btnSeat39.Appearance.Options.UseFont = true;
-            this.btnSeat39.Location = new System.Drawing.Point(955, 214);
+            this.btnSeat39.Location = new System.Drawing.Point(1114, 257);
             this.btnSeat39.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat39.Name = "btnSeat39";
-            this.btnSeat39.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat39.Size = new System.Drawing.Size(177, 29);
             this.btnSeat39.StyleController = this.layucSelectSeat;
             this.btnSeat39.TabIndex = 29;
             this.btnSeat39.Text = "Seat 39";
+            this.btnSeat39.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat37
             // 
@@ -1652,13 +1696,14 @@ namespace Viewer
             this.btnSeat37.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat37.Appearance.Options.UseBackColor = true;
             this.btnSeat37.Appearance.Options.UseFont = true;
-            this.btnSeat37.Location = new System.Drawing.Point(645, 214);
+            this.btnSeat37.Location = new System.Drawing.Point(752, 257);
             this.btnSeat37.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat37.Name = "btnSeat37";
-            this.btnSeat37.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat37.Size = new System.Drawing.Size(176, 29);
             this.btnSeat37.StyleController = this.layucSelectSeat;
             this.btnSeat37.TabIndex = 28;
             this.btnSeat37.Text = "Seat 37";
+            this.btnSeat37.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat38
             // 
@@ -1666,13 +1711,14 @@ namespace Viewer
             this.btnSeat38.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat38.Appearance.Options.UseBackColor = true;
             this.btnSeat38.Appearance.Options.UseFont = true;
-            this.btnSeat38.Location = new System.Drawing.Point(799, 214);
+            this.btnSeat38.Location = new System.Drawing.Point(932, 257);
             this.btnSeat38.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat38.Name = "btnSeat38";
-            this.btnSeat38.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat38.Size = new System.Drawing.Size(178, 29);
             this.btnSeat38.StyleController = this.layucSelectSeat;
             this.btnSeat38.TabIndex = 27;
             this.btnSeat38.Text = "Seat 38";
+            this.btnSeat38.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat35
             // 
@@ -1680,13 +1726,14 @@ namespace Viewer
             this.btnSeat35.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat35.Appearance.Options.UseBackColor = true;
             this.btnSeat35.Appearance.Options.UseFont = true;
-            this.btnSeat35.Location = new System.Drawing.Point(334, 214);
+            this.btnSeat35.Location = new System.Drawing.Point(389, 257);
             this.btnSeat35.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat35.Name = "btnSeat35";
-            this.btnSeat35.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat35.Size = new System.Drawing.Size(177, 29);
             this.btnSeat35.StyleController = this.layucSelectSeat;
             this.btnSeat35.TabIndex = 26;
             this.btnSeat35.Text = "Seat 35";
+            this.btnSeat35.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat33
             // 
@@ -1694,13 +1741,14 @@ namespace Viewer
             this.btnSeat33.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat33.Appearance.Options.UseBackColor = true;
             this.btnSeat33.Appearance.Options.UseFont = true;
-            this.btnSeat33.Location = new System.Drawing.Point(24, 214);
+            this.btnSeat33.Location = new System.Drawing.Point(27, 257);
             this.btnSeat33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat33.Name = "btnSeat33";
-            this.btnSeat33.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat33.Size = new System.Drawing.Size(176, 29);
             this.btnSeat33.StyleController = this.layucSelectSeat;
             this.btnSeat33.TabIndex = 25;
             this.btnSeat33.Text = "Seat 33";
+            this.btnSeat33.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat34
             // 
@@ -1708,13 +1756,14 @@ namespace Viewer
             this.btnSeat34.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat34.Appearance.Options.UseBackColor = true;
             this.btnSeat34.Appearance.Options.UseFont = true;
-            this.btnSeat34.Location = new System.Drawing.Point(178, 214);
+            this.btnSeat34.Location = new System.Drawing.Point(207, 257);
             this.btnSeat34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat34.Name = "btnSeat34";
-            this.btnSeat34.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat34.Size = new System.Drawing.Size(178, 29);
             this.btnSeat34.StyleController = this.layucSelectSeat;
             this.btnSeat34.TabIndex = 24;
             this.btnSeat34.Text = "Seat 34";
+            this.btnSeat34.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat36
             // 
@@ -1722,13 +1771,14 @@ namespace Viewer
             this.btnSeat36.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat36.Appearance.Options.UseBackColor = true;
             this.btnSeat36.Appearance.Options.UseFont = true;
-            this.btnSeat36.Location = new System.Drawing.Point(489, 214);
+            this.btnSeat36.Location = new System.Drawing.Point(570, 257);
             this.btnSeat36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat36.Name = "btnSeat36";
-            this.btnSeat36.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat36.Size = new System.Drawing.Size(178, 29);
             this.btnSeat36.StyleController = this.layucSelectSeat;
             this.btnSeat36.TabIndex = 23;
             this.btnSeat36.Text = "Seat 36";
+            this.btnSeat36.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat40
             // 
@@ -1736,13 +1786,14 @@ namespace Viewer
             this.btnSeat40.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat40.Appearance.Options.UseBackColor = true;
             this.btnSeat40.Appearance.Options.UseFont = true;
-            this.btnSeat40.Location = new System.Drawing.Point(1110, 214);
+            this.btnSeat40.Location = new System.Drawing.Point(1295, 257);
             this.btnSeat40.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat40.Name = "btnSeat40";
-            this.btnSeat40.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat40.Size = new System.Drawing.Size(178, 29);
             this.btnSeat40.StyleController = this.layucSelectSeat;
             this.btnSeat40.TabIndex = 22;
             this.btnSeat40.Text = "Seat 40";
+            this.btnSeat40.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat31
             // 
@@ -1750,13 +1801,14 @@ namespace Viewer
             this.btnSeat31.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat31.Appearance.Options.UseBackColor = true;
             this.btnSeat31.Appearance.Options.UseFont = true;
-            this.btnSeat31.Location = new System.Drawing.Point(955, 186);
+            this.btnSeat31.Location = new System.Drawing.Point(1114, 224);
             this.btnSeat31.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat31.Name = "btnSeat31";
-            this.btnSeat31.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat31.Size = new System.Drawing.Size(177, 29);
             this.btnSeat31.StyleController = this.layucSelectSeat;
             this.btnSeat31.TabIndex = 21;
             this.btnSeat31.Text = "Seat 31";
+            this.btnSeat31.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat29
             // 
@@ -1764,13 +1816,14 @@ namespace Viewer
             this.btnSeat29.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat29.Appearance.Options.UseBackColor = true;
             this.btnSeat29.Appearance.Options.UseFont = true;
-            this.btnSeat29.Location = new System.Drawing.Point(645, 186);
+            this.btnSeat29.Location = new System.Drawing.Point(752, 224);
             this.btnSeat29.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat29.Name = "btnSeat29";
-            this.btnSeat29.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat29.Size = new System.Drawing.Size(176, 29);
             this.btnSeat29.StyleController = this.layucSelectSeat;
             this.btnSeat29.TabIndex = 20;
             this.btnSeat29.Text = "Seat 29";
+            this.btnSeat29.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat30
             // 
@@ -1778,13 +1831,14 @@ namespace Viewer
             this.btnSeat30.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat30.Appearance.Options.UseBackColor = true;
             this.btnSeat30.Appearance.Options.UseFont = true;
-            this.btnSeat30.Location = new System.Drawing.Point(799, 186);
+            this.btnSeat30.Location = new System.Drawing.Point(932, 224);
             this.btnSeat30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat30.Name = "btnSeat30";
-            this.btnSeat30.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat30.Size = new System.Drawing.Size(178, 29);
             this.btnSeat30.StyleController = this.layucSelectSeat;
             this.btnSeat30.TabIndex = 19;
             this.btnSeat30.Text = "Seat 30";
+            this.btnSeat30.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat27
             // 
@@ -1792,13 +1846,14 @@ namespace Viewer
             this.btnSeat27.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat27.Appearance.Options.UseBackColor = true;
             this.btnSeat27.Appearance.Options.UseFont = true;
-            this.btnSeat27.Location = new System.Drawing.Point(334, 186);
+            this.btnSeat27.Location = new System.Drawing.Point(389, 224);
             this.btnSeat27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat27.Name = "btnSeat27";
-            this.btnSeat27.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat27.Size = new System.Drawing.Size(177, 29);
             this.btnSeat27.StyleController = this.layucSelectSeat;
             this.btnSeat27.TabIndex = 18;
             this.btnSeat27.Text = "Seat 27";
+            this.btnSeat27.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat25
             // 
@@ -1806,13 +1861,14 @@ namespace Viewer
             this.btnSeat25.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat25.Appearance.Options.UseBackColor = true;
             this.btnSeat25.Appearance.Options.UseFont = true;
-            this.btnSeat25.Location = new System.Drawing.Point(24, 186);
+            this.btnSeat25.Location = new System.Drawing.Point(27, 224);
             this.btnSeat25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat25.Name = "btnSeat25";
-            this.btnSeat25.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat25.Size = new System.Drawing.Size(176, 29);
             this.btnSeat25.StyleController = this.layucSelectSeat;
             this.btnSeat25.TabIndex = 17;
             this.btnSeat25.Text = "Seat 25";
+            this.btnSeat25.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat26
             // 
@@ -1820,13 +1876,14 @@ namespace Viewer
             this.btnSeat26.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat26.Appearance.Options.UseBackColor = true;
             this.btnSeat26.Appearance.Options.UseFont = true;
-            this.btnSeat26.Location = new System.Drawing.Point(178, 186);
+            this.btnSeat26.Location = new System.Drawing.Point(207, 224);
             this.btnSeat26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat26.Name = "btnSeat26";
-            this.btnSeat26.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat26.Size = new System.Drawing.Size(178, 29);
             this.btnSeat26.StyleController = this.layucSelectSeat;
             this.btnSeat26.TabIndex = 16;
             this.btnSeat26.Text = "Seat 26";
+            this.btnSeat26.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat28
             // 
@@ -1834,13 +1891,14 @@ namespace Viewer
             this.btnSeat28.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat28.Appearance.Options.UseBackColor = true;
             this.btnSeat28.Appearance.Options.UseFont = true;
-            this.btnSeat28.Location = new System.Drawing.Point(489, 186);
+            this.btnSeat28.Location = new System.Drawing.Point(570, 224);
             this.btnSeat28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat28.Name = "btnSeat28";
-            this.btnSeat28.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat28.Size = new System.Drawing.Size(178, 29);
             this.btnSeat28.StyleController = this.layucSelectSeat;
             this.btnSeat28.TabIndex = 15;
             this.btnSeat28.Text = "Seat 28";
+            this.btnSeat28.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat32
             // 
@@ -1848,13 +1906,14 @@ namespace Viewer
             this.btnSeat32.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat32.Appearance.Options.UseBackColor = true;
             this.btnSeat32.Appearance.Options.UseFont = true;
-            this.btnSeat32.Location = new System.Drawing.Point(1110, 186);
+            this.btnSeat32.Location = new System.Drawing.Point(1295, 224);
             this.btnSeat32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat32.Name = "btnSeat32";
-            this.btnSeat32.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat32.Size = new System.Drawing.Size(178, 29);
             this.btnSeat32.StyleController = this.layucSelectSeat;
             this.btnSeat32.TabIndex = 14;
             this.btnSeat32.Text = "Seat 32";
+            this.btnSeat32.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat23
             // 
@@ -1862,13 +1921,14 @@ namespace Viewer
             this.btnSeat23.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat23.Appearance.Options.UseBackColor = true;
             this.btnSeat23.Appearance.Options.UseFont = true;
-            this.btnSeat23.Location = new System.Drawing.Point(955, 158);
+            this.btnSeat23.Location = new System.Drawing.Point(1114, 191);
             this.btnSeat23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat23.Name = "btnSeat23";
-            this.btnSeat23.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat23.Size = new System.Drawing.Size(177, 29);
             this.btnSeat23.StyleController = this.layucSelectSeat;
             this.btnSeat23.TabIndex = 13;
             this.btnSeat23.Text = "Seat 23";
+            this.btnSeat23.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat21
             // 
@@ -1876,13 +1936,14 @@ namespace Viewer
             this.btnSeat21.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat21.Appearance.Options.UseBackColor = true;
             this.btnSeat21.Appearance.Options.UseFont = true;
-            this.btnSeat21.Location = new System.Drawing.Point(645, 158);
+            this.btnSeat21.Location = new System.Drawing.Point(752, 191);
             this.btnSeat21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat21.Name = "btnSeat21";
-            this.btnSeat21.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat21.Size = new System.Drawing.Size(176, 29);
             this.btnSeat21.StyleController = this.layucSelectSeat;
             this.btnSeat21.TabIndex = 12;
             this.btnSeat21.Text = "Seat 21";
+            this.btnSeat21.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat22
             // 
@@ -1890,13 +1951,14 @@ namespace Viewer
             this.btnSeat22.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat22.Appearance.Options.UseBackColor = true;
             this.btnSeat22.Appearance.Options.UseFont = true;
-            this.btnSeat22.Location = new System.Drawing.Point(799, 158);
+            this.btnSeat22.Location = new System.Drawing.Point(932, 191);
             this.btnSeat22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat22.Name = "btnSeat22";
-            this.btnSeat22.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat22.Size = new System.Drawing.Size(178, 29);
             this.btnSeat22.StyleController = this.layucSelectSeat;
             this.btnSeat22.TabIndex = 11;
             this.btnSeat22.Text = "Seat 22";
+            this.btnSeat22.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat19
             // 
@@ -1904,13 +1966,14 @@ namespace Viewer
             this.btnSeat19.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat19.Appearance.Options.UseBackColor = true;
             this.btnSeat19.Appearance.Options.UseFont = true;
-            this.btnSeat19.Location = new System.Drawing.Point(334, 158);
+            this.btnSeat19.Location = new System.Drawing.Point(389, 191);
             this.btnSeat19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat19.Name = "btnSeat19";
-            this.btnSeat19.Size = new System.Drawing.Size(151, 24);
+            this.btnSeat19.Size = new System.Drawing.Size(177, 29);
             this.btnSeat19.StyleController = this.layucSelectSeat;
             this.btnSeat19.TabIndex = 10;
             this.btnSeat19.Text = "Seat 19";
+            this.btnSeat19.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat17
             // 
@@ -1918,13 +1981,14 @@ namespace Viewer
             this.btnSeat17.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat17.Appearance.Options.UseBackColor = true;
             this.btnSeat17.Appearance.Options.UseFont = true;
-            this.btnSeat17.Location = new System.Drawing.Point(24, 158);
+            this.btnSeat17.Location = new System.Drawing.Point(27, 191);
             this.btnSeat17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat17.Name = "btnSeat17";
-            this.btnSeat17.Size = new System.Drawing.Size(150, 24);
+            this.btnSeat17.Size = new System.Drawing.Size(176, 29);
             this.btnSeat17.StyleController = this.layucSelectSeat;
             this.btnSeat17.TabIndex = 9;
             this.btnSeat17.Text = "Seat 17";
+            this.btnSeat17.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat18
             // 
@@ -1932,13 +1996,14 @@ namespace Viewer
             this.btnSeat18.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat18.Appearance.Options.UseBackColor = true;
             this.btnSeat18.Appearance.Options.UseFont = true;
-            this.btnSeat18.Location = new System.Drawing.Point(178, 158);
+            this.btnSeat18.Location = new System.Drawing.Point(207, 191);
             this.btnSeat18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat18.Name = "btnSeat18";
-            this.btnSeat18.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat18.Size = new System.Drawing.Size(178, 29);
             this.btnSeat18.StyleController = this.layucSelectSeat;
             this.btnSeat18.TabIndex = 8;
             this.btnSeat18.Text = "Seat 18";
+            this.btnSeat18.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat20
             // 
@@ -1946,13 +2011,14 @@ namespace Viewer
             this.btnSeat20.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat20.Appearance.Options.UseBackColor = true;
             this.btnSeat20.Appearance.Options.UseFont = true;
-            this.btnSeat20.Location = new System.Drawing.Point(489, 158);
+            this.btnSeat20.Location = new System.Drawing.Point(570, 191);
             this.btnSeat20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat20.Name = "btnSeat20";
-            this.btnSeat20.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat20.Size = new System.Drawing.Size(178, 29);
             this.btnSeat20.StyleController = this.layucSelectSeat;
             this.btnSeat20.TabIndex = 7;
             this.btnSeat20.Text = "Seat 20";
+            this.btnSeat20.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // btnSeat24
             // 
@@ -1960,13 +2026,14 @@ namespace Viewer
             this.btnSeat24.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeat24.Appearance.Options.UseBackColor = true;
             this.btnSeat24.Appearance.Options.UseFont = true;
-            this.btnSeat24.Location = new System.Drawing.Point(1110, 158);
+            this.btnSeat24.Location = new System.Drawing.Point(1295, 191);
             this.btnSeat24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSeat24.Name = "btnSeat24";
-            this.btnSeat24.Size = new System.Drawing.Size(152, 24);
+            this.btnSeat24.Size = new System.Drawing.Size(178, 29);
             this.btnSeat24.StyleController = this.layucSelectSeat;
             this.btnSeat24.TabIndex = 6;
             this.btnSeat24.Text = "Seat 24";
+            this.btnSeat24.Click += new System.EventHandler(this.btnSeat1_Click);
             // 
             // lblucScreen
             // 
@@ -1976,24 +2043,13 @@ namespace Viewer
             this.lblucScreen.Appearance.Options.UseForeColor = true;
             this.lblucScreen.Appearance.Options.UseTextOptions = true;
             this.lblucScreen.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblucScreen.Location = new System.Drawing.Point(12, 12);
+            this.lblucScreen.Location = new System.Drawing.Point(14, 14);
             this.lblucScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblucScreen.Name = "lblucScreen";
-            this.lblucScreen.Size = new System.Drawing.Size(1262, 25);
+            this.lblucScreen.Size = new System.Drawing.Size(1472, 32);
             this.lblucScreen.StyleController = this.layucSelectSeat;
             this.lblucScreen.TabIndex = 5;
             this.lblucScreen.Text = "Screen";
-            // 
-            // textEdit21
-            // 
-            this.textEdit21.Location = new System.Drawing.Point(219, 515);
-            this.textEdit21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textEdit21.Name = "textEdit21";
-            this.textEdit21.Properties.Appearance.Font = new System.Drawing.Font("Arial", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit21.Properties.Appearance.Options.UseFont = true;
-            this.textEdit21.Size = new System.Drawing.Size(1057, 42);
-            this.textEdit21.StyleController = this.layucSelectSeat;
-            this.textEdit21.TabIndex = 117;
             // 
             // Root
             // 
@@ -2004,11 +2060,10 @@ namespace Viewer
             this.emptySpaceItem2,
             this.grcSeats,
             this.layucGroup,
-            this.emptySpaceItem3,
             this.layucCustomer,
             this.emptySpaceItem1});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1286, 730);
+            this.Root.Size = new System.Drawing.Size(1500, 898);
             this.Root.TextVisible = false;
             // 
             // lblScreen
@@ -2019,9 +2074,9 @@ namespace Viewer
             this.lblScreen.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblScreen.Control = this.lblucScreen;
             this.lblScreen.Location = new System.Drawing.Point(0, 0);
-            this.lblScreen.MinSize = new System.Drawing.Size(68, 16);
+            this.lblScreen.MinSize = new System.Drawing.Size(79, 20);
             this.lblScreen.Name = "lblScreen";
-            this.lblScreen.Size = new System.Drawing.Size(1266, 29);
+            this.lblScreen.Size = new System.Drawing.Size(1476, 36);
             this.lblScreen.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblScreen.TextSize = new System.Drawing.Size(0, 0);
             this.lblScreen.TextVisible = false;
@@ -2029,9 +2084,9 @@ namespace Viewer
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 29);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 36);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(1266, 15);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(1476, 18);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // grcSeats
@@ -2147,20 +2202,20 @@ namespace Viewer
             this.layoutControlItem103,
             this.layoutControlItem68,
             this.layoutControlItem69});
-            this.grcSeats.Location = new System.Drawing.Point(0, 44);
+            this.grcSeats.Location = new System.Drawing.Point(0, 54);
             this.grcSeats.Name = "grcSeats";
-            this.grcSeats.Size = new System.Drawing.Size(1266, 450);
+            this.grcSeats.Size = new System.Drawing.Size(1476, 533);
             this.grcSeats.Text = "Select Seats";
             // 
             // layoutControlItem67
             // 
             this.layoutControlItem67.Control = this.btnSeat4;
-            this.layoutControlItem67.Location = new System.Drawing.Point(465, 0);
-            this.layoutControlItem67.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem67.Location = new System.Drawing.Point(543, 0);
+            this.layoutControlItem67.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem67.Name = "layoutControlItem67";
             this.layoutControlItem67.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem67.OptionsTableLayoutItem.RowIndex = 1;
-            this.layoutControlItem67.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem67.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem67.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem67.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem67.TextVisible = false;
@@ -2168,11 +2223,11 @@ namespace Viewer
             // layoutControlItem72
             // 
             this.layoutControlItem72.Control = this.btnSeat5;
-            this.layoutControlItem72.Location = new System.Drawing.Point(621, 0);
-            this.layoutControlItem72.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem72.Location = new System.Drawing.Point(725, 0);
+            this.layoutControlItem72.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem72.Name = "layoutControlItem72";
             this.layoutControlItem72.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem72.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem72.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem72.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem72.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem72.TextVisible = false;
@@ -2180,12 +2235,12 @@ namespace Viewer
             // layoutControlItem71
             // 
             this.layoutControlItem71.Control = this.btnSeat6;
-            this.layoutControlItem71.Location = new System.Drawing.Point(775, 0);
-            this.layoutControlItem71.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem71.Location = new System.Drawing.Point(905, 0);
+            this.layoutControlItem71.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem71.Name = "layoutControlItem71";
             this.layoutControlItem71.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem71.OptionsTableLayoutItem.RowIndex = 2;
-            this.layoutControlItem71.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem71.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem71.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem71.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem71.TextVisible = false;
@@ -2193,11 +2248,11 @@ namespace Viewer
             // layoutControlItem73
             // 
             this.layoutControlItem73.Control = this.btnSeat7;
-            this.layoutControlItem73.Location = new System.Drawing.Point(931, 0);
-            this.layoutControlItem73.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem73.Location = new System.Drawing.Point(1087, 0);
+            this.layoutControlItem73.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem73.Name = "layoutControlItem73";
             this.layoutControlItem73.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem73.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem73.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem73.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem73.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem73.TextVisible = false;
@@ -2205,12 +2260,12 @@ namespace Viewer
             // layoutControlItem65
             // 
             this.layoutControlItem65.Control = this.btnSeat8;
-            this.layoutControlItem65.Location = new System.Drawing.Point(1086, 0);
-            this.layoutControlItem65.MinSize = new System.Drawing.Size(84, 25);
+            this.layoutControlItem65.Location = new System.Drawing.Point(1268, 0);
+            this.layoutControlItem65.MinSize = new System.Drawing.Size(98, 31);
             this.layoutControlItem65.Name = "layoutControlItem65";
             this.layoutControlItem65.OptionsTableLayoutItem.ColumnIndex = 1;
             this.layoutControlItem65.OptionsTableLayoutItem.RowIndex = 3;
-            this.layoutControlItem65.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem65.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem65.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem65.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem65.TextVisible = false;
@@ -2218,10 +2273,10 @@ namespace Viewer
             // layoutControlItem74
             // 
             this.layoutControlItem74.Control = this.btnSeat9;
-            this.layoutControlItem74.Location = new System.Drawing.Point(0, 28);
-            this.layoutControlItem74.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem74.Location = new System.Drawing.Point(0, 33);
+            this.layoutControlItem74.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem74.Name = "layoutControlItem74";
-            this.layoutControlItem74.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem74.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem74.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem74.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem74.TextVisible = false;
@@ -2229,10 +2284,10 @@ namespace Viewer
             // layoutControlItem76
             // 
             this.layoutControlItem76.Control = this.btnSeat10;
-            this.layoutControlItem76.Location = new System.Drawing.Point(154, 28);
-            this.layoutControlItem76.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem76.Location = new System.Drawing.Point(180, 33);
+            this.layoutControlItem76.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem76.Name = "layoutControlItem76";
-            this.layoutControlItem76.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem76.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem76.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem76.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem76.TextVisible = false;
@@ -2240,10 +2295,10 @@ namespace Viewer
             // layoutControlItem75
             // 
             this.layoutControlItem75.Control = this.btnSeat12;
-            this.layoutControlItem75.Location = new System.Drawing.Point(465, 28);
-            this.layoutControlItem75.MinSize = new System.Drawing.Size(47, 25);
+            this.layoutControlItem75.Location = new System.Drawing.Point(543, 33);
+            this.layoutControlItem75.MinSize = new System.Drawing.Size(55, 31);
             this.layoutControlItem75.Name = "layoutControlItem75";
-            this.layoutControlItem75.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem75.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem75.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem75.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem75.TextVisible = false;
@@ -2251,37 +2306,37 @@ namespace Viewer
             // layoutControlItem79
             // 
             this.layoutControlItem79.Control = this.btnSeat13;
-            this.layoutControlItem79.Location = new System.Drawing.Point(621, 28);
+            this.layoutControlItem79.Location = new System.Drawing.Point(725, 33);
             this.layoutControlItem79.Name = "layoutControlItem79";
-            this.layoutControlItem79.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem79.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem79.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem79.TextVisible = false;
             // 
             // layoutControlItem78
             // 
             this.layoutControlItem78.Control = this.btnSeat14;
-            this.layoutControlItem78.Location = new System.Drawing.Point(775, 28);
+            this.layoutControlItem78.Location = new System.Drawing.Point(905, 33);
             this.layoutControlItem78.Name = "layoutControlItem78";
-            this.layoutControlItem78.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem78.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem78.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem78.TextVisible = false;
             // 
             // layoutControlItem80
             // 
             this.layoutControlItem80.Control = this.btnSeat15;
-            this.layoutControlItem80.Location = new System.Drawing.Point(931, 28);
+            this.layoutControlItem80.Location = new System.Drawing.Point(1087, 33);
             this.layoutControlItem80.Name = "layoutControlItem80";
-            this.layoutControlItem80.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem80.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem80.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem80.TextVisible = false;
             // 
             // layoutControlItem66
             // 
             this.layoutControlItem66.Control = this.btnSeat16;
-            this.layoutControlItem66.Location = new System.Drawing.Point(1086, 28);
-            this.layoutControlItem66.MinSize = new System.Drawing.Size(84, 25);
+            this.layoutControlItem66.Location = new System.Drawing.Point(1268, 33);
+            this.layoutControlItem66.MinSize = new System.Drawing.Size(98, 31);
             this.layoutControlItem66.Name = "layoutControlItem66";
-            this.layoutControlItem66.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem66.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem66.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem66.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem66.TextVisible = false;
@@ -2289,792 +2344,792 @@ namespace Viewer
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.btnSeat17;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 66);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem4.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnSeat18;
-            this.layoutControlItem3.Location = new System.Drawing.Point(154, 56);
+            this.layoutControlItem3.Location = new System.Drawing.Point(180, 66);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem3.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.btnSeat19;
-            this.layoutControlItem5.Location = new System.Drawing.Point(310, 56);
+            this.layoutControlItem5.Location = new System.Drawing.Point(362, 66);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem5.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem5.TextVisible = false;
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnSeat20;
-            this.layoutControlItem2.Location = new System.Drawing.Point(465, 56);
+            this.layoutControlItem2.Location = new System.Drawing.Point(543, 66);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem2.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.btnSeat21;
-            this.layoutControlItem7.Location = new System.Drawing.Point(621, 56);
+            this.layoutControlItem7.Location = new System.Drawing.Point(725, 66);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem7.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem7.TextVisible = false;
             // 
             // layoutControlItem6
             // 
             this.layoutControlItem6.Control = this.btnSeat22;
-            this.layoutControlItem6.Location = new System.Drawing.Point(775, 56);
+            this.layoutControlItem6.Location = new System.Drawing.Point(905, 66);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem6.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.btnSeat23;
-            this.layoutControlItem8.Location = new System.Drawing.Point(931, 56);
+            this.layoutControlItem8.Location = new System.Drawing.Point(1087, 66);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem8.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem8.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem8.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.btnSeat24;
-            this.layoutControlItem1.Location = new System.Drawing.Point(1086, 56);
+            this.layoutControlItem1.Location = new System.Drawing.Point(1268, 66);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem1.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.btnSeat25;
-            this.layoutControlItem12.Location = new System.Drawing.Point(0, 84);
+            this.layoutControlItem12.Location = new System.Drawing.Point(0, 99);
             this.layoutControlItem12.Name = "layoutControlItem12";
-            this.layoutControlItem12.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem12.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
             // 
             // layoutControlItem11
             // 
             this.layoutControlItem11.Control = this.btnSeat26;
-            this.layoutControlItem11.Location = new System.Drawing.Point(154, 84);
+            this.layoutControlItem11.Location = new System.Drawing.Point(180, 99);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem11.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem11.TextVisible = false;
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.btnSeat27;
-            this.layoutControlItem13.Location = new System.Drawing.Point(310, 84);
+            this.layoutControlItem13.Location = new System.Drawing.Point(362, 99);
             this.layoutControlItem13.Name = "layoutControlItem13";
-            this.layoutControlItem13.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem13.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.btnSeat28;
-            this.layoutControlItem10.Location = new System.Drawing.Point(465, 84);
+            this.layoutControlItem10.Location = new System.Drawing.Point(543, 99);
             this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem10.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem10.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.btnSeat29;
-            this.layoutControlItem15.Location = new System.Drawing.Point(621, 84);
+            this.layoutControlItem15.Location = new System.Drawing.Point(725, 99);
             this.layoutControlItem15.Name = "layoutControlItem15";
-            this.layoutControlItem15.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem15.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.btnSeat30;
-            this.layoutControlItem14.Location = new System.Drawing.Point(775, 84);
+            this.layoutControlItem14.Location = new System.Drawing.Point(905, 99);
             this.layoutControlItem14.Name = "layoutControlItem14";
-            this.layoutControlItem14.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem14.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
             // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.btnSeat31;
-            this.layoutControlItem16.Location = new System.Drawing.Point(931, 84);
+            this.layoutControlItem16.Location = new System.Drawing.Point(1087, 99);
             this.layoutControlItem16.Name = "layoutControlItem16";
-            this.layoutControlItem16.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem16.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
             // 
             // layoutControlItem9
             // 
             this.layoutControlItem9.Control = this.btnSeat32;
-            this.layoutControlItem9.Location = new System.Drawing.Point(1086, 84);
+            this.layoutControlItem9.Location = new System.Drawing.Point(1268, 99);
             this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem9.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem9.TextVisible = false;
             // 
             // layoutControlItem20
             // 
             this.layoutControlItem20.Control = this.btnSeat33;
-            this.layoutControlItem20.Location = new System.Drawing.Point(0, 112);
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 132);
             this.layoutControlItem20.Name = "layoutControlItem20";
-            this.layoutControlItem20.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem20.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem20.TextVisible = false;
             // 
             // layoutControlItem19
             // 
             this.layoutControlItem19.Control = this.btnSeat34;
-            this.layoutControlItem19.Location = new System.Drawing.Point(154, 112);
+            this.layoutControlItem19.Location = new System.Drawing.Point(180, 132);
             this.layoutControlItem19.Name = "layoutControlItem19";
-            this.layoutControlItem19.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem19.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem19.TextVisible = false;
             // 
             // layoutControlItem21
             // 
             this.layoutControlItem21.Control = this.btnSeat35;
-            this.layoutControlItem21.Location = new System.Drawing.Point(310, 112);
+            this.layoutControlItem21.Location = new System.Drawing.Point(362, 132);
             this.layoutControlItem21.Name = "layoutControlItem21";
-            this.layoutControlItem21.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem21.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem21.TextVisible = false;
             // 
             // layoutControlItem18
             // 
             this.layoutControlItem18.Control = this.btnSeat36;
-            this.layoutControlItem18.Location = new System.Drawing.Point(465, 112);
+            this.layoutControlItem18.Location = new System.Drawing.Point(543, 132);
             this.layoutControlItem18.Name = "layoutControlItem18";
-            this.layoutControlItem18.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem18.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem18.TextVisible = false;
             // 
             // layoutControlItem23
             // 
             this.layoutControlItem23.Control = this.btnSeat37;
-            this.layoutControlItem23.Location = new System.Drawing.Point(621, 112);
+            this.layoutControlItem23.Location = new System.Drawing.Point(725, 132);
             this.layoutControlItem23.Name = "layoutControlItem23";
-            this.layoutControlItem23.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem23.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem23.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem23.TextVisible = false;
             // 
             // layoutControlItem22
             // 
             this.layoutControlItem22.Control = this.btnSeat38;
-            this.layoutControlItem22.Location = new System.Drawing.Point(775, 112);
+            this.layoutControlItem22.Location = new System.Drawing.Point(905, 132);
             this.layoutControlItem22.Name = "layoutControlItem22";
-            this.layoutControlItem22.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem22.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem22.TextVisible = false;
             // 
             // layoutControlItem24
             // 
             this.layoutControlItem24.Control = this.btnSeat39;
-            this.layoutControlItem24.Location = new System.Drawing.Point(931, 112);
+            this.layoutControlItem24.Location = new System.Drawing.Point(1087, 132);
             this.layoutControlItem24.Name = "layoutControlItem24";
-            this.layoutControlItem24.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem24.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem24.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem24.TextVisible = false;
             // 
             // layoutControlItem17
             // 
             this.layoutControlItem17.Control = this.btnSeat40;
-            this.layoutControlItem17.Location = new System.Drawing.Point(1086, 112);
+            this.layoutControlItem17.Location = new System.Drawing.Point(1268, 132);
             this.layoutControlItem17.Name = "layoutControlItem17";
-            this.layoutControlItem17.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem17.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem17.TextVisible = false;
             // 
             // layoutControlItem29
             // 
             this.layoutControlItem29.Control = this.btnSeat41;
-            this.layoutControlItem29.Location = new System.Drawing.Point(0, 140);
+            this.layoutControlItem29.Location = new System.Drawing.Point(0, 165);
             this.layoutControlItem29.Name = "layoutControlItem29";
-            this.layoutControlItem29.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem29.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem29.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem29.TextVisible = false;
             // 
             // layoutControlItem27
             // 
             this.layoutControlItem27.Control = this.btnSeat42;
-            this.layoutControlItem27.Location = new System.Drawing.Point(154, 140);
+            this.layoutControlItem27.Location = new System.Drawing.Point(180, 165);
             this.layoutControlItem27.Name = "layoutControlItem27";
-            this.layoutControlItem27.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem27.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem27.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem27.TextVisible = false;
             // 
             // layoutControlItem30
             // 
             this.layoutControlItem30.Control = this.btnSeat43;
-            this.layoutControlItem30.Location = new System.Drawing.Point(310, 140);
+            this.layoutControlItem30.Location = new System.Drawing.Point(362, 165);
             this.layoutControlItem30.Name = "layoutControlItem30";
-            this.layoutControlItem30.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem30.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             // 
             // layoutControlItem26
             // 
             this.layoutControlItem26.Control = this.btnSeat44;
-            this.layoutControlItem26.Location = new System.Drawing.Point(465, 140);
+            this.layoutControlItem26.Location = new System.Drawing.Point(543, 165);
             this.layoutControlItem26.Name = "layoutControlItem26";
-            this.layoutControlItem26.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem26.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem26.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem26.TextVisible = false;
             // 
             // layoutControlItem31
             // 
             this.layoutControlItem31.Control = this.btnSeat45;
-            this.layoutControlItem31.Location = new System.Drawing.Point(621, 140);
+            this.layoutControlItem31.Location = new System.Drawing.Point(725, 165);
             this.layoutControlItem31.Name = "layoutControlItem31";
-            this.layoutControlItem31.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem31.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem31.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem31.TextVisible = false;
             // 
             // layoutControlItem28
             // 
             this.layoutControlItem28.Control = this.btnSeat46;
-            this.layoutControlItem28.Location = new System.Drawing.Point(775, 140);
+            this.layoutControlItem28.Location = new System.Drawing.Point(905, 165);
             this.layoutControlItem28.Name = "layoutControlItem28";
-            this.layoutControlItem28.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem28.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem28.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem28.TextVisible = false;
             // 
             // layoutControlItem32
             // 
             this.layoutControlItem32.Control = this.btnSeat47;
-            this.layoutControlItem32.Location = new System.Drawing.Point(931, 140);
+            this.layoutControlItem32.Location = new System.Drawing.Point(1087, 165);
             this.layoutControlItem32.Name = "layoutControlItem32";
-            this.layoutControlItem32.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem32.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem32.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem32.TextVisible = false;
             // 
             // layoutControlItem25
             // 
             this.layoutControlItem25.Control = this.btnSeat48;
-            this.layoutControlItem25.Location = new System.Drawing.Point(1086, 140);
+            this.layoutControlItem25.Location = new System.Drawing.Point(1268, 165);
             this.layoutControlItem25.Name = "layoutControlItem25";
-            this.layoutControlItem25.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem25.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem25.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem25.TextVisible = false;
             // 
             // layoutControlItem36
             // 
             this.layoutControlItem36.Control = this.btnSeat49;
-            this.layoutControlItem36.Location = new System.Drawing.Point(0, 168);
+            this.layoutControlItem36.Location = new System.Drawing.Point(0, 198);
             this.layoutControlItem36.Name = "layoutControlItem36";
-            this.layoutControlItem36.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem36.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem36.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem36.TextVisible = false;
             // 
             // layoutControlItem35
             // 
             this.layoutControlItem35.Control = this.btnSeat50;
-            this.layoutControlItem35.Location = new System.Drawing.Point(154, 168);
+            this.layoutControlItem35.Location = new System.Drawing.Point(180, 198);
             this.layoutControlItem35.Name = "layoutControlItem35";
-            this.layoutControlItem35.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem35.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem35.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem35.TextVisible = false;
             // 
             // layoutControlItem37
             // 
             this.layoutControlItem37.Control = this.btnSeat51;
-            this.layoutControlItem37.Location = new System.Drawing.Point(310, 168);
+            this.layoutControlItem37.Location = new System.Drawing.Point(362, 198);
             this.layoutControlItem37.Name = "layoutControlItem37";
-            this.layoutControlItem37.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem37.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem37.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem37.TextVisible = false;
             // 
             // layoutControlItem34
             // 
             this.layoutControlItem34.Control = this.btnSeat52;
-            this.layoutControlItem34.Location = new System.Drawing.Point(465, 168);
+            this.layoutControlItem34.Location = new System.Drawing.Point(543, 198);
             this.layoutControlItem34.Name = "layoutControlItem34";
-            this.layoutControlItem34.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem34.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem34.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem34.TextVisible = false;
             // 
             // layoutControlItem39
             // 
             this.layoutControlItem39.Control = this.btnSeat53;
-            this.layoutControlItem39.Location = new System.Drawing.Point(621, 168);
+            this.layoutControlItem39.Location = new System.Drawing.Point(725, 198);
             this.layoutControlItem39.Name = "layoutControlItem39";
-            this.layoutControlItem39.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem39.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem39.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem39.TextVisible = false;
             // 
             // layoutControlItem38
             // 
             this.layoutControlItem38.Control = this.btnSeat54;
-            this.layoutControlItem38.Location = new System.Drawing.Point(775, 168);
+            this.layoutControlItem38.Location = new System.Drawing.Point(905, 198);
             this.layoutControlItem38.Name = "layoutControlItem38";
-            this.layoutControlItem38.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem38.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem38.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem38.TextVisible = false;
             // 
             // layoutControlItem40
             // 
             this.layoutControlItem40.Control = this.btnSeat55;
-            this.layoutControlItem40.Location = new System.Drawing.Point(931, 168);
+            this.layoutControlItem40.Location = new System.Drawing.Point(1087, 198);
             this.layoutControlItem40.Name = "layoutControlItem40";
-            this.layoutControlItem40.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem40.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem40.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem40.TextVisible = false;
             // 
             // layoutControlItem33
             // 
             this.layoutControlItem33.Control = this.btnSeat56;
-            this.layoutControlItem33.Location = new System.Drawing.Point(1086, 168);
+            this.layoutControlItem33.Location = new System.Drawing.Point(1268, 198);
             this.layoutControlItem33.Name = "layoutControlItem33";
-            this.layoutControlItem33.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem33.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem33.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem33.TextVisible = false;
             // 
             // layoutControlItem44
             // 
             this.layoutControlItem44.Control = this.btnSeat57;
-            this.layoutControlItem44.Location = new System.Drawing.Point(0, 196);
+            this.layoutControlItem44.Location = new System.Drawing.Point(0, 231);
             this.layoutControlItem44.Name = "layoutControlItem44";
-            this.layoutControlItem44.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem44.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem44.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem44.TextVisible = false;
             // 
             // layoutControlItem43
             // 
             this.layoutControlItem43.Control = this.btnSeat58;
-            this.layoutControlItem43.Location = new System.Drawing.Point(154, 196);
+            this.layoutControlItem43.Location = new System.Drawing.Point(180, 231);
             this.layoutControlItem43.Name = "layoutControlItem43";
-            this.layoutControlItem43.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem43.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem43.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem43.TextVisible = false;
             // 
             // layoutControlItem45
             // 
             this.layoutControlItem45.Control = this.btnSeat59;
-            this.layoutControlItem45.Location = new System.Drawing.Point(310, 196);
+            this.layoutControlItem45.Location = new System.Drawing.Point(362, 231);
             this.layoutControlItem45.Name = "layoutControlItem45";
-            this.layoutControlItem45.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem45.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem45.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem45.TextVisible = false;
             // 
             // layoutControlItem42
             // 
             this.layoutControlItem42.Control = this.btnSeat60;
-            this.layoutControlItem42.Location = new System.Drawing.Point(465, 196);
+            this.layoutControlItem42.Location = new System.Drawing.Point(543, 231);
             this.layoutControlItem42.Name = "layoutControlItem42";
-            this.layoutControlItem42.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem42.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem42.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem42.TextVisible = false;
             // 
             // layoutControlItem47
             // 
             this.layoutControlItem47.Control = this.btnSeat61;
-            this.layoutControlItem47.Location = new System.Drawing.Point(621, 196);
+            this.layoutControlItem47.Location = new System.Drawing.Point(725, 231);
             this.layoutControlItem47.Name = "layoutControlItem47";
-            this.layoutControlItem47.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem47.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem47.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem47.TextVisible = false;
             // 
             // layoutControlItem46
             // 
             this.layoutControlItem46.Control = this.btnSeat62;
-            this.layoutControlItem46.Location = new System.Drawing.Point(775, 196);
+            this.layoutControlItem46.Location = new System.Drawing.Point(905, 231);
             this.layoutControlItem46.Name = "layoutControlItem46";
-            this.layoutControlItem46.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem46.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem46.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem46.TextVisible = false;
             // 
             // layoutControlItem48
             // 
             this.layoutControlItem48.Control = this.btnSeat63;
-            this.layoutControlItem48.Location = new System.Drawing.Point(931, 196);
+            this.layoutControlItem48.Location = new System.Drawing.Point(1087, 231);
             this.layoutControlItem48.Name = "layoutControlItem48";
-            this.layoutControlItem48.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem48.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem48.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem48.TextVisible = false;
             // 
             // layoutControlItem41
             // 
             this.layoutControlItem41.Control = this.btnSeat64;
-            this.layoutControlItem41.Location = new System.Drawing.Point(1086, 196);
+            this.layoutControlItem41.Location = new System.Drawing.Point(1268, 231);
             this.layoutControlItem41.Name = "layoutControlItem41";
-            this.layoutControlItem41.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem41.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem41.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem41.TextVisible = false;
             // 
             // layoutControlItem53
             // 
             this.layoutControlItem53.Control = this.btnSeat65;
-            this.layoutControlItem53.Location = new System.Drawing.Point(0, 224);
+            this.layoutControlItem53.Location = new System.Drawing.Point(0, 264);
             this.layoutControlItem53.Name = "layoutControlItem53";
-            this.layoutControlItem53.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem53.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem53.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem53.TextVisible = false;
             // 
             // layoutControlItem52
             // 
             this.layoutControlItem52.Control = this.btnSeat66;
-            this.layoutControlItem52.Location = new System.Drawing.Point(154, 224);
+            this.layoutControlItem52.Location = new System.Drawing.Point(180, 264);
             this.layoutControlItem52.Name = "layoutControlItem52";
-            this.layoutControlItem52.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem52.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem52.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem52.TextVisible = false;
             // 
             // layoutControlItem54
             // 
             this.layoutControlItem54.Control = this.btnSeat67;
-            this.layoutControlItem54.Location = new System.Drawing.Point(310, 224);
+            this.layoutControlItem54.Location = new System.Drawing.Point(362, 264);
             this.layoutControlItem54.Name = "layoutControlItem54";
-            this.layoutControlItem54.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem54.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem54.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem54.TextVisible = false;
             // 
             // layoutControlItem51
             // 
             this.layoutControlItem51.Control = this.btnSeat68;
-            this.layoutControlItem51.Location = new System.Drawing.Point(465, 224);
+            this.layoutControlItem51.Location = new System.Drawing.Point(543, 264);
             this.layoutControlItem51.Name = "layoutControlItem51";
-            this.layoutControlItem51.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem51.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem51.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem51.TextVisible = false;
             // 
             // layoutControlItem56
             // 
             this.layoutControlItem56.Control = this.btnSeat69;
-            this.layoutControlItem56.Location = new System.Drawing.Point(621, 224);
+            this.layoutControlItem56.Location = new System.Drawing.Point(725, 264);
             this.layoutControlItem56.Name = "layoutControlItem56";
-            this.layoutControlItem56.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem56.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem56.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem56.TextVisible = false;
             // 
             // layoutControlItem55
             // 
             this.layoutControlItem55.Control = this.btnSeat70;
-            this.layoutControlItem55.Location = new System.Drawing.Point(775, 224);
+            this.layoutControlItem55.Location = new System.Drawing.Point(905, 264);
             this.layoutControlItem55.Name = "layoutControlItem55";
-            this.layoutControlItem55.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem55.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem55.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem55.TextVisible = false;
             // 
             // layoutControlItem57
             // 
             this.layoutControlItem57.Control = this.btnSeat71;
-            this.layoutControlItem57.Location = new System.Drawing.Point(931, 224);
+            this.layoutControlItem57.Location = new System.Drawing.Point(1087, 264);
             this.layoutControlItem57.Name = "layoutControlItem57";
-            this.layoutControlItem57.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem57.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem57.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem57.TextVisible = false;
             // 
             // layoutControlItem49
             // 
             this.layoutControlItem49.Control = this.btnSeat72;
-            this.layoutControlItem49.Location = new System.Drawing.Point(1086, 224);
+            this.layoutControlItem49.Location = new System.Drawing.Point(1268, 264);
             this.layoutControlItem49.Name = "layoutControlItem49";
-            this.layoutControlItem49.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem49.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem49.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem49.TextVisible = false;
             // 
             // layoutControlItem60
             // 
             this.layoutControlItem60.Control = this.btnSeat73;
-            this.layoutControlItem60.Location = new System.Drawing.Point(0, 252);
+            this.layoutControlItem60.Location = new System.Drawing.Point(0, 297);
             this.layoutControlItem60.Name = "layoutControlItem60";
-            this.layoutControlItem60.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem60.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem60.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem60.TextVisible = false;
             // 
             // layoutControlItem59
             // 
             this.layoutControlItem59.Control = this.btnSeat74;
-            this.layoutControlItem59.Location = new System.Drawing.Point(154, 252);
+            this.layoutControlItem59.Location = new System.Drawing.Point(180, 297);
             this.layoutControlItem59.Name = "layoutControlItem59";
-            this.layoutControlItem59.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem59.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem59.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem59.TextVisible = false;
             // 
             // layoutControlItem61
             // 
             this.layoutControlItem61.Control = this.btnSeat75;
-            this.layoutControlItem61.Location = new System.Drawing.Point(310, 252);
+            this.layoutControlItem61.Location = new System.Drawing.Point(362, 297);
             this.layoutControlItem61.Name = "layoutControlItem61";
-            this.layoutControlItem61.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem61.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem61.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem61.TextVisible = false;
             // 
             // layoutControlItem58
             // 
             this.layoutControlItem58.Control = this.btnSeat76;
-            this.layoutControlItem58.Location = new System.Drawing.Point(465, 252);
+            this.layoutControlItem58.Location = new System.Drawing.Point(543, 297);
             this.layoutControlItem58.Name = "layoutControlItem58";
-            this.layoutControlItem58.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem58.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem58.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem58.TextVisible = false;
             // 
             // layoutControlItem63
             // 
             this.layoutControlItem63.Control = this.btnSeat77;
-            this.layoutControlItem63.Location = new System.Drawing.Point(621, 252);
+            this.layoutControlItem63.Location = new System.Drawing.Point(725, 297);
             this.layoutControlItem63.Name = "layoutControlItem63";
-            this.layoutControlItem63.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem63.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem63.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem63.TextVisible = false;
             // 
             // layoutControlItem62
             // 
             this.layoutControlItem62.Control = this.btnSeat78;
-            this.layoutControlItem62.Location = new System.Drawing.Point(775, 252);
+            this.layoutControlItem62.Location = new System.Drawing.Point(905, 297);
             this.layoutControlItem62.Name = "layoutControlItem62";
-            this.layoutControlItem62.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem62.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem62.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem62.TextVisible = false;
             // 
             // layoutControlItem64
             // 
             this.layoutControlItem64.Control = this.btnSeat79;
-            this.layoutControlItem64.Location = new System.Drawing.Point(931, 252);
+            this.layoutControlItem64.Location = new System.Drawing.Point(1087, 297);
             this.layoutControlItem64.Name = "layoutControlItem64";
-            this.layoutControlItem64.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem64.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem64.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem64.TextVisible = false;
             // 
             // layoutControlItem50
             // 
             this.layoutControlItem50.Control = this.btnSeat80;
-            this.layoutControlItem50.Location = new System.Drawing.Point(1086, 252);
+            this.layoutControlItem50.Location = new System.Drawing.Point(1268, 297);
             this.layoutControlItem50.Name = "layoutControlItem50";
-            this.layoutControlItem50.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem50.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem50.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem50.TextVisible = false;
             // 
             // layoutControlItem85
             // 
             this.layoutControlItem85.Control = this.btnSeat81;
-            this.layoutControlItem85.Location = new System.Drawing.Point(0, 280);
+            this.layoutControlItem85.Location = new System.Drawing.Point(0, 330);
             this.layoutControlItem85.Name = "layoutControlItem85";
-            this.layoutControlItem85.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem85.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem85.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem85.TextVisible = false;
             // 
             // layoutControlItem83
             // 
             this.layoutControlItem83.Control = this.btnSeat82;
-            this.layoutControlItem83.Location = new System.Drawing.Point(154, 280);
+            this.layoutControlItem83.Location = new System.Drawing.Point(180, 330);
             this.layoutControlItem83.Name = "layoutControlItem83";
-            this.layoutControlItem83.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem83.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem83.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem83.TextVisible = false;
             // 
             // layoutControlItem86
             // 
             this.layoutControlItem86.Control = this.btnSeat83;
-            this.layoutControlItem86.Location = new System.Drawing.Point(310, 280);
+            this.layoutControlItem86.Location = new System.Drawing.Point(362, 330);
             this.layoutControlItem86.Name = "layoutControlItem86";
-            this.layoutControlItem86.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem86.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem86.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem86.TextVisible = false;
             // 
             // layoutControlItem82
             // 
             this.layoutControlItem82.Control = this.btnSeat84;
-            this.layoutControlItem82.Location = new System.Drawing.Point(465, 280);
+            this.layoutControlItem82.Location = new System.Drawing.Point(543, 330);
             this.layoutControlItem82.Name = "layoutControlItem82";
-            this.layoutControlItem82.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem82.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem82.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem82.TextVisible = false;
             // 
             // layoutControlItem87
             // 
             this.layoutControlItem87.Control = this.btnSeat85;
-            this.layoutControlItem87.Location = new System.Drawing.Point(621, 280);
+            this.layoutControlItem87.Location = new System.Drawing.Point(725, 330);
             this.layoutControlItem87.Name = "layoutControlItem87";
-            this.layoutControlItem87.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem87.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem87.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem87.TextVisible = false;
             // 
             // layoutControlItem84
             // 
             this.layoutControlItem84.Control = this.btnSeat86;
-            this.layoutControlItem84.Location = new System.Drawing.Point(775, 280);
+            this.layoutControlItem84.Location = new System.Drawing.Point(905, 330);
             this.layoutControlItem84.Name = "layoutControlItem84";
-            this.layoutControlItem84.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem84.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem84.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem84.TextVisible = false;
             // 
             // layoutControlItem88
             // 
             this.layoutControlItem88.Control = this.btnSeat87;
-            this.layoutControlItem88.Location = new System.Drawing.Point(931, 280);
+            this.layoutControlItem88.Location = new System.Drawing.Point(1087, 330);
             this.layoutControlItem88.Name = "layoutControlItem88";
-            this.layoutControlItem88.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem88.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem88.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem88.TextVisible = false;
             // 
             // layoutControlItem81
             // 
             this.layoutControlItem81.Control = this.btnSeat88;
-            this.layoutControlItem81.Location = new System.Drawing.Point(1086, 280);
+            this.layoutControlItem81.Location = new System.Drawing.Point(1268, 330);
             this.layoutControlItem81.Name = "layoutControlItem81";
-            this.layoutControlItem81.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem81.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem81.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem81.TextVisible = false;
             // 
             // layoutControlItem92
             // 
             this.layoutControlItem92.Control = this.btnSeat89;
-            this.layoutControlItem92.Location = new System.Drawing.Point(0, 308);
+            this.layoutControlItem92.Location = new System.Drawing.Point(0, 363);
             this.layoutControlItem92.Name = "layoutControlItem92";
-            this.layoutControlItem92.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem92.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem92.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem92.TextVisible = false;
             // 
             // layoutControlItem91
             // 
             this.layoutControlItem91.Control = this.btnSeat90;
-            this.layoutControlItem91.Location = new System.Drawing.Point(154, 308);
+            this.layoutControlItem91.Location = new System.Drawing.Point(180, 363);
             this.layoutControlItem91.Name = "layoutControlItem91";
-            this.layoutControlItem91.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem91.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem91.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem91.TextVisible = false;
             // 
             // layoutControlItem93
             // 
             this.layoutControlItem93.Control = this.btnSeat91;
-            this.layoutControlItem93.Location = new System.Drawing.Point(310, 308);
+            this.layoutControlItem93.Location = new System.Drawing.Point(362, 363);
             this.layoutControlItem93.Name = "layoutControlItem93";
-            this.layoutControlItem93.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem93.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem93.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem93.TextVisible = false;
             // 
             // layoutControlItem90
             // 
             this.layoutControlItem90.Control = this.btnSeat92;
-            this.layoutControlItem90.Location = new System.Drawing.Point(465, 308);
+            this.layoutControlItem90.Location = new System.Drawing.Point(543, 363);
             this.layoutControlItem90.Name = "layoutControlItem90";
-            this.layoutControlItem90.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem90.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem90.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem90.TextVisible = false;
             // 
             // layoutControlItem95
             // 
             this.layoutControlItem95.Control = this.btnSeat93;
-            this.layoutControlItem95.Location = new System.Drawing.Point(621, 308);
+            this.layoutControlItem95.Location = new System.Drawing.Point(725, 363);
             this.layoutControlItem95.Name = "layoutControlItem95";
-            this.layoutControlItem95.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem95.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem95.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem95.TextVisible = false;
             // 
             // layoutControlItem94
             // 
             this.layoutControlItem94.Control = this.btnSeat94;
-            this.layoutControlItem94.Location = new System.Drawing.Point(775, 308);
+            this.layoutControlItem94.Location = new System.Drawing.Point(905, 363);
             this.layoutControlItem94.Name = "layoutControlItem94";
-            this.layoutControlItem94.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem94.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem94.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem94.TextVisible = false;
             // 
             // layoutControlItem96
             // 
             this.layoutControlItem96.Control = this.btnSeat95;
-            this.layoutControlItem96.Location = new System.Drawing.Point(931, 308);
+            this.layoutControlItem96.Location = new System.Drawing.Point(1087, 363);
             this.layoutControlItem96.Name = "layoutControlItem96";
-            this.layoutControlItem96.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem96.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem96.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem96.TextVisible = false;
             // 
             // layoutControlItem89
             // 
             this.layoutControlItem89.Control = this.btnSeat96;
-            this.layoutControlItem89.Location = new System.Drawing.Point(1086, 308);
+            this.layoutControlItem89.Location = new System.Drawing.Point(1268, 363);
             this.layoutControlItem89.Name = "layoutControlItem89";
-            this.layoutControlItem89.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem89.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem89.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem89.TextVisible = false;
             // 
             // layoutControlItem99
             // 
             this.layoutControlItem99.Control = this.btnCPS1;
-            this.layoutControlItem99.Location = new System.Drawing.Point(0, 336);
+            this.layoutControlItem99.Location = new System.Drawing.Point(0, 396);
             this.layoutControlItem99.Name = "layoutControlItem99";
-            this.layoutControlItem99.Size = new System.Drawing.Size(310, 28);
+            this.layoutControlItem99.Size = new System.Drawing.Size(362, 33);
             this.layoutControlItem99.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem99.TextVisible = false;
             // 
             // layoutControlItem100
             // 
             this.layoutControlItem100.Control = this.btnCPS3;
-            this.layoutControlItem100.Location = new System.Drawing.Point(621, 336);
+            this.layoutControlItem100.Location = new System.Drawing.Point(725, 396);
             this.layoutControlItem100.Name = "layoutControlItem100";
-            this.layoutControlItem100.Size = new System.Drawing.Size(310, 28);
+            this.layoutControlItem100.Size = new System.Drawing.Size(362, 33);
             this.layoutControlItem100.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem100.TextVisible = false;
             // 
             // layoutControlItem98
             // 
             this.layoutControlItem98.Control = this.btnCPS2;
-            this.layoutControlItem98.Location = new System.Drawing.Point(310, 336);
+            this.layoutControlItem98.Location = new System.Drawing.Point(362, 396);
             this.layoutControlItem98.Name = "layoutControlItem98";
-            this.layoutControlItem98.Size = new System.Drawing.Size(311, 28);
+            this.layoutControlItem98.Size = new System.Drawing.Size(363, 33);
             this.layoutControlItem98.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem98.TextVisible = false;
             // 
             // layoutControlItem97
             // 
             this.layoutControlItem97.Control = this.btnCPS4;
-            this.layoutControlItem97.Location = new System.Drawing.Point(931, 336);
+            this.layoutControlItem97.Location = new System.Drawing.Point(1087, 396);
             this.layoutControlItem97.Name = "layoutControlItem97";
-            this.layoutControlItem97.Size = new System.Drawing.Size(311, 28);
+            this.layoutControlItem97.Size = new System.Drawing.Size(363, 33);
             this.layoutControlItem97.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem97.TextVisible = false;
             // 
             // layoutControlItem102
             // 
             this.layoutControlItem102.Control = this.btnFS1;
-            this.layoutControlItem102.Location = new System.Drawing.Point(0, 364);
+            this.layoutControlItem102.Location = new System.Drawing.Point(0, 429);
             this.layoutControlItem102.Name = "layoutControlItem102";
-            this.layoutControlItem102.Size = new System.Drawing.Size(621, 28);
+            this.layoutControlItem102.Size = new System.Drawing.Size(725, 33);
             this.layoutControlItem102.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem102.TextVisible = false;
             // 
             // layoutControlItem101
             // 
             this.layoutControlItem101.Control = this.btnFS2;
-            this.layoutControlItem101.Location = new System.Drawing.Point(621, 364);
+            this.layoutControlItem101.Location = new System.Drawing.Point(725, 429);
             this.layoutControlItem101.Name = "layoutControlItem101";
-            this.layoutControlItem101.Size = new System.Drawing.Size(621, 28);
+            this.layoutControlItem101.Size = new System.Drawing.Size(725, 33);
             this.layoutControlItem101.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem101.TextVisible = false;
             // 
             // layoutControlItem70
             // 
             this.layoutControlItem70.Control = this.btnSeat3;
-            this.layoutControlItem70.Location = new System.Drawing.Point(310, 0);
+            this.layoutControlItem70.Location = new System.Drawing.Point(362, 0);
             this.layoutControlItem70.Name = "layoutControlItem70";
-            this.layoutControlItem70.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem70.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem70.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem70.TextVisible = false;
             // 
             // layoutControlItem103
             // 
             this.layoutControlItem103.Control = this.btnSeat2;
-            this.layoutControlItem103.Location = new System.Drawing.Point(154, 0);
+            this.layoutControlItem103.Location = new System.Drawing.Point(180, 0);
             this.layoutControlItem103.Name = "layoutControlItem103";
-            this.layoutControlItem103.Size = new System.Drawing.Size(156, 28);
+            this.layoutControlItem103.Size = new System.Drawing.Size(182, 33);
             this.layoutControlItem103.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem103.TextVisible = false;
             // 
@@ -3083,16 +3138,16 @@ namespace Viewer
             this.layoutControlItem68.Control = this.btnSeat1;
             this.layoutControlItem68.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem68.Name = "layoutControlItem68";
-            this.layoutControlItem68.Size = new System.Drawing.Size(154, 28);
+            this.layoutControlItem68.Size = new System.Drawing.Size(180, 33);
             this.layoutControlItem68.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem68.TextVisible = false;
             // 
             // layoutControlItem69
             // 
             this.layoutControlItem69.Control = this.btnSeat11;
-            this.layoutControlItem69.Location = new System.Drawing.Point(310, 28);
+            this.layoutControlItem69.Location = new System.Drawing.Point(362, 33);
             this.layoutControlItem69.Name = "layoutControlItem69";
-            this.layoutControlItem69.Size = new System.Drawing.Size(155, 28);
+            this.layoutControlItem69.Size = new System.Drawing.Size(181, 33);
             this.layoutControlItem69.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem69.TextVisible = false;
             // 
@@ -3104,9 +3159,9 @@ namespace Viewer
             this.layucTotalMoney,
             this.layucU22Ticket,
             this.layucButtonConfirm});
-            this.layucGroup.Location = new System.Drawing.Point(0, 560);
+            this.layucGroup.Location = new System.Drawing.Point(0, 695);
             this.layucGroup.Name = "layucGroup";
-            this.layucGroup.Size = new System.Drawing.Size(1266, 150);
+            this.layucGroup.Size = new System.Drawing.Size(1476, 179);
             this.layucGroup.Text = "Reception";
             // 
             // layucTotalMoney
@@ -3116,11 +3171,11 @@ namespace Viewer
             this.layucTotalMoney.AppearanceItemCaption.Options.UseFont = true;
             this.layucTotalMoney.AppearanceItemCaption.Options.UseForeColor = true;
             this.layucTotalMoney.Control = this.txtTotalMoney;
-            this.layucTotalMoney.Location = new System.Drawing.Point(0, 46);
+            this.layucTotalMoney.Location = new System.Drawing.Point(0, 54);
             this.layucTotalMoney.Name = "layucTotalMoney";
-            this.layucTotalMoney.Size = new System.Drawing.Size(886, 46);
+            this.layucTotalMoney.Size = new System.Drawing.Size(1034, 54);
             this.layucTotalMoney.Text = "Total Money: ";
-            this.layucTotalMoney.TextSize = new System.Drawing.Size(196, 35);
+            this.layucTotalMoney.TextSize = new System.Drawing.Size(243, 44);
             // 
             // layucU22Ticket
             // 
@@ -3131,28 +3186,20 @@ namespace Viewer
             this.layucU22Ticket.Control = this.txtU22;
             this.layucU22Ticket.Location = new System.Drawing.Point(0, 0);
             this.layucU22Ticket.Name = "layucU22Ticket";
-            this.layucU22Ticket.Size = new System.Drawing.Size(886, 46);
+            this.layucU22Ticket.Size = new System.Drawing.Size(1034, 54);
             this.layucU22Ticket.Text = "U22 Tickets: ";
-            this.layucU22Ticket.TextSize = new System.Drawing.Size(196, 35);
+            this.layucU22Ticket.TextSize = new System.Drawing.Size(243, 44);
             // 
             // layucButtonConfirm
             // 
             this.layucButtonConfirm.Control = this.btnConfirm;
-            this.layucButtonConfirm.Location = new System.Drawing.Point(886, 0);
-            this.layucButtonConfirm.MinSize = new System.Drawing.Size(161, 43);
+            this.layucButtonConfirm.Location = new System.Drawing.Point(1034, 0);
+            this.layucButtonConfirm.MinSize = new System.Drawing.Size(188, 53);
             this.layucButtonConfirm.Name = "layucButtonConfirm";
-            this.layucButtonConfirm.Size = new System.Drawing.Size(356, 92);
+            this.layucButtonConfirm.Size = new System.Drawing.Size(416, 108);
             this.layucButtonConfirm.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layucButtonConfirm.TextSize = new System.Drawing.Size(0, 0);
             this.layucButtonConfirm.TextVisible = false;
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(0, 550);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(1266, 10);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layucCustomer
             // 
@@ -3161,18 +3208,18 @@ namespace Viewer
             this.layucCustomer.AppearanceItemCaption.Options.UseFont = true;
             this.layucCustomer.AppearanceItemCaption.Options.UseForeColor = true;
             this.layucCustomer.Control = this.txtCusID;
-            this.layucCustomer.Location = new System.Drawing.Point(0, 504);
+            this.layucCustomer.Location = new System.Drawing.Point(0, 641);
             this.layucCustomer.Name = "layucCustomer";
-            this.layucCustomer.Size = new System.Drawing.Size(1266, 46);
+            this.layucCustomer.Size = new System.Drawing.Size(1476, 54);
             this.layucCustomer.Text = "Customer ID: ";
-            this.layucCustomer.TextSize = new System.Drawing.Size(196, 35);
+            this.layucCustomer.TextSize = new System.Drawing.Size(243, 44);
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 494);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 587);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(1266, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(1476, 54);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ucSelectSeat
@@ -3181,18 +3228,17 @@ namespace Viewer
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layucSelectSeat);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucSelectSeat";
-            this.Size = new System.Drawing.Size(1286, 730);
+            this.Size = new System.Drawing.Size(1500, 898);
             ((System.ComponentModel.ISupportInitialize)(this.layucSelectSeat)).EndInit();
             this.layucSelectSeat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCusID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtU22.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalMoney.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblScreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
@@ -3303,7 +3349,6 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.layucTotalMoney)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layucU22Ticket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layucButtonConfirm)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layucCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
@@ -3420,7 +3465,6 @@ namespace Viewer
         private DevExpress.XtraEditors.SimpleButton btnSeat20;
         private DevExpress.XtraEditors.SimpleButton btnSeat24;
         private DevExpress.XtraEditors.LabelControl lblucScreen;
-        private DevExpress.XtraEditors.TextEdit textEdit21;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.LayoutControlItem lblScreen;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
@@ -3531,7 +3575,6 @@ namespace Viewer
         private DevExpress.XtraLayout.LayoutControlItem layucTotalMoney;
         private DevExpress.XtraLayout.LayoutControlItem layucU22Ticket;
         private DevExpress.XtraLayout.LayoutControlItem layucButtonConfirm;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.LayoutControlItem layucCustomer;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
