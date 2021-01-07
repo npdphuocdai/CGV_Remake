@@ -11,27 +11,45 @@ namespace DAL
 {
     class dalTicket : DatabaseServices
     {
-        public List<dtoTicket> GetTickets()
+        public int InsertTicket(dtoTicket ticket)
         {
-            List<dtoTicket> tickets = new List<dtoTicket>();
+            int count = 0;
+            try
+            {
+                string sql = "INSERT [dbo].[Ticket] ([TimeCreated], [TicketPrice], [SeatName], [FilmID], [SetID], [CustomerID], [EmployeeID]) VALUES (@TimeCreate, @Price, @SeatName, @FilmID, @SetID, @CustomerID, @EmployeeID)";
+                SqlParameter parameterTimeCreate = new SqlParameter("@TimeCreate", SqlDbType.DateTime);
+                parameterTimeCreate.Value = ticket.TimeCreate;
+                SqlParameter parameterPrice = new SqlParameter("@Price", SqlDbType.Decimal);
+                parameterPrice.Value = ticket.TicketPrice;
+                SqlParameter parameterSeatName = new SqlParameter("@SeatName", SqlDbType.NVarChar);
+                parameterSeatName.Value = ticket.SeatName;
+                SqlParameter parameterFilmID = new SqlParameter("@FilmID", SqlDbType.Int);
+                parameterFilmID.Value = ticket.FilmID;
+                SqlParameter parameterSetID = new SqlParameter("@SetID", SqlDbType.Int);
+                parameterSetID.Value = ticket.SetID;
+                SqlParameter parameterCustomerID = new SqlParameter("@CustomerID", SqlDbType.Int);
+                parameterCustomerID.Value = ticket.CustomerID;
+                SqlParameter parameterEmployeeID = new SqlParameter("@EmployeeID", SqlDbType.Int);
+                parameterEmployeeID.Value = ticket.EmployeeID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterTimeCreate, parameterPrice, parameterSeatName, parameterFilmID, parameterSetID, parameterCustomerID, parameterEmployeeID });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
+        public DataTable GetTickets()
+        {
+            DataTable tickets = new DataTable();
             try
             {
                 string sql = "SELECT * from [dto].[Ticket]";
-                SqlDataReader reader = ReadData(sql);
-                while(reader.Read())
+                SqlDataAdapter adapter = Adapter(sql);
+                if(adapter != null)
                 {
-                    dtoTicket ticket = new dtoTicket();
-                    ticket.TicketID = Convert.ToInt32((dtoTicket)reader[0]);
-                    ticket.TimeCreate = Convert.ToDateTime((dtoTicket)reader[1]);
-                    ticket.TicketPrice = Convert.ToDecimal((dtoTicket)reader[2]);
-                    ticket.SeatName = ((dtoTicket)reader[3]).ToString();
-                    ticket.FilmID = Convert.ToInt32((dtoTicket)reader[4]);
-                    ticket.SetID = Convert.ToInt32((dtoTicket)reader[5]);
-                    ticket.CustomerID = Convert.ToInt32((dtoTicket)reader[6]);
-                    ticket.EmployeeID = Convert.ToInt32((dtoTicket)reader[7]);
-                    tickets.Add(ticket);
-                }
-                reader.Close();
+                    adapter.Fill(tickets);
+                }                
             }
             finally
             {

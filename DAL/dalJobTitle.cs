@@ -15,22 +15,16 @@ namespace DAL
         /// Hàm lấy danh sách chức vụ
         /// </summary>
         /// <returns></returns>
-        public List<dtoJobTitle> GetJobTitles()
+        public DataTable GetJobTitles()
         {
-            List<dtoJobTitle> jobTitles = new List<dtoJobTitle>();
+            DataTable jobTitles = new DataTable();
             try
             {
                 string sql = "SELECT * FROM [dbo].[JobTitle]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                SqlDataAdapter adapter = Adapter(sql);
+                if(adapter != null)
                 {
-                    dtoJobTitle jobTitle = new dtoJobTitle();
-                    jobTitle.JobTitleID = Convert.ToInt32((dtoJobTitle)reader[0]);
-                    jobTitle.JobTitleName = ((dtoJobTitle)reader[1]).ToString();
-                    jobTitle.Major = ((dtoJobTitle)reader[2]).ToString();
-                    jobTitle.PositionAllowance = Convert.ToDecimal((dtoJobTitle)reader[3]);
-                    jobTitle.CoefficientsSalary = Convert.ToDouble((dtoJobTitle)reader[4]);
-                    jobTitles.Add(jobTitle);
+                    adapter.Fill(jobTitles);
                 }
             }
             finally

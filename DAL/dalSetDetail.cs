@@ -11,25 +11,17 @@ namespace DAL
 {
     class dalSetDetail : DatabaseServices
     {
-        public List<dtoSetDetail> GetSetDetails()
+        public DataTable GetSetDetails()
         {
-            List<dtoSetDetail> setDetails = new List<dtoSetDetail>();
+            DataTable setDetails = new DataTable();
             try
             {
                 string sql = "SELECT * FROM [dbo].[SetDetail]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
                 {
-                    dtoSetDetail setDetail = new dtoSetDetail();
-                    setDetail.FilmID = Convert.ToInt32((dtoSetDetail)reader[0]);
-                    setDetail.SetID = Convert.ToInt32((dtoSetDetail)reader[1]);
-                    setDetail.TotalSeats = Convert.ToInt32((dtoSetDetail)reader[2]);
-                    setDetail.TotalEmptySeats = Convert.ToInt32((dtoSetDetail)reader[3]);
-                    setDetail.ShowingDate = Convert.ToDateTime((dtoSetDetail)reader[4]);
-                    setDetail.RoomID = Convert.ToInt32((dtoSetDetail)reader[5]);
-                    setDetails.Add(setDetail);
+                    adapter.Fill(setDetails);
                 }
-                reader.Close();
             }
             finally
             {

@@ -33,5 +33,23 @@ namespace DAL
             }
             return kq;
         }
+        public DataTable GetPrivilegeDetails ()
+        {
+            DataTable privilegeDetails = new DataTable();
+            try
+            {
+                string sql = "SELECT * FROM [dbo].[PrivilegeDetail]";
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
+                {
+                    adapter.Fill(privilegeDetails);
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return privilegeDetails;
+        }
     }
 }
