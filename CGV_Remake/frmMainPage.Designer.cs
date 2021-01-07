@@ -50,6 +50,7 @@ namespace Viewer
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.aceChangePass = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.acrLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -107,7 +108,8 @@ namespace Viewer
             // aceAccount
             // 
             this.aceAccount.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.aceUsername});
+            this.aceUsername,
+            this.aceChangePass});
             this.aceAccount.Expanded = true;
             this.aceAccount.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceAccount.ImageOptions.SvgImage")));
             this.aceAccount.Name = "aceAccount";
@@ -213,6 +215,12 @@ namespace Viewer
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // aceChangePass
+            // 
+            this.aceChangePass.Name = "aceChangePass";
+            this.aceChangePass.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceChangePass.Text = "Change Password";
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -256,6 +264,7 @@ namespace Viewer
         private DevExpress.XtraBars.SkinPaletteDropDownButtonItem skinPaletteDropDownButtonItem1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceUsername;
         private System.Windows.Forms.Timer timer1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceChangePass;
     }
 }
 

@@ -12,48 +12,6 @@ namespace DAL
     class dalCustomer : DatabaseServices
     {
         /// <summary>
-        /// Hàm tìm kiếm khách hàng theo mã khách hàng
-        /// </summary>
-        /// <param name="customerID"></param>
-        /// <returns></returns>
-        public SqlDataReader SearchCustomerFromID(int customerID)
-        {
-            SqlDataReader reader = null;
-            try
-            {
-                string sql = "SELECT * FROM Customer WHERE CustomerID = @CustomerID";
-                SqlParameter parameterID = new SqlParameter("@CustomerID", SqlDbType.NVarChar);
-                parameterID.Value = customerID;
-                reader = ReadDataPars(sql, new[] { parameterID });
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return reader;
-        }
-        /// <summary>
-        /// Hàm tìm kiếm khách hàng theo tên khách hàng 
-        /// </summary>
-        /// <param name="customerName"></param>
-        /// <returns></returns>
-        public SqlDataReader SearchCustomerFromName(string customerName)
-        {
-            SqlDataReader reader = null;
-            try
-            {
-                string sql = "SELECT * FROM Customer WHERE CustomerFullName = @CustomerName";
-                SqlParameter parameterName = new SqlParameter("@CustomerName", SqlDbType.NVarChar);
-                parameterName.Value = customerName;
-                reader = ReadDataPars(sql, new[] { parameterName });
-            }
-            finally
-            {
-                CloseConnection();
-            }
-            return reader;
-        }
-        /// <summary>
         /// Hàm thêm mới khách hàng
         /// </summary>
         /// <param name="customer"> Đối tượng khách hàng được thêm mới </param>
@@ -87,7 +45,7 @@ namespace DAL
         /// </summary>
         /// <param name="customer"> đối tượng khách hàng được cập nhập </param>
         /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là cập nhập thất bại </returns>
-        public int UpdateEmployeeFromID(dtoCustomer customer)
+        public int UpdateCustomerFromID(dtoCustomer customer)
         {
             int count = 0;
             try
@@ -110,6 +68,24 @@ namespace DAL
                 CloseConnection();
             }
             return count;
+        }
+        public DataTable GetCustomers()
+        {
+            DataTable customers = new DataTable();
+            try
+            {
+                string sql = "SELECT * FROM [dbo].[Customer]";
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
+                {
+                    adapter.Fill(customers);
+                }
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return customers;
         }
     }
 }

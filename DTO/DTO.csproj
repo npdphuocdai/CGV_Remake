@@ -54,6 +54,7 @@
     <Compile Include="dtoViewCustomer.cs" />
     <Compile Include="dtoViewEmployee.cs" />
     <Compile Include="dtoViewFilm.cs" />
+    <Compile Include="dtoViewSetDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="dtoSystemPrivilege.cs" />
     <Compile Include="dtoShowingSet.cs" />

@@ -50,16 +50,16 @@ namespace DAL
         /// </summary>
         /// <param name="employee"> Đối tượng nhân viên được thêm mới </param>
         /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là thêm mới thất bại </returns>
-        public int InsertEmployee(dtoEmployee employee)
+        public int InsertEmployee(dtoEmployee employee, string filename)
         {
             int count = 0;
             try
             {
-                string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Password], [Gender]) SELECT @Employee, BulkColumn, @Birthday, @Address, @PhoneNumber, @Email, @BasicSalary, @JobtitleID, @StartDay, ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password),@Gender From Openrowset(Bulk @Potrait, Single_Blob) as Picture";
+                string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Password], [Gender]) SELECT @Employee, BulkColumn, @Birthday, @Address, @PhoneNumber, @Email, @BasicSalary, @JobtitleID, @StartDay, ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password), @Gender FROM OPENROWSET(BULK @Potrait, Single_Blob) as Picture";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;
-                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.VarBinary);
-                parameterPotrait.Value = employee.Potrait;
+                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.NVarChar);
+                parameterPotrait.Value = filename;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
                 parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
@@ -96,13 +96,11 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeePotrait] = @Portrait, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [BasicSalary] = @BasicSalary, [JobTitleID] = @JobTitleID, [StartDay] = @StartDay) WHERE [EmployeeID] = @EmployeeID";
+                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [BasicSalary] = @BasicSalary, [JobTitleID] = @JobTitleID, [StartDay] = @StartDay) WHERE [EmployeeID] = @EmployeeID";
                 SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
                 parameterID.Value = employee.EmployeeID;
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;
-                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.Image);
-                parameterPotrait.Value = employee.Potrait;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
                 parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
@@ -117,7 +115,7 @@ namespace DAL
                 parameterJobTitleID.Value = employee.JobTitleID;
                 SqlParameter parameterStartDay = new SqlParameter("@Name", SqlDbType.DateTime);
                 parameterStartDay.Value = employee.StartDay;
-                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay });
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay });
             }
             finally
             {
@@ -130,13 +128,11 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeePotrait] = @Portrait, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [Gender] = @Gender) WHERE [EmployeeID] = @EmployeeID";
+                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [Gender] = @Gender) WHERE [EmployeeID] = @EmployeeID";
                 SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
                 parameterID.Value = employee.EmployeeID;
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;
-                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.Image);
-                parameterPotrait.Value = employee.Potrait;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
                 parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
@@ -147,7 +143,35 @@ namespace DAL
                 parameterEmail.Value = employee.Email;
                 SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
                 parameterGender.Value = employee.Gender;
-                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender });
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
+        public int SelfUpdateEmployeeFromView(dtoViewEmployee employee)
+        {
+            int count = 0;
+            try
+            {
+                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [Gender] = @Gender, WHERE [EmployeeID] = @EmployeeID";
+                SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
+                parameterID.Value = employee.EmployeeID;
+                SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
+                parameterName.Value = employee.EmployeeFullName;
+                SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
+                parameterBirthDay.Value = employee.EmployeeBirthday;
+                SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
+                parameterAddress.Value = employee.EmployeeAddress;
+                SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.Char);
+                parameterPhoneNumber.Value = employee.EmployeePhoneNumber;
+                SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
+                parameterEmail.Value = employee.EmployeeEmail;
+                SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
+                parameterGender.Value = employee.Gender;
+                count = InsertUpdateDeleteData(sql, new[] { parameterID, parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender });
             }
             finally
             {
@@ -157,7 +181,6 @@ namespace DAL
         }
         public DataTable GetEmployees()
         {
-            //List<dtoEmployee> employees = new List<dtoEmployee>();
             DataTable employees = new DataTable();
             try
             {

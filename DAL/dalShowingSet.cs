@@ -15,28 +15,23 @@ namespace DAL
         /// Hàm lấy list dữ liệu dạng ShowingSet từ Database
         /// </summary>
         /// <returns></returns>
-        public List<dtoShowingSet> GetListSets()
+        public DataTable GetShowingSets()
         {
-            List<dtoShowingSet> sets = new List<dtoShowingSet>();
+            DataTable showingSets = new DataTable();
             try
             {
                 string sql = "SELECT * FROM [dbo].[ShowingSet]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                SqlDataAdapter adapter = Adapter(sql);
+                if (adapter != null)
                 {
-                    dtoShowingSet set = new dtoShowingSet();
-                    set.SetID = Convert.ToInt32((dtoShowingSet)reader[0]);
-                    set.StartTime = Convert.ToDateTime((dtoShowingSet)reader[1]);
-                    set.EndTime = Convert.ToDateTime((dtoShowingSet)reader[2]);
-                    sets.Add(set);
+                    adapter.Fill(showingSets);
                 }
-                reader.Close();
             }
             finally
             {
                 CloseConnection();
             }
-            return sets;
+            return showingSets;
         }
         /// <summary>
         /// Hàm thêm xuất chiếu

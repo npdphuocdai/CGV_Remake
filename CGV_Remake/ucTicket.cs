@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Viewer
 {
-    public partial class ucTicket : DevExpress.XtraEditors.XtraUserControl
+    public partial class ucTicket : DevExpress.XtraEditors.XtraUserControl 
     {
         public ucTicket()
         {
@@ -31,18 +31,11 @@ namespace Viewer
         }
         private void ucTicket_Load(object sender, EventArgs e)
         {
-            grcSelectMovie.Height = Convert.ToInt32(layTicket.Height * 0.2);
-            layLueMovie.Height = Convert.ToInt32(layGrSelectMovie.Height * 0.5);
-            layLueShowingset.Height = Convert.ToInt32(layGrSelectMovie.Height * 0.5);
-            layBtnSelect.Height = Convert.ToInt32(layLueMovie.Height + layLueShowingset.Height);
-        }
 
+        }
         private void ucTicket_Resize(object sender, EventArgs e)
         {
-            grcSelectMovie.Height = Convert.ToInt32(layTicket.Height * 0.2);
-            layLueMovie.Height = Convert.ToInt32(layGrSelectMovie.Height * 0.5);
-            layLueShowingset.Height = Convert.ToInt32(layGrSelectMovie.Height * 0.5);
-            layBtnSelect.Height = Convert.ToInt32(layLueMovie.Height + layLueShowingset.Height);
+
         }
     }
 }

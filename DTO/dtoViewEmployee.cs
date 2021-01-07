@@ -12,8 +12,6 @@ namespace DTO
         public byte[] EmployeePotrait { get; set; }
         public decimal? BasicSalary { get; set; }
         public DateTime? StartDay { get; set; }
-        public string Password { get; set; }
-        public int JobTitleID { get; set; }
         public string EmployeeFullName { get; set; }
         public string Gender { get; set; }
         public string EmployeeAddress { get; set; }

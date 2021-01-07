@@ -15,21 +15,17 @@ namespace DAL
         /// Hàm lấy list thể loại từ database
         /// </summary>
         /// <returns> Trả về một biến kiểu list thể loại </returns>
-        public List<dtoGenre> GetListGenre()
+        public DataTable GetGenres()
         {
-            List<dtoGenre> genres = new List<dtoGenre>();
+            DataTable genres = new DataTable();
             try
             {
                 string sql = "SELECT * FROM [dbo].[Genre]";
-                SqlDataReader reader = ReadData(sql);
-                while (reader.Read())
+                SqlDataAdapter adapter = Adapter(sql);
+                if(adapter != null)
                 {
-                    dtoGenre genre = new dtoGenre();
-                    genre.GenreID = Convert.ToInt32((dtoGenre)reader[0]);
-                    genre.GenreName = ((dtoGenre)reader[1]).ToString();
-                    genres.Add(genre);
+                    adapter.Fill(genres);
                 }
-                reader.Close();
             }
             finally
             {

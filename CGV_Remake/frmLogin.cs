@@ -20,12 +20,13 @@ namespace Viewer
         {
             InitializeComponent();
         }
-        public static dtoEmployee UserLogin;
+        public static dtoViewEmployee UserLogin;
         public bool flag = false;
         private void btnLogin_Click(object sender, EventArgs e)
         {
             balEmployee balEmployee = new balEmployee();
-            List<dtoEmployee> listEmployee = balEmployee.GetEmployees();
+            balViewEmployee balViewEmployee = new balViewEmployee();
+            List<dtoViewEmployee> listEmployee = balViewEmployee.GetViewEmployees();
             try
             {
                 if (txtUsername.Text == "" || txtPass.Text == "")
@@ -39,7 +40,7 @@ namespace Viewer
                 else
                 {
                     flag = true;
-                    foreach(dtoEmployee i in listEmployee)
+                    foreach(dtoViewEmployee i in listEmployee)
                     {
                         if(Convert.ToInt32(txtUsername.Text) == i.EmployeeID)
                         {
@@ -60,7 +61,8 @@ namespace Viewer
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
             balEmployee balEmployee = new balEmployee();
-            List<dtoEmployee> listEmployee = balEmployee.GetEmployees();
+            balViewEmployee balViewEmployee = new balViewEmployee();
+            List<dtoViewEmployee> listEmployee = balViewEmployee.GetViewEmployees();
             try
             {
                 if (e.KeyChar == (char)13)
@@ -76,7 +78,7 @@ namespace Viewer
                     else
                     {
                         flag = true;
-                        foreach (dtoEmployee i in listEmployee)
+                        foreach (dtoViewEmployee i in listEmployee)
                         {
                             if (Convert.ToInt32(txtUsername.Text) == i.EmployeeID)
                             {
@@ -97,7 +99,8 @@ namespace Viewer
         private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
         {
             balEmployee balEmployee = new balEmployee();
-            List<dtoEmployee> listEmployee = balEmployee.GetEmployees();
+            balViewEmployee balViewEmployee = new balViewEmployee();
+            List<dtoViewEmployee> listEmployee = balViewEmployee.GetViewEmployees();
             try
             {
                 if (e.KeyChar == (char)13)
@@ -113,7 +116,7 @@ namespace Viewer
                     else
                     {
                         flag = true;
-                        foreach (dtoEmployee i in listEmployee)
+                        foreach (dtoViewEmployee i in listEmployee)
                         {
                             if (Convert.ToInt32(txtUsername.Text) == i.EmployeeID)
                             {
