@@ -34,6 +34,35 @@ namespace BAL
             }
             return listEmp;
         }
+        public string GetCustomerName(int id)
+        {
+            dalCustomer dal = new dalCustomer();
+            DataTable data = dal.GetCustomers();
+            for(int i = 0; i < data.Rows.Count; i++)
+            {
+                DataRow row = data.Rows[i];
+                if(Convert.ToInt32(row[0]) == id)
+                {
+                    return row[1].ToString();
+                }
+            }
+            return null;
+        }
+        public DateTime GetCustomerBirthDay(int id)
+        {
+            DateTime customerBD = new DateTime();
+            dalCustomer dal = new dalCustomer();
+            DataTable data = dal.GetCustomers();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                DataRow row = data.Rows[i];
+                if (Convert.ToInt32(row[0]) == id)
+                {
+                    customerBD = Convert.ToDateTime(row[5]);
+                }
+            }
+            return customerBD;
+        }
         /*public int UpdateFromView(dtoViewCustomer viewCustomer)
         {
             dalCustomer Customer = new dalCustomer();

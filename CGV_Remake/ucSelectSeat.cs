@@ -32,11 +32,12 @@ namespace Viewer
                 return _instance;
             }
         }
-        balTicket ticket = new balTicket();
+        
         balSetDetail setDetail = new balSetDetail();
         List<SimpleButton> DanhSachChon = new List<SimpleButton>();
         private void btnSeat1_Click(object sender, EventArgs e)
         {
+            balTicket ticket = new balTicket();
             if (txtCusID.Text == "")
             {
                 SimpleButton btn = sender as SimpleButton;
@@ -85,14 +86,27 @@ namespace Viewer
 
         private void txtCusID_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
         {
+            balTicket ticket = new balTicket();
+            balCustomer cus = new balCustomer();
             if (txtCusID.Text == "")
             {
                 long lg = ticket.GetTotalMoney(DanhSachChon.Count);
                 txtTotalMoney.Text = lg.ToString();
+                txtU22.Text = "0";
             }
             else
             {
                 long lg = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtCusID.Text));
+                DateTime cusBD = new DateTime();
+                cusBD = cus.GetCustomerBirthDay(Convert.ToInt32(txtCusID.Text));
+                if ((DateTime.Now.Year - cusBD.Year) <= 22)
+                {
+                    txtU22.Text = DanhSachChon.Count.ToString();
+                }
+                else
+                {
+                    txtU22.Text = "0";
+                }
                 txtTotalMoney.Text = lg.ToString();
             }
         }
@@ -209,6 +223,7 @@ namespace Viewer
         }
         private void ucSelectSeat_Load(object sender, EventArgs e)
         {
+            balTicket ticket = new balTicket();
             AddButtons();
             foreach (var i in ticket.GetTickets())
             {
@@ -223,7 +238,98 @@ namespace Viewer
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            
+            balTicket ticket = new balTicket();
+            balCustomer customer = new balCustomer();
+            balEmployee employee = new balEmployee();
+            balSetDetail setDetail = new balSetDetail();
+            dtoTicket dtoTicket = new dtoTicket();
+            int count = 0;
+            List<dtoViewTicket> tickets = new List<dtoViewTicket>();
+            string employeeName = employee.GetEmployeeName(frmLogin.UserLogin.EmployeeID);
+            try
+            {
+                if(DanhSachChon.Count == 0)
+                {
+                    throw new Exception("Mời chọn ghế!");
+                }
+                else if(txtCusID.Text == "")
+                {
+                    foreach (var i in DanhSachChon)
+                    {
+                        dtoViewTicket viewTicket = new dtoViewTicket();
+                        viewTicket.TicketID = ticket.GetCountTicket() + 1;
+                        viewTicket.CustomerFullName = "Guest";
+                        viewTicket.EmployeeFullName = employeeName;
+                        viewTicket.FilmName = TicketInfo.FilmName;
+                        viewTicket.RoomID = setDetail.GetRoomID(TicketInfo.FilmID, TicketInfo.SetID);
+                        viewTicket.StartTime = TicketInfo.StartTime;
+                        viewTicket.TicketPrice = 75000;
+                        viewTicket.SeatName = i.Text;
+                        viewTicket.CreateDate = DateTime.Now;
+                        viewTicket.CustomerBirthDay = Convert.ToDateTime("01/01/1900");
+                        tickets.Add(viewTicket);
+                        //Thêm dữ liệu để lưu trữ lên DB
+                        dtoTicket.EmployeeID = frmLogin.UserLogin.EmployeeID;
+                        dtoTicket.SetID = TicketInfo.SetID;
+                        dtoTicket.TicketPrice = 75000;
+                        dtoTicket.TimeCreate = DateTime.Now;
+                        dtoTicket.SeatName = i.Text;
+                        dtoTicket.FilmID = TicketInfo.FilmID;
+                        count += ticket.InsertTicket(dtoTicket);
+                    }
+                }
+                else
+                {
+                    foreach (var i in DanhSachChon)
+                    {
+                        dtoViewTicket viewTicket = new dtoViewTicket();
+                        viewTicket.TicketID = ticket.GetCountTicket() + 1;
+                        viewTicket.CustomerFullName = customer.GetCustomerName(Convert.ToInt32(txtCusID.Text));
+                        viewTicket.EmployeeFullName = employeeName;
+                        viewTicket.FilmName = TicketInfo.FilmName;
+                        viewTicket.RoomID = setDetail.GetRoomID(TicketInfo.FilmID, TicketInfo.SetID);
+                        viewTicket.StartTime = TicketInfo.StartTime;
+                        viewTicket.TicketPrice = Convert.ToDecimal(ticket.GetPrice(Convert.ToInt32(txtCusID.Text)));
+                        viewTicket.SeatName = i.Text;
+                        viewTicket.CreateDate = DateTime.Now;
+                        viewTicket.CustomerBirthDay = customer.GetCustomerBirthDay(Convert.ToInt32(txtCusID.Text));
+                        tickets.Add(viewTicket);
+                        //Thêm dữ liệu để lưu trữ lên DB
+                        dtoTicket.CustomerID = Convert.ToInt32(txtCusID.Text);
+                        dtoTicket.EmployeeID = frmLogin.UserLogin.EmployeeID;
+                        dtoTicket.SetID = TicketInfo.SetID;
+                        dtoTicket.TicketPrice = ticket.GetPrice(Convert.ToInt32(txtCusID.Text));
+                        dtoTicket.TimeCreate = DateTime.Now;
+                        dtoTicket.SeatName = i.Text;
+                        dtoTicket.FilmID = TicketInfo.FilmID;
+                        count += ticket.InsertTicket(dtoTicket);
+                    }
+                }
+                string tb = count.ToString() + " Vé đã được mua thành công";
+                XtraMessageBox.Show(tb, "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (var i in ticket.GetTickets())
+                {
+                    foreach (SimpleButton j in simpleButtons)
+                    {
+                        if (i.SeatName == j.Text && i.SetID == TicketInfo.SetID && i.FilmID == TicketInfo.FilmID)
+                        {
+                            MakeUp(j);
+                        }
+                    }
+                }
+                foreach (var i in tickets)
+                {
+                    using (frmPrintTicket frm = new frmPrintTicket())
+                    {
+                        frm.PrintTicket(i);
+                        frm.ShowDialog();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

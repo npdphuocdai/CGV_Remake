@@ -87,6 +87,7 @@ namespace Viewer
             this.aceHome.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceButtonHome,
             this.aceLogOut});
+            this.aceHome.Expanded = true;
             this.aceHome.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceHome.ImageOptions.SvgImage")));
             this.aceHome.Name = "aceHome";
             this.aceHome.Text = "Home";
@@ -127,6 +128,7 @@ namespace Viewer
             this.aceChangePass.Name = "aceChangePass";
             this.aceChangePass.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceChangePass.Text = "Change Password";
+            this.aceChangePass.Click += new System.EventHandler(this.aceChangePass_Click);
             // 
             // aceServices
             // 
@@ -148,6 +150,7 @@ namespace Viewer
             // 
             this.aceStatistics.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceDashboard});
+            this.aceStatistics.Expanded = true;
             this.aceStatistics.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceStatistics.ImageOptions.SvgImage")));
             this.aceStatistics.Name = "aceStatistics";
             this.aceStatistics.Text = "Statistics";
@@ -157,6 +160,7 @@ namespace Viewer
             this.aceDashboard.Name = "aceDashboard";
             this.aceDashboard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceDashboard.Text = "Dashboard";
+            this.aceDashboard.Click += new System.EventHandler(this.aceDashboard_Click);
             // 
             // aceViewnEdit
             // 

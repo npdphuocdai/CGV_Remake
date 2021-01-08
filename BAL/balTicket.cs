@@ -46,9 +46,38 @@ namespace BAL
                 return 75000 * sl;
             }
         }
+        public long GetPrice( int id)
+        {
+            dalCustomer customer = new dalCustomer();
+            if (customer.GetU22Customer(id))
+            {
+                return 45000;
+            }
+            else
+            {
+                return 75000;
+            }
+        }
         public long GetTotalMoney(int sl)
         {
             return 75000 * sl;
+        }
+        public int GetCountTicket()
+        {
+            string sql = "Select * From [dbo].[Ticket]";
+            dalTicket dal = new dalTicket();
+            int count = 0;
+            SqlDataReader reader = dal.ReadData(sql);
+            while (reader.Read())
+            {
+                count++;
+            }
+            return count;
+        }
+        public int InsertTicket(dtoTicket ticket)
+        {
+            dalTicket dal = new dalTicket();
+            return dal.InsertTicket(ticket);
         }
     }
 }

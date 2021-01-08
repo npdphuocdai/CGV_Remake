@@ -33,5 +33,20 @@ namespace BAL
             }
             return listEmp;
         }
+        public int GetRoomID(int filmID, int setID)
+        {
+            int roomID = -1;
+            dalSetDetail dal = new dalSetDetail();
+            DataTable data = dal.GetSetDetails();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                DataRow row = data.Rows[i];
+                if(Convert.ToInt32(row[0]) == filmID && Convert.ToInt32(row[1]) == setID)
+                {
+                    roomID = Convert.ToInt32(row[5]);
+                }
+            }
+            return roomID;
+        }
     }
 }

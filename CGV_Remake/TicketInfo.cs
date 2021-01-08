@@ -9,6 +9,8 @@ namespace Viewer
     public static class TicketInfo
     {
         public static int FilmID { get; set; }
+        public static string FilmName { get; set; }
         public static int SetID { get; set; }
+        public static string StartTime { get; set; }
     }
 }

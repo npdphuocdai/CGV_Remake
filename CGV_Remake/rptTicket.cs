@@ -24,7 +24,7 @@ namespace Viewer
             parTicketNo.Value = ticket.TicketID;
             parStartTime.Value = ticket.StartTime;
             parRoomNo.Value = ticket.RoomID;
-            if(ticket.CustomerBirthDay.Year <= 22)
+            if((DateTime.Now.Year - ticket.CustomerBirthDay.Year) <= 22)
             {
                 parTicketType.Value = "U22";
             }

@@ -41,7 +41,9 @@ namespace Viewer
         private void btnSelect_Click(object sender, EventArgs e)
         {
             TicketInfo.FilmID = Convert.ToInt32(lueMovie.GetColumnValue("FilmID"));
+            TicketInfo.FilmName = lueMovie.GetColumnValue("FilmName").ToString();
             TicketInfo.SetID = Convert.ToInt32(lueMovie.GetColumnValue("SetID"));
+            TicketInfo.StartTime = lueMovie.GetColumnValue("StartTime").ToString();
             AddPage(ucSelectSeat.Instance);
         }
 

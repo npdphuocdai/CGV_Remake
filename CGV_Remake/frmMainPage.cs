@@ -74,11 +74,17 @@ namespace Viewer
         {
             if(frmLogin.flag == true)
             {
+                aceDashboard.Enabled = true;
+                aceTicket.Enabled = true;
+                aceChangePass.Enabled = true;
                 aceLogOut.Enabled = true;
                 aceUsername.Text = frmLogin.UserLogin.EmployeeFullName;
             }
             else
             {
+                aceDashboard.Enabled = false;
+                aceTicket.Enabled = false;
+                aceChangePass.Enabled = false;
                 aceLogOut.Enabled = false;
             }
         }
@@ -99,6 +105,16 @@ namespace Viewer
                 frmLogin.ShowDialog();
                 this.Show();
             }
+        }
+
+        private void aceChangePass_Click(object sender, EventArgs e)
+        {
+            XtraMessageBox.Show("Tính năng đang được thêm vào, xin đợi thêm một thời gian!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void aceDashboard_Click(object sender, EventArgs e)
+        {
+            XtraMessageBox.Show("Tính năng đang được thêm vào, xin đợi thêm một thời gian!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

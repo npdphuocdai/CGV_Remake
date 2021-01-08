@@ -49,5 +49,19 @@ namespace BAL
             int count = employee.SelfUpdateEmployeeFromView(viewEmployee);
             return count;
         }
+        public string GetEmployeeName(int id)
+        {
+            dalEmployee dal = new dalEmployee();
+            DataTable data = dal.GetEmployees();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                DataRow row = data.Rows[i];
+                if (Convert.ToInt32(row[0]) == id)
+                {
+                    return row[1].ToString();
+                }
+            }
+            return null;
+        }
     }
 }

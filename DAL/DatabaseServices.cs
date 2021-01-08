@@ -106,5 +106,15 @@ namespace DAL
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             return adapter;
         }
+        public int SelectReturnInt(string sql)
+        {
+            command = new SqlCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = sql;
+            command.Connection = connection;
+            OpenConnection();
+            int returnint = (int)command.ExecuteScalar();
+            return returnint;
+        }
     }
 }
