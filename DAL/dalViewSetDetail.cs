@@ -10,6 +10,10 @@ namespace DAL
 {
     public class dalViewSetDetail: DatabaseServices
     {
+        /// <summary>
+        /// Hàm để đổ dữ liệu vào một biến kiểu DataTable
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetViewSetDetails()
         {
             DataTable setDetails = new DataTable();

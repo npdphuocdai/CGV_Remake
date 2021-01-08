@@ -11,6 +11,11 @@ namespace DAL
 {
     public class dalTicket : DatabaseServices
     {
+        /// <summary>
+        /// Hàm để Insert một đối tượng vào Database
+        /// </summary>
+        /// <param name="ticket"></param>
+        /// <returns></returns>
         public int InsertTicket(dtoTicket ticket)
         {
             int count = 0;
@@ -39,6 +44,10 @@ namespace DAL
             }
             return count;
         }
+        /// <summary>
+        /// Hàm để đổ dữ liệu vào một biến kiểu DataTable
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetTickets()
         {
             DataTable tickets = new DataTable();

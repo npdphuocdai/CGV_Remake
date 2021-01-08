@@ -29,6 +29,11 @@ namespace DAL
             }
             return systemprivileges;
         }
+        /// <summary>
+        /// Hàm để Insert một đối tượng vào Database
+        /// </summary>
+        /// <param name="privilege"></param>
+        /// <returns></returns>
         public int InsertPrivilege(dtoSystemPrivilege privilege)
         {
             int count = 0;

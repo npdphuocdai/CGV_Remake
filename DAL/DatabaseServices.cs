@@ -85,6 +85,7 @@ namespace DAL
             //Hàm ExecuteNonQuery sẽ trả về giá trị là số dòng bị tác động bởi câu truy vấn
             return command.ExecuteNonQuery();
         }
+        //SqlDataAdapter sẽ trả về giá trị có thể fill vào một biến kiểu DataTable
         public SqlDataAdapter Adapter(string sql)
         {
             command = new SqlCommand();
@@ -113,6 +114,7 @@ namespace DAL
             command.CommandText = sql;
             command.Connection = connection;
             OpenConnection();
+            //Hàm ExecuteScalar dùng để truy vấn các câu lệnh dạng Count|MAX|MIN ...
             int returnint = (int)command.ExecuteScalar();
             return returnint;
         }
