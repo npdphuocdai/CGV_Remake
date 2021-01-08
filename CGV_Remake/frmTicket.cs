@@ -34,7 +34,6 @@ namespace Viewer
             userControl.Dock = DockStyle.Fill;
             userControl.BringToFront();
         }
-        public bool ticket = false;
         private void frmTicket_Resize(object sender, EventArgs e)
         {
         }
@@ -43,7 +42,6 @@ namespace Viewer
         {
             TicketInfo.FilmID = Convert.ToInt32(lueMovie.GetColumnValue("FilmID"));
             TicketInfo.SetID = Convert.ToInt32(lueMovie.GetColumnValue("SetID"));
-            ticket = true;
             AddPage(ucSelectSeat.Instance);
         }
 

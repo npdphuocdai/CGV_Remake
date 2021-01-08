@@ -57,6 +57,7 @@
     <Compile Include="dtoViewSetDetail.cs" />
     <Compile Include="dtoViewSetDetailFilmName.cs" />
     <Compile Include="dtoViewSetDetailStartTime.cs" />
+    <Compile Include="dtoViewTicket.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="dtoSystemPrivilege.cs" />
     <Compile Include="dtoShowingSet.cs" />
