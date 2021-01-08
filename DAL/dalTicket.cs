@@ -44,7 +44,7 @@ namespace DAL
             DataTable tickets = new DataTable();
             try
             {
-                string sql = "SELECT * from [dto].[Ticket]";
+                string sql = "SELECT * from [dbo].[Ticket]";
                 SqlDataAdapter adapter = Adapter(sql);
                 if(adapter != null)
                 {

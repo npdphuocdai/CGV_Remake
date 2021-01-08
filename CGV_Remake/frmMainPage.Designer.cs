@@ -38,6 +38,7 @@ namespace Viewer
             this.aceLogOut = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceAccount = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceUsername = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceChangePass = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceServices = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceTicket = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceStatistics = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -50,7 +51,6 @@ namespace Viewer
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.aceChangePass = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.acrLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -122,10 +122,17 @@ namespace Viewer
             this.aceUsername.Text = "Log In";
             this.aceUsername.Click += new System.EventHandler(this.aceUsername_Click);
             // 
+            // aceChangePass
+            // 
+            this.aceChangePass.Name = "aceChangePass";
+            this.aceChangePass.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceChangePass.Text = "Change Password";
+            // 
             // aceServices
             // 
             this.aceServices.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceTicket});
+            this.aceServices.Expanded = true;
             this.aceServices.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceServices.ImageOptions.SvgImage")));
             this.aceServices.Name = "aceServices";
             this.aceServices.Text = "Services";
@@ -214,12 +221,6 @@ namespace Viewer
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // aceChangePass
-            // 
-            this.aceChangePass.Name = "aceChangePass";
-            this.aceChangePass.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.aceChangePass.Text = "Change Password";
             // 
             // frmMainPage
             // 

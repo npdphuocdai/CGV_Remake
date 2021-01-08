@@ -3266,6 +3266,7 @@ namespace Viewer
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucSelectSeat";
             this.Size = new System.Drawing.Size(1500, 898);
+            this.Load += new System.EventHandler(this.ucSelectSeat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layucSelectSeat)).EndInit();
             this.layucSelectSeat.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtCusID.Properties)).EndInit();

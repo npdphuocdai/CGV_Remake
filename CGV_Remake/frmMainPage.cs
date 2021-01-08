@@ -52,7 +52,16 @@ namespace Viewer
         }
         private void aceTicket_Click(object sender, EventArgs e)
         {
-            CallChildForm(frmTicket);
+            if (frmTicket.ticket)
+            {
+                frmTicket.ticket = false;
+                frmTicket.AddPage(ucTicket.Instance);
+                CallChildForm(frmTicket);
+            }
+            else
+            {
+                CallChildForm(frmTicket);
+            }
         }
 
         private void aceUsername_Click(object sender, EventArgs e)

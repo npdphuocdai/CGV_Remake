@@ -18,8 +18,9 @@ namespace Viewer
         public frmTicket()
         {
             InitializeComponent();
-            List<dtoViewSetDetail> listFilm = balView.GetViewSetDetails();
+            List<dtoViewSetDetail> listFilm = balView.GetSetDetails();
             lueMovie.Properties.DataSource = listFilm;
+            lueMovie.Properties.ValueMember = "FilmID";
             lueMovie.Properties.DisplayMember = "FilmName";
         }
         balViewSetDetail balView = new balViewSetDetail();
@@ -33,19 +34,21 @@ namespace Viewer
             userControl.Dock = DockStyle.Fill;
             userControl.BringToFront();
         }
-
+        public bool ticket = false;
         private void frmTicket_Resize(object sender, EventArgs e)
         {
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
         {
+            TicketInfo.FilmID = Convert.ToInt32(lueMovie.GetColumnValue("FilmID"));
+            TicketInfo.SetID = Convert.ToInt32(lueMovie.GetColumnValue("SetID"));
+            ticket = true;
             AddPage(ucSelectSeat.Instance);
         }
 
-        private void lueMovie_EditValueChanged(object sender, EventArgs e)
+        private void lueMovie_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
         {
-
         }
     }
 }
