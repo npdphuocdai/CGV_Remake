@@ -151,7 +151,7 @@ namespace DAL
             }
             return count;
         }
-        public int SelfUpdateEmployeeFromView(dtoViewEmployee employee)
+        public int SelfUpdateEmployeeFromView(dtoViewEmployees employee)
         {
             int count = 0;
             try
@@ -179,7 +179,7 @@ namespace DAL
             }
             return count;
         }
-        public int AdminUpdateEmployeeFromView(dtoViewEmployee employee)
+        public int AdminUpdateEmployeeFromView(dtoViewEmployees employee)
         {
             int count = 0;
             try

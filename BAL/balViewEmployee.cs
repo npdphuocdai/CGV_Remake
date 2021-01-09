@@ -11,30 +11,30 @@ namespace BAL
 {
     public class balViewEmployee
     {
-        public List<dtoViewEmployee> GetViewEmployees()
+        public List<dtoViewEmployees> GetViewEmployees()
         {
             dalViewEmployee ViewEmployee = new dalViewEmployee();
-            List<dtoViewEmployee> listEmp = new List<dtoViewEmployee>();
+            List<dtoViewEmployees> listEmp = new List<dtoViewEmployees>();
             DataTable employees = ViewEmployee.GetViewEmployees();
             for (int i = 0; i < employees.Rows.Count; i++)
             {
-                dtoViewEmployee employee = new dtoViewEmployee();
+                dtoViewEmployees employee = new dtoViewEmployees();
                 DataRow row = employees.Rows[i];
                 employee.EmployeeID = Convert.ToInt32(row[0]);
                 employee.Gender = row[1].ToString();
                 employee.EmployeeFullName = row[2].ToString();
                 employee.EmployeeBirthday = Convert.ToDateTime(row[3]);
                 employee.EmployeeAddress = row[4].ToString();
-                employee.EmployeePhoneNumber= row[5].ToString();
-                employee.EmployeeEmail = row[6].ToString();
-                employee.StartDay = Convert.ToDateTime(row[7]);
-                employee.JobtitleName = row[8].ToString();
-                employee.BasicSalary = Convert.ToDecimal(row[9]);
-                employee.CoefficientsSalary = Convert.ToInt32(row[10]);
-                employee.PositionAllowance = Convert.ToDecimal(row[11]);
-                employee.Major = row[12].ToString();
-                employee.EmployeePotrait = (byte[])row[13];
-                employee.JobTitleID = Convert.ToInt32(row[14]);
+                employee.JobTitleID = Convert.ToInt32(row[5]);
+                employee.EmployeePhoneNumber= row[6].ToString();
+                employee.EmployeeEmail = row[7].ToString();
+                employee.StartDay = Convert.ToDateTime(row[8]);
+                employee.JobtitleName = row[9].ToString();
+                employee.BasicSalary = Convert.ToDecimal(row[10]);
+                employee.CoefficientsSalary = Convert.ToInt32(row[11]);
+                employee.PositionAllowance = Convert.ToDecimal(row[12]);
+                employee.Major = row[13].ToString();
+                employee.EmployeePotrait = (byte[])row[14];
                 listEmp.Add(employee);
             }
             return listEmp;

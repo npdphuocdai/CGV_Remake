@@ -43,13 +43,13 @@ namespace BAL
             }
             return listEmp;
         }
-        public int UpdateFromView(dtoViewEmployee viewEmployee)
+        public int UpdateFromView(dtoViewEmployees viewEmployee)
         {
             dalEmployee employee = new dalEmployee();
             int count = employee.SelfUpdateEmployeeFromView(viewEmployee);
             return count;
         }
-        public int AdminUpdateFromView(dtoViewEmployee viewEmployee)
+        public int AdminUpdateFromView(dtoViewEmployees viewEmployee)
         {
             dalEmployee employee = new dalEmployee();
             int count = employee.AdminUpdateEmployeeFromView(viewEmployee);

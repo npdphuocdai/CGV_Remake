@@ -25,7 +25,7 @@ namespace Viewer
             AddPage(ucHome.Instance);
         }
         frmTicket frmTicket = new frmTicket();
-        public static dtoViewEmployee EmployeeTemp = new dtoViewEmployee();
+        public static dtoViewEmployees EmployeeTemp = new dtoViewEmployees();
         frmLogin frmLogin = new frmLogin();
         /// <summary>
         /// Dùng để gọi một UserControl và add vào Fluent Desigh
