@@ -29,14 +29,7 @@ namespace Viewer
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dtoViewEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dtoViewEmployeeBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dtoViewEmployeeBindingSource
-            // 
-            this.dtoViewEmployeeBindingSource.DataSource = typeof(DTO.dtoViewEmployee);
             // 
             // ucViewEmployee
             // 
@@ -44,13 +37,10 @@ namespace Viewer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ucViewEmployee";
             this.Size = new System.Drawing.Size(1124, 382);
-            ((System.ComponentModel.ISupportInitialize)(this.dtoViewEmployeeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.BindingSource dtoViewEmployeeBindingSource;
     }
 }
