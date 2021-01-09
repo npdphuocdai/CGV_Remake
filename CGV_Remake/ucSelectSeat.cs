@@ -32,12 +32,13 @@ namespace Viewer
                 return _instance;
             }
         }
-        
+        balEmployee employee = new balEmployee();
+        balTicket ticket = new balTicket();
+        balCustomer customer = new balCustomer();
         balSetDetail setDetail = new balSetDetail();
         List<SimpleButton> DanhSachChon = new List<SimpleButton>();
         private void btnSeat1_Click(object sender, EventArgs e)
         {
-            balTicket ticket = new balTicket();
             if (txtCusID.Text == "")
             {
                 SimpleButton btn = sender as SimpleButton;
@@ -86,8 +87,6 @@ namespace Viewer
 
         private void txtCusID_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
         {
-            balTicket ticket = new balTicket();
-            balCustomer cus = new balCustomer();
             if (txtCusID.Text == "")
             {
                 long lg = ticket.GetTotalMoney(DanhSachChon.Count);
@@ -98,7 +97,7 @@ namespace Viewer
             {
                 long lg = ticket.GetTotalMoney(DanhSachChon.Count, Convert.ToInt32(txtCusID.Text));
                 DateTime cusBD = new DateTime();
-                cusBD = cus.GetCustomerBirthDay(Convert.ToInt32(txtCusID.Text));
+                cusBD = customer.GetCustomerBirthDay(Convert.ToInt32(txtCusID.Text));
                 if ((DateTime.Now.Year - cusBD.Year) <= 22)
                 {
                     txtU22.Text = DanhSachChon.Count.ToString();
@@ -223,7 +222,6 @@ namespace Viewer
         }
         private void ucSelectSeat_Load(object sender, EventArgs e)
         {
-            balTicket ticket = new balTicket();
             AddButtons();
             foreach (var i in ticket.GetTickets())
             {
@@ -238,11 +236,6 @@ namespace Viewer
         }
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            balTicket ticket = new balTicket();
-            balCustomer customer = new balCustomer();
-            balEmployee employee = new balEmployee();
-            balSetDetail setDetail = new balSetDetail();
-            dtoTicket dtoTicket = new dtoTicket();
             int count = 0;
             List<dtoViewTicket> tickets = new List<dtoViewTicket>();
             string employeeName = employee.GetEmployeeName(frmLogin.UserLogin.EmployeeID);
@@ -256,6 +249,7 @@ namespace Viewer
                 {
                     foreach (var i in DanhSachChon)
                     {
+                        dtoTicket dtoTicket = new dtoTicket();
                         dtoViewTicket viewTicket = new dtoViewTicket();
                         viewTicket.TicketID = ticket.GetCountTicket() + 1;
                         viewTicket.CustomerFullName = "Guest";
@@ -282,6 +276,7 @@ namespace Viewer
                 {
                     foreach (var i in DanhSachChon)
                     {
+                        dtoTicket dtoTicket = new dtoTicket();
                         dtoViewTicket viewTicket = new dtoViewTicket();
                         viewTicket.TicketID = ticket.GetCountTicket() + 1;
                         viewTicket.CustomerFullName = customer.GetCustomerName(Convert.ToInt32(txtCusID.Text));
@@ -316,6 +311,10 @@ namespace Viewer
                             MakeUp(j);
                         }
                     }
+                }
+                while(DanhSachChon.Count > 0)
+                {
+                    DanhSachChon.RemoveAt(0);
                 }
                 foreach (var i in tickets)
                 {

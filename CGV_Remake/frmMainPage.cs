@@ -131,7 +131,7 @@ namespace Viewer
 
         private void aceDashboard_Click(object sender, EventArgs e)
         {
-            XtraMessageBox.Show("Tính năng đang được thêm vào, xin đợi thêm một thời gian!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AddPage(ucDashboard.Instance);
         }
     }
 }

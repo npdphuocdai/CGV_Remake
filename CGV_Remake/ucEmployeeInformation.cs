@@ -81,7 +81,7 @@ namespace Viewer
             frmMainPage.EmployeeTemp.Major = txtMajor1.Text;
             balEmployee employee = new balEmployee();
             int count = employee.UpdateFromView(frmMainPage.EmployeeTemp);
-            string mess = "Số hàng đã được update: " + count.ToString();
+            string mess = "Thông tin nhân viên đã được update thành công!"+"\nSố hàng đã được update: " + count.ToString();
             XtraMessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
