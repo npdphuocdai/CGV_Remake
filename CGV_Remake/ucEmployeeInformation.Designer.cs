@@ -378,6 +378,7 @@ namespace Viewer
             this.txtMajor1.Name = "txtMajor1";
             this.txtMajor1.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajor1.Properties.Appearance.Options.UseFont = true;
+            this.txtMajor1.Properties.ReadOnly = true;
             this.txtMajor1.Size = new System.Drawing.Size(453, 38);
             this.txtMajor1.StyleController = this.layoutControl2;
             this.txtMajor1.TabIndex = 9;
@@ -596,7 +597,6 @@ namespace Viewer
             this.txtGender.Name = "txtGender";
             this.txtGender.Properties.Appearance.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.Properties.Appearance.Options.UseFont = true;
-            this.txtGender.Properties.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(506, 38);
             this.txtGender.StyleController = this.layoutControl1;
             this.txtGender.TabIndex = 14;

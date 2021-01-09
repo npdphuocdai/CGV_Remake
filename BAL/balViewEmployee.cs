@@ -34,6 +34,7 @@ namespace BAL
                 employee.PositionAllowance = Convert.ToDecimal(row[11]);
                 employee.Major = row[12].ToString();
                 employee.EmployeePotrait = (byte[])row[13];
+                employee.JobTitleID = Convert.ToInt32(row[14]);
                 listEmp.Add(employee);
             }
             return listEmp;

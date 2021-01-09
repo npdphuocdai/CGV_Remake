@@ -8,8 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BAL;
-using DTO;
 
 namespace Viewer
 {
@@ -18,24 +16,6 @@ namespace Viewer
         public ucViewEmployee()
         {
             InitializeComponent();
-            BindingData();
-        }
-        private static ucViewEmployee _instance;
-        public static ucViewEmployee Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new ucViewEmployee();
-                }
-                return _instance;
-            }
-        }
-        balViewEmployee balViewEmployee = new balViewEmployee();
-        public void BindingData()
-        {
-            dtoViewEmployeeBindingSource.DataSource = balViewEmployee.GetViewEmployees();
         }
     }
 }

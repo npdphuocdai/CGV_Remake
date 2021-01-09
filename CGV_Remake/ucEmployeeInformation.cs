@@ -26,6 +26,7 @@ namespace Viewer
             grpInfor.Width = Convert.ToInt32(layoutTong.Width * 0.48);
             grpOthers.Width = Convert.ToInt32(layoutTong.Width * 0.48);
         }
+        public string FileName;
         private void ucEmployeeInformation_Resize(object sender, EventArgs e)
         {
             layPotrait.Height = Convert.ToInt32(layoutTong.Height * 0.54);
@@ -34,7 +35,6 @@ namespace Viewer
             grpInfor.Width = Convert.ToInt32(layoutTong.Width * 0.48);
             grpOthers.Width = Convert.ToInt32(layoutTong.Width * 0.48);
         }
-        string FileName;
         private static ucEmployeeInformation _instance;
         public static ucEmployeeInformation Instance
         {

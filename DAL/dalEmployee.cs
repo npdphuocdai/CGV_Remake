@@ -179,6 +179,36 @@ namespace DAL
             }
             return count;
         }
+        public int AdminUpdateEmployeeFromView(dtoViewEmployee employee)
+        {
+            int count = 0;
+            try
+            {
+                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [Gender] = @Gender, [JobTitleID] = @JobTitleID WHERE [EmployeeID] = @EmployeeID";
+                SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
+                parameterID.Value = employee.EmployeeID;
+                SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
+                parameterName.Value = employee.EmployeeFullName;
+                SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
+                parameterBirthDay.Value = employee.EmployeeBirthday;
+                SqlParameter parameterAddress = new SqlParameter("@Address", SqlDbType.NVarChar);
+                parameterAddress.Value = employee.EmployeeAddress;
+                SqlParameter parameterPhoneNumber = new SqlParameter("@PhoneNumber", SqlDbType.Char);
+                parameterPhoneNumber.Value = employee.EmployeePhoneNumber;
+                SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
+                parameterEmail.Value = employee.EmployeeEmail;
+                SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
+                parameterGender.Value = employee.Gender;
+                SqlParameter parameterJobTitleID = new SqlParameter("@JobTitleID", SqlDbType.NVarChar);
+                parameterJobTitleID.Value = employee.JobTitleID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterID, parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender, parameterJobTitleID });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
         public DataTable GetEmployees()
         {
             DataTable employees = new DataTable();

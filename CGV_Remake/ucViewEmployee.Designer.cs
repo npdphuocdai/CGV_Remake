@@ -29,18 +29,12 @@ namespace Viewer
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucViewEmployee));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.layTong = new DevExpress.XtraLayout.LayoutControl();
-            this.gridViewEmployee = new DevExpress.XtraGrid.GridControl();
-            this.dtoViewEmployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dgvViewEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colEmployeeID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmployeePotrait = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBasicSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDay = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeeFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGender = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeeAddress = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -48,60 +42,31 @@ namespace Viewer
             this.colEmployeeBirthday = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmployeePhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colJobtitleName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colUpdate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.btnViewProfile = new DevExpress.XtraEditors.SimpleButton();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layBtnViewProfile = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            ((System.ComponentModel.ISupportInitialize)(this.layTong)).BeginInit();
-            this.layTong.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtoViewEmployeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViewEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layBtnViewProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            this.colCoefficientsSalary = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPositionAllowance = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMajor = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // layTong
+            // gridControl1
             // 
-            this.layTong.Controls.Add(this.gridViewEmployee);
-            this.layTong.Controls.Add(this.btnViewProfile);
-            this.layTong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layTong.Location = new System.Drawing.Point(0, 0);
-            this.layTong.Name = "layTong";
-            this.layTong.Root = this.Root;
-            this.layTong.Size = new System.Drawing.Size(1500, 670);
-            this.layTong.TabIndex = 0;
-            this.layTong.Text = "layoutControl1";
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(1124, 382);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // gridViewEmployee
+            // gridView1
             // 
-            this.gridViewEmployee.DataSource = this.dtoViewEmployeeBindingSource;
-            this.gridViewEmployee.Location = new System.Drawing.Point(2, 2);
-            this.gridViewEmployee.MainView = this.dgvViewEmployee;
-            this.gridViewEmployee.Name = "gridViewEmployee";
-            this.gridViewEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnUpdate});
-            this.gridViewEmployee.Size = new System.Drawing.Size(1496, 559);
-            this.gridViewEmployee.TabIndex = 5;
-            this.gridViewEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgvViewEmployee});
-            // 
-            // dtoViewEmployeeBindingSource
-            // 
-            this.dtoViewEmployeeBindingSource.DataSource = typeof(DTO.dtoViewEmployee);
-            // 
-            // dgvViewEmployee
-            // 
-            this.dgvViewEmployee.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colEmployeeID,
+            this.colEmployeePotrait,
+            this.colBasicSalary,
+            this.colStartDay,
             this.colEmployeeFullName,
             this.colGender,
             this.colEmployeeAddress,
@@ -109,238 +74,159 @@ namespace Viewer
             this.colEmployeeBirthday,
             this.colEmployeePhoneNumber,
             this.colJobtitleName,
-            this.colUpdate});
-            this.dgvViewEmployee.GridControl = this.gridViewEmployee;
-            this.dgvViewEmployee.Name = "dgvViewEmployee";
-            this.dgvViewEmployee.OptionsView.ShowAutoFilterRow = true;
+            this.colCoefficientsSalary,
+            this.colPositionAllowance,
+            this.colMajor});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // colEmployeeID
             // 
-            this.colEmployeeID.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeID.AppearanceCell.Options.UseFont = true;
-            this.colEmployeeID.AppearanceCell.Options.UseTextOptions = true;
-            this.colEmployeeID.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colEmployeeID.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeID.AppearanceHeader.Options.UseFont = true;
-            this.colEmployeeID.AppearanceHeader.Options.UseTextOptions = true;
-            this.colEmployeeID.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colEmployeeID.FieldName = "EmployeeID";
             this.colEmployeeID.MinWidth = 25;
             this.colEmployeeID.Name = "colEmployeeID";
-            this.colEmployeeID.OptionsColumn.ReadOnly = true;
             this.colEmployeeID.Visible = true;
             this.colEmployeeID.VisibleIndex = 0;
-            this.colEmployeeID.Width = 118;
+            this.colEmployeeID.Width = 94;
+            // 
+            // colEmployeePotrait
+            // 
+            this.colEmployeePotrait.FieldName = "EmployeePotrait";
+            this.colEmployeePotrait.MinWidth = 25;
+            this.colEmployeePotrait.Name = "colEmployeePotrait";
+            this.colEmployeePotrait.Visible = true;
+            this.colEmployeePotrait.VisibleIndex = 1;
+            this.colEmployeePotrait.Width = 94;
+            // 
+            // colBasicSalary
+            // 
+            this.colBasicSalary.FieldName = "BasicSalary";
+            this.colBasicSalary.MinWidth = 25;
+            this.colBasicSalary.Name = "colBasicSalary";
+            this.colBasicSalary.Visible = true;
+            this.colBasicSalary.VisibleIndex = 2;
+            this.colBasicSalary.Width = 94;
+            // 
+            // colStartDay
+            // 
+            this.colStartDay.FieldName = "StartDay";
+            this.colStartDay.MinWidth = 25;
+            this.colStartDay.Name = "colStartDay";
+            this.colStartDay.Visible = true;
+            this.colStartDay.VisibleIndex = 3;
+            this.colStartDay.Width = 94;
             // 
             // colEmployeeFullName
             // 
-            this.colEmployeeFullName.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeFullName.AppearanceCell.Options.UseFont = true;
-            this.colEmployeeFullName.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeFullName.AppearanceHeader.Options.UseFont = true;
             this.colEmployeeFullName.FieldName = "EmployeeFullName";
             this.colEmployeeFullName.MinWidth = 25;
             this.colEmployeeFullName.Name = "colEmployeeFullName";
             this.colEmployeeFullName.Visible = true;
-            this.colEmployeeFullName.VisibleIndex = 1;
-            this.colEmployeeFullName.Width = 203;
+            this.colEmployeeFullName.VisibleIndex = 4;
+            this.colEmployeeFullName.Width = 94;
             // 
             // colGender
             // 
-            this.colGender.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colGender.AppearanceCell.Options.UseFont = true;
-            this.colGender.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colGender.AppearanceHeader.Options.UseFont = true;
             this.colGender.FieldName = "Gender";
             this.colGender.MinWidth = 25;
             this.colGender.Name = "colGender";
             this.colGender.Visible = true;
-            this.colGender.VisibleIndex = 2;
-            this.colGender.Width = 104;
+            this.colGender.VisibleIndex = 5;
+            this.colGender.Width = 94;
             // 
             // colEmployeeAddress
             // 
-            this.colEmployeeAddress.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeAddress.AppearanceCell.Options.UseFont = true;
-            this.colEmployeeAddress.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeAddress.AppearanceHeader.Options.UseFont = true;
             this.colEmployeeAddress.FieldName = "EmployeeAddress";
             this.colEmployeeAddress.MinWidth = 25;
             this.colEmployeeAddress.Name = "colEmployeeAddress";
             this.colEmployeeAddress.Visible = true;
-            this.colEmployeeAddress.VisibleIndex = 3;
-            this.colEmployeeAddress.Width = 186;
+            this.colEmployeeAddress.VisibleIndex = 6;
+            this.colEmployeeAddress.Width = 94;
             // 
             // colEmployeeEmail
             // 
-            this.colEmployeeEmail.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeEmail.AppearanceCell.Options.UseFont = true;
-            this.colEmployeeEmail.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeEmail.AppearanceHeader.Options.UseFont = true;
             this.colEmployeeEmail.FieldName = "EmployeeEmail";
             this.colEmployeeEmail.MinWidth = 25;
             this.colEmployeeEmail.Name = "colEmployeeEmail";
             this.colEmployeeEmail.Visible = true;
-            this.colEmployeeEmail.VisibleIndex = 4;
-            this.colEmployeeEmail.Width = 186;
+            this.colEmployeeEmail.VisibleIndex = 7;
+            this.colEmployeeEmail.Width = 94;
             // 
             // colEmployeeBirthday
             // 
-            this.colEmployeeBirthday.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeBirthday.AppearanceCell.Options.UseFont = true;
-            this.colEmployeeBirthday.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeeBirthday.AppearanceHeader.Options.UseFont = true;
             this.colEmployeeBirthday.FieldName = "EmployeeBirthday";
             this.colEmployeeBirthday.MinWidth = 25;
             this.colEmployeeBirthday.Name = "colEmployeeBirthday";
             this.colEmployeeBirthday.Visible = true;
-            this.colEmployeeBirthday.VisibleIndex = 5;
-            this.colEmployeeBirthday.Width = 186;
+            this.colEmployeeBirthday.VisibleIndex = 8;
+            this.colEmployeeBirthday.Width = 94;
             // 
             // colEmployeePhoneNumber
             // 
-            this.colEmployeePhoneNumber.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeePhoneNumber.AppearanceCell.Options.UseFont = true;
-            this.colEmployeePhoneNumber.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colEmployeePhoneNumber.AppearanceHeader.Options.UseFont = true;
             this.colEmployeePhoneNumber.FieldName = "EmployeePhoneNumber";
             this.colEmployeePhoneNumber.MinWidth = 25;
             this.colEmployeePhoneNumber.Name = "colEmployeePhoneNumber";
             this.colEmployeePhoneNumber.Visible = true;
-            this.colEmployeePhoneNumber.VisibleIndex = 6;
-            this.colEmployeePhoneNumber.Width = 300;
+            this.colEmployeePhoneNumber.VisibleIndex = 9;
+            this.colEmployeePhoneNumber.Width = 94;
             // 
             // colJobtitleName
             // 
-            this.colJobtitleName.AppearanceCell.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colJobtitleName.AppearanceCell.Options.UseFont = true;
-            this.colJobtitleName.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colJobtitleName.AppearanceHeader.Options.UseFont = true;
             this.colJobtitleName.FieldName = "JobtitleName";
             this.colJobtitleName.MinWidth = 25;
             this.colJobtitleName.Name = "colJobtitleName";
             this.colJobtitleName.Visible = true;
-            this.colJobtitleName.VisibleIndex = 7;
-            this.colJobtitleName.Width = 183;
+            this.colJobtitleName.VisibleIndex = 10;
+            this.colJobtitleName.Width = 94;
             // 
-            // colUpdate
+            // colCoefficientsSalary
             // 
-            this.colUpdate.AppearanceHeader.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colUpdate.AppearanceHeader.Options.UseFont = true;
-            this.colUpdate.Caption = "Update";
-            this.colUpdate.ColumnEdit = this.btnUpdate;
-            this.colUpdate.MinWidth = 25;
-            this.colUpdate.Name = "colUpdate";
-            this.colUpdate.Visible = true;
-            this.colUpdate.VisibleIndex = 8;
-            this.colUpdate.Width = 94;
+            this.colCoefficientsSalary.FieldName = "CoefficientsSalary";
+            this.colCoefficientsSalary.MinWidth = 25;
+            this.colCoefficientsSalary.Name = "colCoefficientsSalary";
+            this.colCoefficientsSalary.Visible = true;
+            this.colCoefficientsSalary.VisibleIndex = 11;
+            this.colCoefficientsSalary.Width = 94;
             // 
-            // btnUpdate
+            // colPositionAllowance
             // 
-            this.btnUpdate.AutoHeight = false;
-            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
-            this.btnUpdate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.colPositionAllowance.FieldName = "PositionAllowance";
+            this.colPositionAllowance.MinWidth = 25;
+            this.colPositionAllowance.Name = "colPositionAllowance";
+            this.colPositionAllowance.Visible = true;
+            this.colPositionAllowance.VisibleIndex = 12;
+            this.colPositionAllowance.Width = 94;
             // 
-            // btnViewProfile
+            // colMajor
             // 
-            this.btnViewProfile.Appearance.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewProfile.Appearance.Options.UseFont = true;
-            this.btnViewProfile.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnViewProfile.ImageOptions.SvgImage")));
-            this.btnViewProfile.Location = new System.Drawing.Point(502, 565);
-            this.btnViewProfile.Name = "btnViewProfile";
-            this.btnViewProfile.Size = new System.Drawing.Size(496, 103);
-            this.btnViewProfile.StyleController = this.layTong;
-            this.btnViewProfile.TabIndex = 4;
-            this.btnViewProfile.Text = "View Profile";
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layBtnViewProfile,
-            this.emptySpaceItem2,
-            this.emptySpaceItem3,
-            this.layoutControlItem1});
-            this.Root.Name = "Root";
-            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.Root.Size = new System.Drawing.Size(1500, 670);
-            this.Root.TextVisible = false;
-            // 
-            // layBtnViewProfile
-            // 
-            this.layBtnViewProfile.Control = this.btnViewProfile;
-            this.layBtnViewProfile.Location = new System.Drawing.Point(500, 563);
-            this.layBtnViewProfile.MinSize = new System.Drawing.Size(264, 53);
-            this.layBtnViewProfile.Name = "layBtnViewProfile";
-            this.layBtnViewProfile.Size = new System.Drawing.Size(500, 107);
-            this.layBtnViewProfile.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.layBtnViewProfile.TextSize = new System.Drawing.Size(0, 0);
-            this.layBtnViewProfile.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 563);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(500, 107);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem3
-            // 
-            this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(1000, 563);
-            this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(500, 107);
-            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.gridViewEmployee;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(1500, 563);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
+            this.colMajor.FieldName = "Major";
+            this.colMajor.MinWidth = 25;
+            this.colMajor.Name = "colMajor";
+            this.colMajor.Visible = true;
+            this.colMajor.VisibleIndex = 13;
+            this.colMajor.Width = 94;
             // 
             // ucViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.layTong);
+            this.Controls.Add(this.gridControl1);
             this.Name = "ucViewEmployee";
-            this.Size = new System.Drawing.Size(1500, 670);
-            ((System.ComponentModel.ISupportInitialize)(this.layTong)).EndInit();
-            this.layTong.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridViewEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtoViewEmployeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvViewEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layBtnViewProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            this.Size = new System.Drawing.Size(1124, 382);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraLayout.LayoutControl layTong;
-        private DevExpress.XtraLayout.LayoutControlGroup Root;
-        private DevExpress.XtraGrid.GridControl gridViewEmployee;
-        private DevExpress.XtraGrid.Views.Grid.GridView dgvViewEmployee;
-        private DevExpress.XtraEditors.SimpleButton btnViewProfile;
-        private DevExpress.XtraLayout.LayoutControlItem layBtnViewProfile;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
-        private System.Windows.Forms.BindingSource dtoViewEmployeeBindingSource;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeeID;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmployeePotrait;
+        private DevExpress.XtraGrid.Columns.GridColumn colBasicSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDay;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeeFullName;
         private DevExpress.XtraGrid.Columns.GridColumn colGender;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeeAddress;
@@ -348,7 +234,8 @@ namespace Viewer
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeeBirthday;
         private DevExpress.XtraGrid.Columns.GridColumn colEmployeePhoneNumber;
         private DevExpress.XtraGrid.Columns.GridColumn colJobtitleName;
-        private DevExpress.XtraGrid.Columns.GridColumn colUpdate;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnUpdate;
+        private DevExpress.XtraGrid.Columns.GridColumn colCoefficientsSalary;
+        private DevExpress.XtraGrid.Columns.GridColumn colPositionAllowance;
+        private DevExpress.XtraGrid.Columns.GridColumn colMajor;
     }
 }

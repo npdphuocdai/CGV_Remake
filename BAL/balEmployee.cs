@@ -49,6 +49,12 @@ namespace BAL
             int count = employee.SelfUpdateEmployeeFromView(viewEmployee);
             return count;
         }
+        public int AdminUpdateFromView(dtoViewEmployee viewEmployee)
+        {
+            dalEmployee employee = new dalEmployee();
+            int count = employee.AdminUpdateEmployeeFromView(viewEmployee);
+            return count;
+        }
         public string GetEmployeeName(int id)
         {
             dalEmployee dal = new dalEmployee();
