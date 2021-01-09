@@ -51,6 +51,7 @@ namespace Viewer
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.acrLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -87,7 +88,6 @@ namespace Viewer
             this.aceHome.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceButtonHome,
             this.aceLogOut});
-            this.aceHome.Expanded = true;
             this.aceHome.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceHome.ImageOptions.SvgImage")));
             this.aceHome.Name = "aceHome";
             this.aceHome.Text = "Home";
@@ -111,7 +111,6 @@ namespace Viewer
             this.aceAccount.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceUsername,
             this.aceChangePass});
-            this.aceAccount.Expanded = true;
             this.aceAccount.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceAccount.ImageOptions.SvgImage")));
             this.aceAccount.Name = "aceAccount";
             this.aceAccount.Text = "Account";
@@ -134,7 +133,6 @@ namespace Viewer
             // 
             this.aceServices.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceTicket});
-            this.aceServices.Expanded = true;
             this.aceServices.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceServices.ImageOptions.SvgImage")));
             this.aceServices.Name = "aceServices";
             this.aceServices.Text = "Services";
@@ -150,7 +148,6 @@ namespace Viewer
             // 
             this.aceStatistics.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceDashboard});
-            this.aceStatistics.Expanded = true;
             this.aceStatistics.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceStatistics.ImageOptions.SvgImage")));
             this.aceStatistics.Name = "aceStatistics";
             this.aceStatistics.Text = "Statistics";
@@ -164,6 +161,9 @@ namespace Viewer
             // 
             // aceViewnEdit
             // 
+            this.aceViewnEdit.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement1});
+            this.aceViewnEdit.Expanded = true;
             this.aceViewnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceViewnEdit.ImageOptions.SvgImage")));
             this.aceViewnEdit.Name = "aceViewnEdit";
             this.aceViewnEdit.Text = "View & Edit";
@@ -226,6 +226,12 @@ namespace Viewer
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // accordionControlElement1
+            // 
+            this.accordionControlElement1.Name = "accordionControlElement1";
+            this.accordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement1.Text = "View Employees";
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -270,6 +276,7 @@ namespace Viewer
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceUsername;
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceChangePass;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
     }
 }
 

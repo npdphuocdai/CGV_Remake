@@ -214,6 +214,7 @@
       <DependentUpon>ucViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\DTO.dtoViewEmployee.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
