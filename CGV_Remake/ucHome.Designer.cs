@@ -104,7 +104,6 @@ namespace Viewer
             this.islCenter.Location = new System.Drawing.Point(169, 124);
             this.islCenter.Name = "islCenter";
             this.islCenter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.islCenter.ScrollButtonVisibility = DevExpress.Utils.DefaultBoolean.False;
             this.islCenter.Size = new System.Drawing.Size(1175, 656);
             this.islCenter.StyleController = this.layHome;
             this.islCenter.TabIndex = 9;
