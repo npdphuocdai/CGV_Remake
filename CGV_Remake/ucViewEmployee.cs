@@ -20,6 +20,18 @@ namespace Viewer
             InitializeComponent();
             BindingData();
         }
+        private static ucViewEmployee _instance;
+        public static ucViewEmployee Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new ucViewEmployee();
+                }
+                return _instance;
+            }
+        }
         balViewEmployee balViewEmployee = new balViewEmployee();
         public void BindingData()
         {

@@ -133,5 +133,10 @@ namespace Viewer
         {
             AddPage(ucDashboard.Instance);
         }
+
+        private void aceViewEmployees_Click(object sender, EventArgs e)
+        {
+            AddPage(ucViewEmployee.Instance);
+        }
     }
 }
