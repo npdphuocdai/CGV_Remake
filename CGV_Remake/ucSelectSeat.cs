@@ -269,7 +269,7 @@ namespace Viewer
                         dtoTicket.TimeCreate = DateTime.Now;
                         dtoTicket.SeatName = i.Text;
                         dtoTicket.FilmID = TicketInfo.FilmID;
-                        count += ticket.InsertTicket(dtoTicket);
+                        count += ticket.InsertTicketNonCusID(dtoTicket);
                     }
                 }
                 else

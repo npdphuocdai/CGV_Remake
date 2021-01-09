@@ -22,15 +22,29 @@ namespace BAL
             {
                 dtoTicket Ticket = new dtoTicket();
                 DataRow row = Tickets.Rows[i];
-                Ticket.TicketID = Convert.ToInt32(row[0]);
-                Ticket.TimeCreate = Convert.ToDateTime(row[1]);
-                Ticket.TicketPrice = Convert.ToInt32(row[2]);
-                Ticket.SeatName = row[3].ToString();
-                Ticket.FilmID = Convert.ToInt32(row[4]);
-                Ticket.SetID = Convert.ToInt32(row[5]);
-                Ticket.CustomerID = Convert.ToInt32(row[6]);
-                Ticket.EmployeeID = Convert.ToInt32(row[7]);
-                listEmp.Add(Ticket);
+                if (row[6] is DBNull)
+                {
+                    Ticket.TicketID = Convert.ToInt32(row[0]);
+                    Ticket.TimeCreate = Convert.ToDateTime(row[1]);
+                    Ticket.TicketPrice = Convert.ToInt32(row[2]);
+                    Ticket.SeatName = row[3].ToString();
+                    Ticket.FilmID = Convert.ToInt32(row[4]);
+                    Ticket.SetID = Convert.ToInt32(row[5]);
+                    Ticket.EmployeeID = Convert.ToInt32(row[7]);
+                    listEmp.Add(Ticket);
+                }
+                else
+                {
+                    Ticket.TicketID = Convert.ToInt32(row[0]);
+                    Ticket.TimeCreate = Convert.ToDateTime(row[1]);
+                    Ticket.TicketPrice = Convert.ToInt32(row[2]);
+                    Ticket.SeatName = row[3].ToString();
+                    Ticket.FilmID = Convert.ToInt32(row[4]);
+                    Ticket.SetID = Convert.ToInt32(row[5]);
+                    Ticket.CustomerID = Convert.ToInt32(row[6]);
+                    Ticket.EmployeeID = Convert.ToInt32(row[7]);
+                    listEmp.Add(Ticket);
+                }
             }
             return listEmp;
         }
@@ -78,6 +92,11 @@ namespace BAL
         {
             dalTicket dal = new dalTicket();
             return dal.InsertTicket(ticket);
+        }
+        public int InsertTicketNonCusID(dtoTicket ticket)
+        {
+            dalTicket dal = new dalTicket();
+            return dal.InsertTicketNonCusID(ticket);
         }
     }
 }

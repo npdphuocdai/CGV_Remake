@@ -29,7 +29,6 @@ namespace Viewer
                 return _instance;
             }
         }
-
         private void ucHome_Resize(object sender, EventArgs e)
         {
             layCGV.Height = Convert.ToInt32(layHome.Height * 0.125);

@@ -44,6 +44,32 @@ namespace DAL
             }
             return count;
         }
+        public int InsertTicketNonCusID(dtoTicket ticket)
+        {
+            int count = 0;
+            try
+            {
+                string sql = "INSERT [dbo].[Ticket] ([TimeCreated], [TicketPrice], [SeatName], [FilmID], [SetID], [EmployeeID]) VALUES (@TimeCreate, @Price, @SeatName, @FilmID, @SetID, @EmployeeID)";
+                SqlParameter parameterTimeCreate = new SqlParameter("@TimeCreate", SqlDbType.DateTime);
+                parameterTimeCreate.Value = ticket.TimeCreate;
+                SqlParameter parameterPrice = new SqlParameter("@Price", SqlDbType.Decimal);
+                parameterPrice.Value = ticket.TicketPrice;
+                SqlParameter parameterSeatName = new SqlParameter("@SeatName", SqlDbType.NVarChar);
+                parameterSeatName.Value = ticket.SeatName;
+                SqlParameter parameterFilmID = new SqlParameter("@FilmID", SqlDbType.Int);
+                parameterFilmID.Value = ticket.FilmID;
+                SqlParameter parameterSetID = new SqlParameter("@SetID", SqlDbType.Int);
+                parameterSetID.Value = ticket.SetID;
+                SqlParameter parameterEmployeeID = new SqlParameter("@EmployeeID", SqlDbType.Int);
+                parameterEmployeeID.Value = ticket.EmployeeID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterTimeCreate, parameterPrice, parameterSeatName, parameterFilmID, parameterSetID, parameterEmployeeID });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
         /// <summary>
         /// Hàm để đổ dữ liệu vào một biến kiểu DataTable
         /// </summary>
