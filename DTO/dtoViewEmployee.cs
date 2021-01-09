@@ -8,6 +8,7 @@ namespace DTO
 {
     public class dtoViewEmployee
     {
+        public int JobTitleID { get; set; }
         public int EmployeeID { get; set; }
         public byte[] EmployeePotrait { get; set; }
         public decimal? BasicSalary { get; set; }
@@ -22,6 +23,5 @@ namespace DTO
         public float CoefficientsSalary { get; set; }
         public decimal? PositionAllowance { get; set; }
         public string Major { get; set; }
-        public int JobTitleID { get; set; }
     }
 }

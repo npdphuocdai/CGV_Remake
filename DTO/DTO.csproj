@@ -62,5 +62,8 @@
     <Compile Include="dtoSystemPrivilege.cs" />
     <Compile Include="dtoShowingSet.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
