@@ -52,7 +52,7 @@
     <Compile Include="dtoShowingRoom.cs" />
     <Compile Include="dtoTicket.cs" />
     <Compile Include="dtoViewCustomer.cs" />
-    <Compile Include="dtoViewEmployee.cs" />
+    <Compile Include="dtoViewEmployees.cs" />
     <Compile Include="dtoViewFilm.cs" />
     <Compile Include="dtoViewSetDetail.cs" />
     <Compile Include="dtoViewSetDetailFilmName.cs" />
