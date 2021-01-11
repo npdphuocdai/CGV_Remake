@@ -43,6 +43,12 @@ namespace BAL
             }
             return listEmp;
         }
+        public int InsertEmployee(dtoEmployee dtoEmployee, string fileName)
+        {
+            dalEmployee employee = new dalEmployee();
+            int count = employee.InsertEmployee(dtoEmployee, fileName);
+            return count;
+        }
         public int UpdateFromView(dtoViewEmployees viewEmployee)
         {
             dalEmployee employee = new dalEmployee();
@@ -53,6 +59,12 @@ namespace BAL
         {
             dalEmployee employee = new dalEmployee();
             int count = employee.AdminUpdateEmployeeFromView(viewEmployee);
+            return count;
+        }
+        public int UpdatePassword(int ID, string pass)
+        {
+            dalEmployee employee = new dalEmployee();
+            int count = employee.UpdatePassword(ID, pass);
             return count;
         }
         public string GetEmployeeName(int id)

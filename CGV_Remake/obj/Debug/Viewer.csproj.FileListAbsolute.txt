@@ -383,3 +383,5 @@ C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\es\DevExpress.Xt
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\ja\DevExpress.XtraGauges.v20.1.Presets.resources.dll
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\bin\Debug\ru\DevExpress.XtraGauges.v20.1.Presets.resources.dll
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucDashboard.resources
+C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucAddEmployee.resources
+C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.frmChangePass.resources

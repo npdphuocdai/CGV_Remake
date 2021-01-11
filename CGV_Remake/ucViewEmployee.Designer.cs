@@ -30,12 +30,12 @@ namespace Viewer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucViewEmployee));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.GridEmployee = new DevExpress.XtraGrid.GridControl();
             this.DataSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvViewEmployee = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -53,6 +53,11 @@ namespace Viewer
             this.colBasicSalary = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colUpdate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.layTong = new DevExpress.XtraLayout.LayoutControl();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lblTop = new DevExpress.XtraEditors.LabelControl();
+            this.layLblTop = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.GridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewEmployee)).BeginInit();
@@ -60,19 +65,23 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.DataSourceJob)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layTong)).BeginInit();
+            this.layTong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layLblTop)).BeginInit();
             this.SuspendLayout();
             // 
             // GridEmployee
             // 
             this.GridEmployee.DataSource = this.DataSource;
-            this.GridEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GridEmployee.Location = new System.Drawing.Point(0, 0);
+            this.GridEmployee.Location = new System.Drawing.Point(3, 77);
             this.GridEmployee.MainView = this.dgvViewEmployee;
             this.GridEmployee.Name = "GridEmployee";
             this.GridEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUpdate,
             this.lueJobTitle});
-            this.GridEmployee.Size = new System.Drawing.Size(1124, 511);
+            this.GridEmployee.Size = new System.Drawing.Size(1118, 431);
             this.GridEmployee.TabIndex = 0;
             this.GridEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvViewEmployee});
@@ -285,18 +294,79 @@ namespace Viewer
             // btnUpdate
             // 
             this.btnUpdate.AutoHeight = false;
-            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
             this.btnUpdate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // layTong
+            // 
+            this.layTong.Controls.Add(this.lblTop);
+            this.layTong.Controls.Add(this.GridEmployee);
+            this.layTong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layTong.Location = new System.Drawing.Point(0, 0);
+            this.layTong.Name = "layTong";
+            this.layTong.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(544, 227, 812, 500);
+            this.layTong.Root = this.Root;
+            this.layTong.Size = new System.Drawing.Size(1124, 511);
+            this.layTong.TabIndex = 1;
+            this.layTong.Text = "layoutControl1";
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layLblTop});
+            this.Root.Name = "Root";
+            this.Root.Padding = new DevExpress.XtraLayout.Utils.Padding(1, 1, 1, 1);
+            this.Root.Size = new System.Drawing.Size(1124, 511);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.GridEmployee;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 74);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(1122, 435);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // lblTop
+            // 
+            this.lblTop.Appearance.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Warning;
+            this.lblTop.Appearance.Options.UseFont = true;
+            this.lblTop.Appearance.Options.UseForeColor = true;
+            this.lblTop.Appearance.Options.UseTextOptions = true;
+            this.lblTop.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTop.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTop.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
+            this.lblTop.LineVisible = true;
+            this.lblTop.Location = new System.Drawing.Point(3, 3);
+            this.lblTop.Name = "lblTop";
+            this.lblTop.Size = new System.Drawing.Size(1118, 70);
+            this.lblTop.StyleController = this.layTong;
+            this.lblTop.TabIndex = 3;
+            this.lblTop.Text = "Employee";
+            // 
+            // layLblTop
+            // 
+            this.layLblTop.Control = this.lblTop;
+            this.layLblTop.Location = new System.Drawing.Point(0, 0);
+            this.layLblTop.Name = "layLblTop";
+            this.layLblTop.Size = new System.Drawing.Size(1122, 74);
+            this.layLblTop.TextSize = new System.Drawing.Size(0, 0);
+            this.layLblTop.TextVisible = false;
             // 
             // ucViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.GridEmployee);
+            this.Controls.Add(this.layTong);
             this.Name = "ucViewEmployee";
             this.Size = new System.Drawing.Size(1124, 511);
             ((System.ComponentModel.ISupportInitialize)(this.GridEmployee)).EndInit();
@@ -306,6 +376,11 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.DataSourceJob)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layTong)).EndInit();
+            this.layTong.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layLblTop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +404,10 @@ namespace Viewer
         private System.Windows.Forms.BindingSource DataSourceJob;
         private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit lueJobTitle;
         private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraLayout.LayoutControl layTong;
+        private DevExpress.XtraEditors.LabelControl lblTop;
+        private DevExpress.XtraLayout.LayoutControlGroup Root;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.LayoutControlItem layLblTop;
     }
 }

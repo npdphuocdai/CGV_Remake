@@ -45,6 +45,7 @@ namespace Viewer
             this.aceDashboard = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceViewnEdit = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceViewEmployees = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceAddEmployee = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.SkinsLink = new DevExpress.XtraBars.BarSubItem();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
@@ -111,6 +112,7 @@ namespace Viewer
             this.aceAccount.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceUsername,
             this.aceChangePass});
+            this.aceAccount.Expanded = true;
             this.aceAccount.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceAccount.ImageOptions.SvgImage")));
             this.aceAccount.Name = "aceAccount";
             this.aceAccount.Text = "Account";
@@ -162,11 +164,11 @@ namespace Viewer
             // aceViewnEdit
             // 
             this.aceViewnEdit.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.aceViewEmployees});
-            this.aceViewnEdit.Expanded = true;
+            this.aceViewEmployees,
+            this.aceAddEmployee});
             this.aceViewnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceViewnEdit.ImageOptions.SvgImage")));
             this.aceViewnEdit.Name = "aceViewnEdit";
-            this.aceViewnEdit.Text = "View & Edit";
+            this.aceViewnEdit.Text = "Management";
             // 
             // aceViewEmployees
             // 
@@ -174,6 +176,13 @@ namespace Viewer
             this.aceViewEmployees.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceViewEmployees.Text = "View Employees";
             this.aceViewEmployees.Click += new System.EventHandler(this.aceViewEmployees_Click);
+            // 
+            // aceAddEmployee
+            // 
+            this.aceAddEmployee.Name = "aceAddEmployee";
+            this.aceAddEmployee.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceAddEmployee.Text = "Add Employee";
+            this.aceAddEmployee.Click += new System.EventHandler(this.aceAddEmployee_Click);
             // 
             // fluentDesignFormControl1
             // 
@@ -278,6 +287,7 @@ namespace Viewer
         private System.Windows.Forms.Timer timer1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceChangePass;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceViewEmployees;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceAddEmployee;
     }
 }
 

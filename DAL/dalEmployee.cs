@@ -55,11 +55,9 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Password], [Gender]) SELECT @Employee, BulkColumn, @Birthday, @Address, @PhoneNumber, @Email, @BasicSalary, @JobtitleID, @StartDay, ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password), @Gender FROM OPENROWSET(BULK @Potrait, Single_Blob) as Picture";
+                string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Password], [Gender]) SELECT @Name, BulkColumn, @Birthday, @Address, @PhoneNumber, @Email, @BasicSalary, @JobtitleID, @StartDay, ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password), @Gender FROM OPENROWSET(BULK N'" + filename + "', Single_Blob) as Picture";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;
-                SqlParameter parameterPotrait = new SqlParameter("@Potrait", SqlDbType.NVarChar);
-                parameterPotrait.Value = filename;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
                 parameterBirthDay.Value = employee.BirthDay;
                 SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
@@ -78,7 +76,7 @@ namespace DAL
                 parameterStartDay.Value = employee.StartDay;
                 SqlParameter parameterPassword = new SqlParameter("@Password", SqlDbType.NVarChar);
                 parameterPassword.Value = employee.Password;
-                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterPotrait, parameterBirthDay, parameterGender, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay, parameterPassword});
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterGender, parameterAddress, parameterPhoneNumber, parameterEmail, parameterBasicSalary, parameterJobTitleID, parameterStartDay, parameterPassword});
             }
             finally
             {
@@ -202,6 +200,24 @@ namespace DAL
                 SqlParameter parameterJobTilteID = new SqlParameter("@JobTitleID", SqlDbType.NVarChar);
                 parameterJobTilteID.Value = employee.JobTitleID;
                 count = InsertUpdateDeleteData(sql, new[] { parameterID, parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender, parameterJobTilteID });
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
+        public int UpdatePassword(int ID, string password)
+        {
+            int count = 0;
+            try
+            {
+                string sql = "UPDATE [dbo].[Employee] SET [Password] = ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password) WHERE [EmployeeID] = @ID";
+                SqlParameter parameterID = new SqlParameter("@ID", SqlDbType.Int);
+                parameterID.Value = ID;
+                SqlParameter parameterPass = new SqlParameter("@Password", SqlDbType.NVarChar);
+                parameterPass.Value = password;
+                count = InsertUpdateDeleteData(sql, new[] { parameterID, parameterPass });
             }
             finally
             {

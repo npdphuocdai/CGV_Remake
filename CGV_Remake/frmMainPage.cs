@@ -27,6 +27,7 @@ namespace Viewer
         frmTicket frmTicket = new frmTicket();
         public static dtoViewEmployees EmployeeTemp = new dtoViewEmployees();
         frmLogin frmLogin = new frmLogin();
+        frmChangePass frmChangePass = new frmChangePass();
         /// <summary>
         /// Dùng để gọi một UserControl và add vào Fluent Desigh
         /// </summary>
@@ -96,6 +97,8 @@ namespace Viewer
                 aceTicket.Enabled = true;
                 aceChangePass.Enabled = true;
                 aceLogOut.Enabled = true;
+                aceViewEmployees.Enabled = true;
+                aceAddEmployee.Enabled = true;
                 aceUsername.Text = frmLogin.UserLogin.EmployeeFullName;
             }
             //Nếu không thì sẽ disable tất cả chức năng trừ "Home" và "Log In"
@@ -105,6 +108,8 @@ namespace Viewer
                 aceTicket.Enabled = false;
                 aceChangePass.Enabled = false;
                 aceLogOut.Enabled = false;
+                aceViewEmployees.Enabled = false;
+                aceAddEmployee.Enabled = false;
             }
         }
 
@@ -126,7 +131,9 @@ namespace Viewer
 
         private void aceChangePass_Click(object sender, EventArgs e)
         {
-            XtraMessageBox.Show("Tính năng đang được thêm vào, xin đợi thêm một thời gian!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
+            frmChangePass.ShowDialog();
+            this.Show();
         }
 
         private void aceDashboard_Click(object sender, EventArgs e)
@@ -137,6 +144,11 @@ namespace Viewer
         private void aceViewEmployees_Click(object sender, EventArgs e)
         {
             AddPage(ucViewEmployee.Instance);
+        }
+
+        private void aceAddEmployee_Click(object sender, EventArgs e)
+        {
+            AddPage(ucAddEmployee.Instance);
         }
     }
 }

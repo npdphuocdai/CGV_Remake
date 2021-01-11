@@ -99,6 +99,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePass.Designer.cs">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     </Compile>
     <Compile Include="SettingImage.cs" />
     <Compile Include="TicketInfo.cs" />
+    <Compile Include="ucAddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAddEmployee.Designer.cs">
+      <DependentUpon>ucAddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +181,9 @@
     <Compile Include="ucViewEmployee.Designer.cs">
       <DependentUpon>ucViewEmployee.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmChangePass.resx">
+      <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +209,9 @@
     </Compile>
     <EmbeddedResource Include="rptTicket.resx">
       <DependentUpon>rptTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAddEmployee.resx">
+      <DependentUpon>ucAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
