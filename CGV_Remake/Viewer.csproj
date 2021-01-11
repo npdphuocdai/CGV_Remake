@@ -215,6 +215,7 @@
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\DataSources\DTO.dtoEmployee.datasource" />
+    <None Include="Properties\DataSources\DTO.dtoJobTitle.datasource" />
     <None Include="Properties\DataSources\DTO.dtoViewEmployees.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

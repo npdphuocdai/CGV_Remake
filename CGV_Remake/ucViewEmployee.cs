@@ -22,6 +22,7 @@ namespace Viewer
         }
         balViewEmployee balViewEmployee = new balViewEmployee();
         balEmployee balEmployee = new balEmployee();
+        balJobTitle balJobTitle = new balJobTitle();
         private static ucViewEmployee _instance;
         public static ucViewEmployee Instance
         {
@@ -37,7 +38,29 @@ namespace Viewer
         public void BindingData()
         {
             DataSource.DataSource = balViewEmployee.GetViewEmployees();
-            DataSourceJob.DataSource = balViewEmployee.GetViewEmployees();
+            DataSourceJob.DataSource = balJobTitle.GetJobTitles();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dtoViewEmployees viewEmployees = new dtoViewEmployees();
+                viewEmployees = dgvViewEmployee.GetFocusedRow() as dtoViewEmployees;
+                if (viewEmployees.EmployeeFullName == "" || viewEmployees.Gender == "" || viewEmployees.EmployeeBirthday.ToString() == "" || viewEmployees.EmployeePhoneNumber == "" || viewEmployees.EmployeeAddress == "" || viewEmployees.EmployeeEmail == "" || viewEmployees.BasicSalary.ToString() == "")
+                {
+                    throw new Exception("Vui lòng không để trống thông tin!");
+                }
+                else
+                {
+                    int count = balEmployee.AdminUpdateFromView(viewEmployees);
+                    XtraMessageBox.Show("Cập nhập thông tin nhân viên thành công! \nSố hàng đã được cập nhập: " + count.ToString(), "Succesful", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+            }
+            catch(Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

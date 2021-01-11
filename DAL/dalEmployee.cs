@@ -184,7 +184,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [Gender] = @Gender, [JobTitleID] = @JobTitleID WHERE [EmployeeID] = @EmployeeID";
+                string sql = "UPDATE [dbo].[Employee] SET [EmployeeFullName] = @Name, [EmployeeBirthDay] = @BirthDay, [EmployeeAddress] = @Address, [EmployeePhoneNumber] = @PhoneNumber, [EmployeeEmail] = @Email, [Gender] = @Gender, [JobTilteID] = @JobTitleID WHERE [EmployeeID] = @EmployeeID";
                 SqlParameter parameterID = new SqlParameter("@EmployeeID", SqlDbType.Int);
                 parameterID.Value = employee.EmployeeID;
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
@@ -199,9 +199,9 @@ namespace DAL
                 parameterEmail.Value = employee.EmployeeEmail;
                 SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
                 parameterGender.Value = employee.Gender;
-                SqlParameter parameterJobTitleID = new SqlParameter("@JobTitleID", SqlDbType.NVarChar);
-                parameterJobTitleID.Value = employee.JobTitleID;
-                count = InsertUpdateDeleteData(sql, new[] { parameterID, parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender, parameterJobTitleID });
+                SqlParameter parameterJobTilteID = new SqlParameter("@JobTitleID", SqlDbType.NVarChar);
+                parameterJobTilteID.Value = employee.JobTitleID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterID, parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender, parameterJobTilteID });
             }
             finally
             {
