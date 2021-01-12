@@ -57,7 +57,6 @@ namespace Viewer
                 XtraMessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
         {
             balEmployee balEmployee = new balEmployee();

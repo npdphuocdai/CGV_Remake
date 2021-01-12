@@ -84,6 +84,7 @@ namespace Viewer
             //Nếu cờ đăng nhập là "true" thì khi click vào sẽ hiển thị bảng thông tin người dùng
             else
             {
+                ucEmployeeInformation.Instance.Bind();
                 AddPage(ucEmployeeInformation.Instance);
             }
         }
@@ -126,6 +127,7 @@ namespace Viewer
             frmLogin.UserLogin = null;
             this.Hide();
             frmLogin.ShowDialog();
+            AddPage(ucHome.Instance);
             this.Show();
         }
 
@@ -143,12 +145,18 @@ namespace Viewer
 
         private void aceViewEmployees_Click(object sender, EventArgs e)
         {
+            ucViewEmployee.Instance.BindingData();
             AddPage(ucViewEmployee.Instance);
         }
 
         private void aceAddEmployee_Click(object sender, EventArgs e)
         {
             AddPage(ucAddEmployee.Instance);
+        }
+
+        private void frmMainPage_Load(object sender, EventArgs e)
+        {
+            AddPage(ucHome.Instance);
         }
     }
 }

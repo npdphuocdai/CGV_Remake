@@ -148,6 +148,7 @@ namespace Viewer
             this.imgInfor.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.imgInfor.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.imgInfor.Properties.ImageLoading += new DevExpress.XtraEditors.Repository.ImageLoadEventHandler(this.imgInfor_Properties_ImageLoading);
+            this.imgInfor.Properties.ImageSaving += new DevExpress.XtraEditors.Repository.ImageSaveEventHandler(this.imgInfor_Properties_ImageSaving);
             this.imgInfor.Size = new System.Drawing.Size(489, 208);
             this.imgInfor.StyleController = this.layoutTong;
             this.imgInfor.TabIndex = 9;

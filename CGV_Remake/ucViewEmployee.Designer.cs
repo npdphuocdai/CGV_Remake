@@ -54,9 +54,9 @@ namespace Viewer
             this.colUpdate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.layTong = new DevExpress.XtraLayout.LayoutControl();
+            this.lblTop = new DevExpress.XtraEditors.LabelControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lblTop = new DevExpress.XtraEditors.LabelControl();
             this.layLblTop = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.GridEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSource)).BeginInit();
@@ -314,6 +314,24 @@ namespace Viewer
             this.layTong.TabIndex = 1;
             this.layTong.Text = "layoutControl1";
             // 
+            // lblTop
+            // 
+            this.lblTop.Appearance.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Warning;
+            this.lblTop.Appearance.Options.UseFont = true;
+            this.lblTop.Appearance.Options.UseForeColor = true;
+            this.lblTop.Appearance.Options.UseTextOptions = true;
+            this.lblTop.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTop.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblTop.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
+            this.lblTop.LineVisible = true;
+            this.lblTop.Location = new System.Drawing.Point(3, 3);
+            this.lblTop.Name = "lblTop";
+            this.lblTop.Size = new System.Drawing.Size(1118, 70);
+            this.lblTop.StyleController = this.layTong;
+            this.lblTop.TabIndex = 3;
+            this.lblTop.Text = "Employee";
+            // 
             // Root
             // 
             this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -335,24 +353,6 @@ namespace Viewer
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
-            // lblTop
-            // 
-            this.lblTop.Appearance.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop.Appearance.ForeColor = DevExpress.LookAndFeel.DXSkinColors.ForeColors.Warning;
-            this.lblTop.Appearance.Options.UseFont = true;
-            this.lblTop.Appearance.Options.UseForeColor = true;
-            this.lblTop.Appearance.Options.UseTextOptions = true;
-            this.lblTop.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTop.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblTop.LineLocation = DevExpress.XtraEditors.LineLocation.Center;
-            this.lblTop.LineVisible = true;
-            this.lblTop.Location = new System.Drawing.Point(3, 3);
-            this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(1118, 70);
-            this.lblTop.StyleController = this.layTong;
-            this.lblTop.TabIndex = 3;
-            this.lblTop.Text = "Employee";
-            // 
             // layLblTop
             // 
             this.layLblTop.Control = this.lblTop;
@@ -369,6 +369,7 @@ namespace Viewer
             this.Controls.Add(this.layTong);
             this.Name = "ucViewEmployee";
             this.Size = new System.Drawing.Size(1124, 511);
+            this.Load += new System.EventHandler(this.ucViewEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewEmployee)).EndInit();

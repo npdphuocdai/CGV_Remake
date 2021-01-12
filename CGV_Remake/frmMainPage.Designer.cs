@@ -258,6 +258,7 @@ namespace Viewer
             this.NavigationControl = this.acrLeft;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CGV Managerment";
+            this.Load += new System.EventHandler(this.frmMainPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.acrLeft)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();

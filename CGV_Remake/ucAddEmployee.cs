@@ -71,13 +71,27 @@ namespace Viewer
                 dtoEmployee.StartDay = DateTime.Now;
                 balEmployee employee = new balEmployee();
                 int count = employee.InsertEmployee(dtoEmployee, fileName);
+                txtFullName.Text = "";
+                txtAddress.Text = "";
+                txtGender.Text = "";
+                txtJobTitle.Text = "";
+                txtPass.Text = "";
+                txtPhoneNumber.Text = "";
+                txtBirthDay.Text = "";
+                txtBasicSalary.Text = "";
                 string mess = "Thông tin nhân viên đã được thêm thành công!" + "\nSố hàng đã được thêm: " + count.ToString();
                 XtraMessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch(Exception ex)
             {
                 XtraMessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void imgInfor_Properties_ImageSaving(object sender, DevExpress.XtraEditors.Repository.SaveLoadImageEventArgs e)
+        {
+            fileName = e.FileName;
         }
     }
 }

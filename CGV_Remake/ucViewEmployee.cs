@@ -40,7 +40,6 @@ namespace Viewer
             DataSource.DataSource = balViewEmployee.GetViewEmployees();
             DataSourceJob.DataSource = balJobTitle.GetJobTitles();
         }
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -61,6 +60,11 @@ namespace Viewer
             {
                 XtraMessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ucViewEmployee_Load(object sender, EventArgs e)
+        {
+            BindingData();
         }
     }
 }

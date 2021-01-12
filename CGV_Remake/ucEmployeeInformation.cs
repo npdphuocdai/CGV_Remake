@@ -26,14 +26,6 @@ namespace Viewer
             grpInfor.Width = Convert.ToInt32(layoutTong.Width * 0.48);
             grpOthers.Width = Convert.ToInt32(layoutTong.Width * 0.48);
         }
-        private void ucEmployeeInformation_Resize(object sender, EventArgs e)
-        {
-            layPotrait.Height = Convert.ToInt32(layoutTong.Height * 0.54);
-            grpInfor.Height = Convert.ToInt32(layoutTong.Height * 0.35);
-            grpOthers.Height = Convert.ToInt32(layoutTong.Height * 0.35);
-            grpInfor.Width = Convert.ToInt32(layoutTong.Width * 0.48);
-            grpOthers.Width = Convert.ToInt32(layoutTong.Width * 0.48);
-        }
         private static ucEmployeeInformation _instance;
         public static ucEmployeeInformation Instance
         {
@@ -45,6 +37,31 @@ namespace Viewer
                 }
                 return _instance;
             }
+        }
+        public void Bind()
+        {
+            txtEmployeeID.Text = frmLogin.UserLogin.EmployeeID.ToString();
+            txtGender.Text = frmLogin.UserLogin.Gender;
+            txtFullName.Text = frmLogin.UserLogin.EmployeeFullName;
+            txtBirthDay.Text = frmLogin.UserLogin.EmployeeBirthday.ToString();
+            txtAddress.Text = frmLogin.UserLogin.EmployeeAddress;
+            txtPhoneNumber.Text = frmLogin.UserLogin.EmployeePhoneNumber;
+            txtEmail.Text = frmLogin.UserLogin.EmployeeEmail;
+            txtStartDay1.Text = frmLogin.UserLogin.StartDay.ToString();
+            txtJobTitle1.Text = frmLogin.UserLogin.JobtitleName.ToString();
+            txtBasicSalary1.Text = frmLogin.UserLogin.BasicSalary.ToString();
+            imgInfor.Image = SettingImage.ByteArrayToImage(frmLogin.UserLogin.EmployeePotrait);
+            txtCoe.Text = frmLogin.UserLogin.CoefficientsSalary.ToString();
+            txtPosi.Text = frmLogin.UserLogin.PositionAllowance.ToString();
+            txtMajor1.Text = frmLogin.UserLogin.Major.ToString();
+        }
+        private void ucEmployeeInformation_Resize(object sender, EventArgs e)
+        {
+            layPotrait.Height = Convert.ToInt32(layoutTong.Height * 0.54);
+            grpInfor.Height = Convert.ToInt32(layoutTong.Height * 0.35);
+            grpOthers.Height = Convert.ToInt32(layoutTong.Height * 0.35);
+            grpInfor.Width = Convert.ToInt32(layoutTong.Width * 0.48);
+            grpOthers.Width = Convert.ToInt32(layoutTong.Width * 0.48);
         }
         private void ucEmployeeInformation_Load(object sender, EventArgs e)
         {
