@@ -19,6 +19,7 @@ namespace Viewer
         public ucSelectSeat()
         {
             InitializeComponent();
+            txtCusID.Text = "";
         }
         private static ucSelectSeat _instance;
         public static ucSelectSeat Instance
@@ -32,6 +33,7 @@ namespace Viewer
                 return _instance;
             }
         }
+        balCustomer balCustomer = new balCustomer();
         balEmployee employee = new balEmployee();
         balTicket ticket = new balTicket();
         balCustomer customer = new balCustomer();
@@ -271,6 +273,10 @@ namespace Viewer
                         dtoTicket.FilmID = TicketInfo.FilmID;
                         count += ticket.InsertTicketNonCusID(dtoTicket);
                     }
+                }
+                else if (!balCustomer.CheckCustomer(Convert.ToInt32(txtCusID.Text)))
+                {
+                    throw new Exception("Mã khách hàng không tồn tại!");
                 }
                 else
                 {

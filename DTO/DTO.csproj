@@ -45,7 +45,7 @@
     <Compile Include="dtoGenre.cs" />
     <Compile Include="dtoHuman.cs" />
     <Compile Include="dtoEmployee.cs" />
-    <Compile Include="dtoFilm.cs" />
+    <Compile Include="dtoFilms.cs" />
     <Compile Include="dtoJobTitle.cs" />
     <Compile Include="dtoPrivilegeDetail.cs" />
     <Compile Include="dtoSetDetail.cs" />

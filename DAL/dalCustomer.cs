@@ -21,7 +21,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "INSERT [dbo].[Customer] ([CustomerFullName], [CustomerBirthday], [CustomerAddress], [CustomerPhoneNumber], [CustomerEmail]) VALUES (@Name, @BirthDay, @Address, @PhoneNumber, @Email)";
+                string sql = "INSERT [dbo].[Customer] ([CustomerFullName], [CustomerBirthday], [CustomerAddress], [CustomerPhoneNumber], [CustomerEmail], [Gender]) VALUES (@Name, @BirthDay, @Address, @PhoneNumber, @Email, @Gender)";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = customer.FullName;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
@@ -32,7 +32,9 @@ namespace DAL
                 parameterPhoneNumber.Value = customer.PhoneNumber;
                 SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
                 parameterEmail.Value = customer.Email;
-                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail });
+                SqlParameter parameterGender = new SqlParameter("@Gender", SqlDbType.NVarChar);
+                parameterGender.Value = customer.Gender;
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterGender });
             }
             finally
             {
@@ -50,7 +52,7 @@ namespace DAL
             int count = 0;
             try
             {
-                string sql = "UPDATE [dbo].[Customer] SET [CustomerFullName] = @Name, [CustomerBirthDay] = @BirthDay, [CustomerAddress] = @Address, [CustomerPhoneNumber] = @PhoneNumber, [CustomerEmail] = @Email) WHERE [CustomerID] = @CustomerID";
+                string sql = "UPDATE [dbo].[Customer] SET [CustomerFullName] = @Name, [CustomerBirthDay] = @BirthDay, [CustomerAddress] = @Address, [CustomerPhoneNumber] = @PhoneNumber, [CustomerEmail] = @Email WHERE [CustomerID] = @CustomerID";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = customer.FullName;
                 SqlParameter parameterBirthDay = new SqlParameter("@BirthDay", SqlDbType.DateTime);
@@ -61,7 +63,9 @@ namespace DAL
                 parameterPhoneNumber.Value = customer.PhoneNumber;
                 SqlParameter parameterEmail = new SqlParameter("@Email", SqlDbType.NVarChar);
                 parameterEmail.Value = customer.Email;
-                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail });
+                SqlParameter parameterID = new SqlParameter("@CustomerID", SqlDbType.Int);
+                parameterID.Value = customer.CustomerID;
+                count = InsertUpdateDeleteData(sql, new[] { parameterName, parameterBirthDay, parameterAddress, parameterPhoneNumber, parameterEmail, parameterID });
             }
             finally
             {

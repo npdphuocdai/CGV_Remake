@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class dtoFilm
+    public class dtoFilms
     {       
-        public int FilmID;
+        public int FilmID { get; set; }
         public string FilmName { get; set; }
         public DateTime? ReleaseDate { get; set; }
         public DateTime? StopDate { get; set; }

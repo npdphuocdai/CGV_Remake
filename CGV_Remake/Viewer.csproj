@@ -163,6 +163,12 @@
     <Compile Include="ucHome.Designer.cs">
       <DependentUpon>ucHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucMovieManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMovieManagement.Designer.cs">
+      <DependentUpon>ucMovieManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucSelectSeat.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="ucTicket.Designer.cs">
       <DependentUpon>ucTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucViewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucViewCustomer.Designer.cs">
+      <DependentUpon>ucViewCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="ucViewEmployee.cs">
       <SubType>UserControl</SubType>
@@ -222,17 +234,25 @@
     <EmbeddedResource Include="ucHome.resx">
       <DependentUpon>ucHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucMovieManagement.resx">
+      <DependentUpon>ucMovieManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucSelectSeat.resx">
       <DependentUpon>ucSelectSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTicket.resx">
       <DependentUpon>ucTicket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucViewCustomer.resx">
+      <DependentUpon>ucViewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucViewEmployee.resx">
       <DependentUpon>ucViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\DTO.dtoCustomer.datasource" />
     <None Include="Properties\DataSources\DTO.dtoEmployee.datasource" />
+    <None Include="Properties\DataSources\DTO.dtoGenre.datasource" />
     <None Include="Properties\DataSources\DTO.dtoJobTitle.datasource" />
     <None Include="Properties\DataSources\DTO.dtoViewEmployees.datasource" />
     <None Include="Properties\Settings.settings">

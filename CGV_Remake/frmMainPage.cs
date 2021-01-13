@@ -92,8 +92,9 @@ namespace Viewer
         {
             //Kiểm tra xem "cờ" đăng nhập đã được mở hay chưa
             //Nếu đã được mở thì Enable toàn bộ chức năng có thể dùng theo phân quyền
-            if(frmLogin.flag == true)
+            if(frmLogin.flag == true && frmLogin.UserLogin.JobTitleID == 1)
             {
+                aceViewCustomer.Enabled = true;
                 aceDashboard.Enabled = true;
                 aceTicket.Enabled = true;
                 aceChangePass.Enabled = true;
@@ -102,9 +103,20 @@ namespace Viewer
                 aceAddEmployee.Enabled = true;
                 aceUsername.Text = frmLogin.UserLogin.EmployeeFullName;
             }
+            else if(frmLogin.flag == true && frmLogin.UserLogin.JobTitleID == 2)
+            {
+                aceViewCustomer.Enabled = false;
+                aceDashboard.Enabled = false;
+                aceTicket.Enabled = true;
+                aceChangePass.Enabled = true;
+                aceLogOut.Enabled = true;
+                aceViewEmployees.Enabled = false;
+                aceAddEmployee.Enabled = false;
+            }
             //Nếu không thì sẽ disable tất cả chức năng trừ "Home" và "Log In"
             else
             {
+                aceViewCustomer.Enabled = false;
                 aceDashboard.Enabled = false;
                 aceTicket.Enabled = false;
                 aceChangePass.Enabled = false;
@@ -157,6 +169,16 @@ namespace Viewer
         private void frmMainPage_Load(object sender, EventArgs e)
         {
             AddPage(ucHome.Instance);
+        }
+
+        private void aceViewCustomer_Click(object sender, EventArgs e)
+        {
+            AddPage(ucViewCustomer.Instance);
+        }
+
+        private void aceViewMovie_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

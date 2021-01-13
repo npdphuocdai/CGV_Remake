@@ -27,12 +27,23 @@ namespace BAL
                 Customer.Gender = row[2].ToString();
                 Customer.PhoneNumber = row[3].ToString();
                 Customer.Email = row[4].ToString();
-                Customer.Email = row[7].ToString();
-                Customer.BirthDay = Convert.ToDateTime(row[6]);               
-                Customer.Address = row[5].ToString();   
+                Customer.BirthDay = Convert.ToDateTime(row[5]);               
+                Customer.Address = row[6].ToString();   
                 listEmp.Add(Customer);
             }
             return listEmp;
+        }
+        public bool CheckCustomer(int cusID)
+        {
+            bool kq = false;
+            foreach (var i in GetCustomers())
+            {
+                if (i.CustomerID == cusID)
+                {
+                    kq = true;
+                }
+            }
+            return kq;
         }
         public string GetCustomerName(int id)
         {
@@ -63,11 +74,17 @@ namespace BAL
             }
             return customerBD;
         }
-        /*public int UpdateFromView(dtoViewCustomer viewCustomer)
+        public int Update(dtoCustomer dtoCustomer)
         {
             dalCustomer Customer = new dalCustomer();
-            int count = Customer.SelfUpdateCustomerFromView(viewCustomer);
+            int count = Customer.UpdateCustomerFromID(dtoCustomer);
             return count;
-        }*/
+        }
+        public int Insert(dtoCustomer dtoCustomer)
+        {
+            dalCustomer dalCustomer = new dalCustomer();
+            int count = dalCustomer.InsertCustomer(dtoCustomer);
+            return count;
+        }
     }
 }

@@ -58,29 +58,31 @@ namespace Viewer
                 {
                     throw new Exception("Vui lòng không để trống thông tin!");
                 }
-                dtoEmployee dtoEmployee = new dtoEmployee();
-                dtoEmployee.FullName = txtFullName.Text;
-                dtoEmployee.Address = txtAddress.Text;
-                dtoEmployee.BasicSalary = Convert.ToDecimal(txtBasicSalary.Text);
-                dtoEmployee.BirthDay = Convert.ToDateTime(txtBirthDay.Text);
-                dtoEmployee.Email = txtEmail.Text;
-                dtoEmployee.Gender = txtGender.Text;
-                dtoEmployee.JobTitleID = Convert.ToInt32(txtJobTitle.Text);
-                dtoEmployee.Password = txtPass.Text;
-                dtoEmployee.PhoneNumber = txtPhoneNumber.Text;
-                dtoEmployee.StartDay = DateTime.Now;
-                balEmployee employee = new balEmployee();
-                int count = employee.InsertEmployee(dtoEmployee, fileName);
-                txtFullName.Text = "";
-                txtAddress.Text = "";
-                txtGender.Text = "";
-                txtJobTitle.Text = "";
-                txtPass.Text = "";
-                txtPhoneNumber.Text = "";
-                txtBirthDay.Text = "";
-                txtBasicSalary.Text = "";
-                string mess = "Thông tin nhân viên đã được thêm thành công!" + "\nSố hàng đã được thêm: " + count.ToString();
-                XtraMessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                {
+                    dtoEmployee dtoEmployee = new dtoEmployee();
+                    dtoEmployee.FullName = txtFullName.Text;
+                    dtoEmployee.Address = txtAddress.Text;
+                    dtoEmployee.BasicSalary = Convert.ToDecimal(txtBasicSalary.Text);
+                    dtoEmployee.BirthDay = Convert.ToDateTime(txtBirthDay.Text);
+                    dtoEmployee.Email = txtEmail.Text;
+                    dtoEmployee.Gender = txtGender.Text;
+                    dtoEmployee.JobTitleID = Convert.ToInt32(txtJobTitle.Text);
+                    dtoEmployee.Password = txtPass.Text;
+                    dtoEmployee.PhoneNumber = txtPhoneNumber.Text;
+                    dtoEmployee.StartDay = DateTime.Now;
+                    int count = employee.InsertEmployee(dtoEmployee, fileName);
+                    txtFullName.Text = "";
+                    txtAddress.Text = "";
+                    txtGender.Text = "";
+                    txtJobTitle.Text = "";
+                    txtPass.Text = "";
+                    txtPhoneNumber.Text = "";
+                    txtBirthDay.Text = "";
+                    txtBasicSalary.Text = "";
+                    string mess = "Thông tin nhân viên đã được thêm thành công!" + "\nSố hàng đã được thêm: " + count.ToString();
+                    XtraMessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch(Exception ex)
             {

@@ -37,7 +37,7 @@ namespace DAL
             }
             return films;
         }*/
-        public int InsertFilm (dtoFilm film)
+        public int InsertFilm (dtoFilms film)
         {
             int count = 0;
             try
@@ -62,7 +62,7 @@ namespace DAL
             return count;
         }
 
-        public int UpdateFilmFromID(dtoFilm film)
+        public int UpdateFilmFromID(dtoFilms film)
         {
             int count = 0;
             try

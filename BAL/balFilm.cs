@@ -13,14 +13,14 @@ namespace BAL
 {
     public class balFilm
     {
-        public List<dtoFilm> GetFilms()
+        public List<dtoFilms> GetFilms()
         {
             dalFilm dalFilm = new dalFilm();
-            List<dtoFilm> listEmp = new List<dtoFilm>();
+            List<dtoFilms> listEmp = new List<dtoFilms>();
             DataTable Films = dalFilm.GetFilms();
             for (int i = 0; i < Films.Rows.Count; i++)
             {
-                dtoFilm Film = new dtoFilm();
+                dtoFilms Film = new dtoFilms();
                 DataRow row = Films.Rows[i];
                 Film.FilmID = Convert.ToInt32(row[0]);
                 Film.FilmName = row[1].ToString();
