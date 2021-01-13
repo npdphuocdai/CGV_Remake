@@ -94,6 +94,7 @@ namespace Viewer
             //Nếu đã được mở thì Enable toàn bộ chức năng có thể dùng theo phân quyền
             if(frmLogin.flag == true && frmLogin.UserLogin.JobTitleID == 1)
             {
+                aceViewMovie.Enabled = true;
                 aceViewCustomer.Enabled = true;
                 aceDashboard.Enabled = true;
                 aceTicket.Enabled = true;
@@ -105,6 +106,7 @@ namespace Viewer
             }
             else if(frmLogin.flag == true && frmLogin.UserLogin.JobTitleID == 2)
             {
+                aceViewMovie.Enabled = false;
                 aceViewCustomer.Enabled = false;
                 aceDashboard.Enabled = false;
                 aceTicket.Enabled = true;
@@ -116,6 +118,7 @@ namespace Viewer
             //Nếu không thì sẽ disable tất cả chức năng trừ "Home" và "Log In"
             else
             {
+                aceViewMovie.Enabled = false;
                 aceViewCustomer.Enabled = false;
                 aceDashboard.Enabled = false;
                 aceTicket.Enabled = false;
@@ -175,10 +178,9 @@ namespace Viewer
         {
             AddPage(ucViewCustomer.Instance);
         }
-
         private void aceViewMovie_Click(object sender, EventArgs e)
         {
-
+            AddPage(ucMovieManagement.Instance);
         }
     }
 }

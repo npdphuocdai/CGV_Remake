@@ -26,17 +26,23 @@ namespace BAL
                 Film.FilmName = row[1].ToString();
                 Film.ReleaseDate = Convert.ToDateTime(row[2]);
                 Film.StopDate = Convert.ToDateTime(row[3]);
-                Film.Duration = Convert.ToDateTime(row[4]);
+                Film.Duration = (TimeSpan)row[4];
                 Film.GenreID = Convert.ToInt32(row[5]);
                 listEmp.Add(Film);
             }
             return listEmp;
         }
-        /*public int UpdateFromView(dtoViewFilm viewFilm)
+        public int Update(dtoFilms viewFilm)
         {
             dalFilm Film = new dalFilm();
-            int count = Film.SelfUpdateFilmFromView(viewFilm);
+            int count = Film.UpdateFilmFromID(viewFilm);
             return count;
-        }*/
+        }
+        public int Insert(dtoFilms dtoFilms)
+        {
+            dalFilm film = new dalFilm();
+            int count = film.InsertFilm(dtoFilms);
+            return count;
+        }
     }
 }

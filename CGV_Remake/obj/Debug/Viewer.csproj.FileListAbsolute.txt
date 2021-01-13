@@ -386,3 +386,4 @@ C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucDashboa
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucAddEmployee.resources
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.frmChangePass.resources
 C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucViewCustomer.resources
+C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucMovieManagement.resources

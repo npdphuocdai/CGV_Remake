@@ -252,6 +252,7 @@
     <None Include="App.config" />
     <None Include="Properties\DataSources\DTO.dtoCustomer.datasource" />
     <None Include="Properties\DataSources\DTO.dtoEmployee.datasource" />
+    <None Include="Properties\DataSources\DTO.dtoFilms.datasource" />
     <None Include="Properties\DataSources\DTO.dtoGenre.datasource" />
     <None Include="Properties\DataSources\DTO.dtoJobTitle.datasource" />
     <None Include="Properties\DataSources\DTO.dtoViewEmployees.datasource" />

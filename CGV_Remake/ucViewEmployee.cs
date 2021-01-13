@@ -61,7 +61,6 @@ namespace Viewer
                 XtraMessageBox.Show(ex.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void ucViewEmployee_Load(object sender, EventArgs e)
         {
             BindingData();

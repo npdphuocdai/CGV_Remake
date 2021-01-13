@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace BAL
 {
-    class balGenre
+    public class balGenre
     {
         public List<dtoGenre> GetGenres()
         {
