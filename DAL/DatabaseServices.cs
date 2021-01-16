@@ -13,7 +13,8 @@ namespace DAL
         /// <summary>
         /// Tạo Connecting String để kết nối với Database
         /// </summary>
-        public string connectionString = @"Data Source = NPD-PhuocDai; Initial Catalog = CGV; User ID = sa; Password = dai0947170732;";
+        public string connectionString = @"Data Source = DESKTOP-5LMAJ65; Initial Catalog = CGV; User ID = sa; Password = 2504"; 
+
         public SqlConnection connection;
         public SqlCommand command;
         public DatabaseServices() 
