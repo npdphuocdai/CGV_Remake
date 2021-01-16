@@ -9,3 +9,9 @@ D:\CNPM\CGV_Remake\DTO\obj\Debug\DTO.dll
 D:\CNPM\CGV_Remake\DTO\obj\Debug\DTO.pdb
 D:\CNPM\CGV_Remake\DTO\bin\Debug\DTO.dll
 D:\CNPM\CGV_Remake\DTO\bin\Debug\DTO.pdb
+D:\Sources\GitHub\CGV_Remake\DTO\bin\Debug\DTO.dll
+D:\Sources\GitHub\CGV_Remake\DTO\bin\Debug\DTO.pdb
+D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.dll
+D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.pdb
