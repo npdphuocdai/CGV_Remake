@@ -114,6 +114,7 @@ namespace Viewer
                 aceLogOut.Enabled = true;
                 aceViewEmployees.Enabled = false;
                 aceAddEmployee.Enabled = false;
+                aceUsername.Text = frmLogin.UserLogin.EmployeeFullName;
             }
             //Nếu không thì sẽ disable tất cả chức năng trừ "Home" và "Log In"
             else

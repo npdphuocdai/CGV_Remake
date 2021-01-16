@@ -16,3 +16,12 @@ D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.dll
 D:\CNPM\CGV_Remake\DAL\obj\Debug\DAL.pdb
+D:\Sources\GitHub\CGV_Remake\DAL\bin\Debug\DAL.dll
+D:\Sources\GitHub\CGV_Remake\DAL\bin\Debug\DAL.pdb
+D:\Sources\GitHub\CGV_Remake\DAL\bin\Debug\DTO.dll
+D:\Sources\GitHub\CGV_Remake\DAL\bin\Debug\DTO.pdb
+D:\Sources\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Sources\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Sources\GitHub\CGV_Remake\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Sources\GitHub\CGV_Remake\DAL\obj\Debug\DAL.dll
+D:\Sources\GitHub\CGV_Remake\DAL\obj\Debug\DAL.pdb

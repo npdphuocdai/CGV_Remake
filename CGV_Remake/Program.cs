@@ -21,7 +21,7 @@ namespace Viewer
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "The Bezier";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainPage());
+			Application.Run(new frmMainPage());
         }
     }
 }
