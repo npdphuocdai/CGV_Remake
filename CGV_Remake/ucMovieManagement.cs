@@ -85,7 +85,7 @@ namespace Viewer
                     dteStopDate.Text = "";
                     tseDuration.Text = "";
                     BindingData();
-                    string mess = "Thông tin khách hàng đã được thêm thành công!" + "\nSố hàng đã được thêm: " + count.ToString();
+                    string mess = "Thông tin phim đã được thêm thành công!" + "\nSố hàng đã được thêm: " + count.ToString();
                     XtraMessageBox.Show(mess, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
