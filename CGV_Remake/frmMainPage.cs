@@ -94,6 +94,7 @@ namespace Viewer
             //Nếu đã được mở thì Enable toàn bộ chức năng có thể dùng theo phân quyền
             if(frmLogin.flag == true && frmLogin.UserLogin.JobTitleID == 1)
             {
+                aceSetManagement.Enabled = true;
                 aceViewMovie.Enabled = true;
                 aceViewCustomer.Enabled = true;
                 aceDashboard.Enabled = true;
@@ -106,6 +107,7 @@ namespace Viewer
             }
             else if(frmLogin.flag == true && frmLogin.UserLogin.JobTitleID == 2)
             {
+                aceSetManagement.Enabled = false;
                 aceViewMovie.Enabled = false;
                 aceViewCustomer.Enabled = false;
                 aceDashboard.Enabled = false;
@@ -119,6 +121,7 @@ namespace Viewer
             //Nếu không thì sẽ disable tất cả chức năng trừ "Home" và "Log In"
             else
             {
+                aceSetManagement.Enabled = false;
                 aceViewMovie.Enabled = false;
                 aceViewCustomer.Enabled = false;
                 aceDashboard.Enabled = false;
