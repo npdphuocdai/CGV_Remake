@@ -557,3 +557,4 @@ D:\CNPM\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucDashboard.resources
 D:\CNPM\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucMovieManagement.resources
 D:\CNPM\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucViewCustomer.resources
 D:\CNPM\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucViewEmployee.resources
+C:\Users\npdph\Documents\GitHub\CGV_Remake\CGV_Remake\obj\Debug\Viewer.ucAddSetDetail.resources

@@ -145,6 +145,12 @@
     <Compile Include="ucAddEmployee.Designer.cs">
       <DependentUpon>ucAddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucAddSetDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAddSetDetail.Designer.cs">
+      <DependentUpon>ucAddSetDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     <EmbeddedResource Include="ucAddEmployee.resx">
       <DependentUpon>ucAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucAddSetDetail.resx">
+      <DependentUpon>ucAddSetDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucDashboard.resx">
       <DependentUpon>ucDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,7 +264,10 @@
     <None Include="Properties\DataSources\DTO.dtoFilms.datasource" />
     <None Include="Properties\DataSources\DTO.dtoGenre.datasource" />
     <None Include="Properties\DataSources\DTO.dtoJobTitle.datasource" />
+    <None Include="Properties\DataSources\DTO.dtoSetDetail.datasource" />
+    <None Include="Properties\DataSources\DTO.dtoShowingSet.datasource" />
     <None Include="Properties\DataSources\DTO.dtoViewEmployees.datasource" />
+    <None Include="Properties\DataSources\DTO.dtoViewSetDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

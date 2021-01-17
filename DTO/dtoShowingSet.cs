@@ -9,7 +9,7 @@ namespace DTO
     public class dtoShowingSet
     {
         public int SetID { get; set; }
-        public DateTime? StartTime { get; set; }
-        public DateTime? EndTime { get; set; }
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
     }
 }

@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
+    /// <summary>
+    /// Customer được kế thừa từ Class Human với các thuộc tính có sẵn từ Human
+    /// </summary>
     public class dtoCustomer : dtoHuman
     {
+        /// <summary>
+        /// Thuộc tính CustomerID là khóa của bảng Customer trong Database
+        /// </summary>
         public int CustomerID { get; set; }
         public dtoCustomer()
         {

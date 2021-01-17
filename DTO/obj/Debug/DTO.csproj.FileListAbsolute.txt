@@ -15,3 +15,4 @@ D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.dll
 D:\Sources\GitHub\CGV_Remake\DTO\obj\Debug\DTO.pdb
+C:\Users\npdph\Documents\GitHub\CGV_Remake\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

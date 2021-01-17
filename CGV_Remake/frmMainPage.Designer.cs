@@ -55,6 +55,7 @@ namespace Viewer
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.aceSetManagement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.acrLeft)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -169,7 +170,9 @@ namespace Viewer
             this.aceViewEmployees,
             this.aceAddEmployee,
             this.aceViewCustomer,
-            this.aceViewMovie});
+            this.aceViewMovie,
+            this.aceSetManagement});
+            this.aceViewnEdit.Expanded = true;
             this.aceViewnEdit.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceViewnEdit.ImageOptions.SvgImage")));
             this.aceViewnEdit.Name = "aceViewnEdit";
             this.aceViewnEdit.Text = "Management";
@@ -260,6 +263,13 @@ namespace Viewer
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // aceSetManagement
+            // 
+            this.aceSetManagement.Name = "aceSetManagement";
+            this.aceSetManagement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceSetManagement.Text = "Set Detail Management";
+            this.aceSetManagement.Click += new System.EventHandler(this.aceSetManagement_Click);
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -309,6 +319,7 @@ namespace Viewer
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceAddEmployee;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceViewCustomer;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceViewMovie;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceSetManagement;
     }
 }
 

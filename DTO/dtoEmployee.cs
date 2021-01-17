@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
+    /// <summary>
+    /// Class Employee được kế thừa các thuộc tính từ Human
+    /// </summary>
     public class dtoEmployee : dtoHuman
     {
+        /// <summary>
+        /// Các thuộc tính thêm của Employee
+        /// </summary>
         public int EmployeeID;
+        /// <summary>
+        /// Dạng byte[] Để chứa vector được mã hóa thành dạng chuỗi nhị phân của 1 ảnh
+        /// </summary>
         public byte[] Potrait { get; set; }
         public decimal? BasicSalary { get; set; }
         public DateTime? StartDay { get; set; }

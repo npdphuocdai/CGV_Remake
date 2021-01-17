@@ -25,14 +25,17 @@ namespace DAL
             bool kq = false;
             try
             {
-                //Tạo câu truy vấn có điều kiện để tìm kiếm user
+                // Tạo câu truy vấn có điều kiện để tìm kiếm user
+                // CONVERT(NVARCHAR, DECRYPTBYPASSPHRASE(N'Team up fight on', [Password])) là câu truy vấn trong SQL để ép kiểu từ 1 kiểu bất kỳ thành dạng NVARCHAR
+                // DECRYPTBYPASSPHRASE là hàm trong SQL dùng để giải mã dữ liệu được mã hóa từ 1 pass cho trước
+                // 'Team up fight on' là pass để giải mã
                 string sql = "SELECT * FROM [dbo].[Employee] WHERE [EmployeeID] = @Username AND CONVERT(NVARCHAR, DECRYPTBYPASSPHRASE(N'Team up fight on', [Password])) = @Password";
-                //Truyền giá trị cho 2 tham số
+                // Truyền giá trị cho 2 tham số
                 SqlParameter parameterUser = new SqlParameter("@Username", SqlDbType.Int);
                 parameterUser.Value = username;
                 SqlParameter parameterPass = new SqlParameter("@Password", SqlDbType.NVarChar);
                 parameterPass.Value = password;
-                //Sử dụng hàm ReadDataPars để truy xuất thông tin
+                // Sử dụng hàm ReadDataPars để truy xuất thông tin
                 SqlDataReader reader = ReadDataPars(sql, new[] { parameterUser, parameterPass });
                 if (reader.Read())
                 {
@@ -49,12 +52,14 @@ namespace DAL
         /// Hàm thêm mới nhân viên
         /// </summary>
         /// <param name="employee"> Đối tượng nhân viên được thêm mới </param>
+        /// <param name="filename"> là một chuỗi chỉ đường dẫn của ảnh </param>
         /// <returns> Giá trị trả về là số lượng các dòng bị tác động bởi câu lệnh , nếu 0 là thêm mới thất bại </returns>
         public int InsertEmployee(dtoEmployee employee, string filename)
         {
             int count = 0;
             try
             {
+                // Ở câu truy vấn này có sử dụng Bulk Column để mã hóa hình ảnh thành 1 vector và lưu trữ trên SQL
                 string sql = "INSERT [dbo].[Employee] ([EmployeeFullName], [EmployeePotrait], [EmployeeBirthday], [EmployeeAddress], [EmployeePhoneNumber], [EmployeeEmail], [BasicSalary], [JobTilteID], [StartDay], [Password], [Gender]) SELECT @Name, BulkColumn, @Birthday, @Address, @PhoneNumber, @Email, @BasicSalary, @JobtitleID, @StartDay, ENCRYPTBYPASSPHRASE(N'Team up fight on',@Password), @Gender FROM OPENROWSET(BULK N'" + filename + "', Single_Blob) as Picture";
                 SqlParameter parameterName = new SqlParameter("@Name", SqlDbType.NVarChar);
                 parameterName.Value = employee.FullName;

@@ -183,5 +183,10 @@ namespace Viewer
         {
             AddPage(ucMovieManagement.Instance);
         }
+
+        private void aceSetManagement_Click(object sender, EventArgs e)
+        {
+            AddPage(ucAddSetDetail.Instance);
+        }
     }
 }
