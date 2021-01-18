@@ -23,8 +23,8 @@ namespace BAL
                 dtoShowingSet ShowingSet = new dtoShowingSet();
                 DataRow row = ShowingSets.Rows[i];
                 ShowingSet.SetID = Convert.ToInt32(row[0]);
-                ShowingSet.StartTime = Convert.ToDateTime(row[1]);
-                ShowingSet.EndTime = Convert.ToDateTime(row[2]);
+                ShowingSet.StartTime = (TimeSpan)row[1];
+                ShowingSet.EndTime = (TimeSpan)row[2];
                 listEmp.Add(ShowingSet);
             }
             return listEmp;

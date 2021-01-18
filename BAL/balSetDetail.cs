@@ -48,5 +48,11 @@ namespace BAL
             }
             return roomID;
         }
+        public int Insert(dtoSetDetail dtoSetDetail)
+        {
+            dalSetDetail dal = new dalSetDetail();
+            int count = dal.Insert(dtoSetDetail);
+            return count;
+        }
     }
 }

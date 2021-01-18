@@ -30,15 +30,16 @@ namespace Viewer
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucMovieManagement));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.layTong = new DevExpress.XtraLayout.LayoutControl();
             this.grbAddMovie = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.tseDuration = new DevExpress.XtraEditors.TimeSpanEdit();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.dteStopDate = new DevExpress.XtraEditors.DateEdit();
             this.dteReleaseDate = new DevExpress.XtraEditors.DateEdit();
@@ -52,6 +53,7 @@ namespace Viewer
             this.layRealeaseDate = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layDuration = new DevExpress.XtraLayout.LayoutControlItem();
             this.lblTop = new DevExpress.XtraEditors.LabelControl();
             this.GridFilm = new DevExpress.XtraGrid.GridControl();
             this.DataSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,14 +73,13 @@ namespace Viewer
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layLblTop = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.tseDuration = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.layDuration = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layTong)).BeginInit();
             this.layTong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grbAddMovie)).BeginInit();
             this.grbAddMovie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tseDuration.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStopDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStopDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteReleaseDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -93,6 +94,7 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.layRealeaseDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridFilm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewFilm)).BeginInit();
@@ -104,8 +106,6 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layLblTop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tseDuration.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layDuration)).BeginInit();
             this.SuspendLayout();
             // 
             // layTong
@@ -148,6 +148,19 @@ namespace Viewer
             this.layoutControl1.Size = new System.Drawing.Size(1289, 159);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // tseDuration
+            // 
+            this.tseDuration.EditValue = System.TimeSpan.Parse("00:00:00");
+            this.tseDuration.Location = new System.Drawing.Point(151, 80);
+            this.tseDuration.Name = "tseDuration";
+            this.tseDuration.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tseDuration.Properties.Appearance.Options.UseFont = true;
+            this.tseDuration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.tseDuration.Size = new System.Drawing.Size(1126, 30);
+            this.tseDuration.StyleController = this.layoutControl1;
+            this.tseDuration.TabIndex = 10;
             // 
             // btnAdd
             // 
@@ -299,6 +312,17 @@ namespace Viewer
             this.emptySpaceItem2.Size = new System.Drawing.Size(423, 37);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layDuration
+            // 
+            this.layDuration.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.layDuration.AppearanceItemCaption.Options.UseFont = true;
+            this.layDuration.Control = this.tseDuration;
+            this.layDuration.Location = new System.Drawing.Point(0, 68);
+            this.layDuration.Name = "layDuration";
+            this.layDuration.Size = new System.Drawing.Size(1269, 34);
+            this.layDuration.Text = "Duration: ";
+            this.layDuration.TextSize = new System.Drawing.Size(136, 24);
+            // 
             // lblTop
             // 
             this.lblTop.Appearance.Font = new System.Drawing.Font("Arial", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -315,7 +339,7 @@ namespace Viewer
             this.lblTop.Size = new System.Drawing.Size(1293, 70);
             this.lblTop.StyleController = this.layTong;
             this.lblTop.TabIndex = 3;
-            this.lblTop.Text = "Customer";
+            this.lblTop.Text = "Movie Management";
             // 
             // GridFilm
             // 
@@ -496,9 +520,9 @@ namespace Viewer
             // btnUpdate
             // 
             this.btnUpdate.AutoHeight = false;
-            editorButtonImageOptions3.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions3.SvgImage")));
+            editorButtonImageOptions1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editorButtonImageOptions1.SvgImage")));
             this.btnUpdate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -546,30 +570,6 @@ namespace Viewer
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // tseDuration
-            // 
-            this.tseDuration.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.tseDuration.Location = new System.Drawing.Point(151, 80);
-            this.tseDuration.Name = "tseDuration";
-            this.tseDuration.Properties.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tseDuration.Properties.Appearance.Options.UseFont = true;
-            this.tseDuration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.tseDuration.Size = new System.Drawing.Size(1126, 30);
-            this.tseDuration.StyleController = this.layoutControl1;
-            this.tseDuration.TabIndex = 10;
-            // 
-            // layDuration
-            // 
-            this.layDuration.AppearanceItemCaption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.layDuration.AppearanceItemCaption.Options.UseFont = true;
-            this.layDuration.Control = this.tseDuration;
-            this.layDuration.Location = new System.Drawing.Point(0, 68);
-            this.layDuration.Name = "layDuration";
-            this.layDuration.Size = new System.Drawing.Size(1269, 34);
-            this.layDuration.Text = "Duration: ";
-            this.layDuration.TextSize = new System.Drawing.Size(136, 24);
-            // 
             // ucMovieManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -583,6 +583,7 @@ namespace Viewer
             this.grbAddMovie.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tseDuration.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStopDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStopDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteReleaseDate.Properties.CalendarTimeProperties)).EndInit();
@@ -597,6 +598,7 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.layRealeaseDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layDuration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridFilm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewFilm)).EndInit();
@@ -608,8 +610,6 @@ namespace Viewer
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layLblTop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tseDuration.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layDuration)).EndInit();
             this.ResumeLayout(false);
 
         }
